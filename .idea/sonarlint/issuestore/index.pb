@@ -1,22 +1,6 @@
 
-e
-5src/main/java/org/example/demo1/HelloApplication.java,d\1\d161b18ad566c93419bc2df6907472fb7a3bfbb9
-d
-4src/main/java/org/example/demo1/HelloController.java,d\0\d0c6a97b3b5e55c06ae5464e04c6048fde6a8dee
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-d
-4src/main/resources/org/example/demo1/hello-view.fxml,3\f\3fe4004cdd9e2da9294650978873fb5940d4444e
-`
-0src/main/java/org/example/demo1/ExpertAudit.java,3\c\3c1c1b356b22da2a9b79e366d02033990297c20f
-T
-$src/main/java/controllers/Login.java,d\7\d7348dead3122e957b92c9ed3e4ca992b430a9cd
-P
- src/main/java/entities/User.java,5\f\5fa02fe45c9f7e20c3b267dee4d4126eab2f79f8
-W
-'src/main/java/services/MyConnexion.java,d\e\de4d55a6da07bda22623da847643601552a1a8aa
-N
-src/main/java/ExpertAudit.java,0\e\0e908fc3caf79151fb34475da5d0daee865f5d3b
 a
 1src/main/java/esprit/experts/HelloController.java,e\0\e0d806a957d480b3d37d5ed3c0d0feb2d9875b5c
 ]
@@ -27,13 +11,11 @@ _
 /src/main/java/esprit/experts/entities/User.java,2\d\2ded748b031ae25848301562fe317da08fdd6698
 c
 3src/main/java/esprit/experts/controllers/Login.java,5\0\500a678f93a0d91923b06fd4a75a687681890911
-Z
-*src/main/java/esprit/experts/services.java,f\6\f6447ca03e9f47c903ffc8852f57ce32561555cd
-d
-4src/main/java/esprit/experts/services/Connexion.java,6\f\6f37c3d6434ce4cf00b05ed2ca02ca730d256cdd
 c
 3src/main/java/esprit/experts/services/IService.java,a\1\a113ee98ccdc9ee6089e2786316a85c4fc392de2
 f
 6src/main/java/esprit/experts/services/userService.java,5\9\59e2c2f1057588f885caeb45e4d3922525ea5d71
 j
 :src/main/java/esprit/experts/utils/DatabaseConnection.java,a\0\a0bacb199cc166ed351fe6498012772d568db9e3
+m
+=src/main/java/esprit/experts/controllers/HelloController.java,5\0\5039bb51032a3a6981e40b21212f3ad88482d175

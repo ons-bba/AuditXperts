@@ -12,8 +12,8 @@ public class ExpertAudit extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         DatabaseConnection.connectDB();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("controllers/login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 650);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

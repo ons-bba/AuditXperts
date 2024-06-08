@@ -13,4 +13,6 @@ module esprit.experts {
 
     opens esprit.experts to javafx.fxml;
     exports esprit.experts;
+    exports esprit.experts.controllers;
+    opens esprit.experts.controllers to javafx.fxml;
 }
