@@ -11,11 +11,20 @@ import java.io.IOException;
 public class ExpertAudit extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        // Initialize database connection
         DatabaseConnection.connectDB();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("controllers/login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 650);
-        stage.setTitle("Hello!");
+
+        // Load FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/register.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        // Set up the stage
+        stage.setTitle("User Registration");
         stage.setScene(scene);
+
+        // Set the stage to full screen
+        stage.setMaximized(true);
+
         stage.show();
     }
 

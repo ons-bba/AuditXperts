@@ -17,5 +17,8 @@ f
 6src/main/java/esprit/experts/services/userService.java,5\9\59e2c2f1057588f885caeb45e4d3922525ea5d71
 j
 :src/main/java/esprit/experts/utils/DatabaseConnection.java,a\0\a0bacb199cc166ed351fe6498012772d568db9e3
-m
-=src/main/java/esprit/experts/controllers/HelloController.java,5\0\5039bb51032a3a6981e40b21212f3ad88482d175
+f
+6src/main/java/esprit/experts/controllers/Register.java,0\e\0e71745edc0d1916d917fd3697c06296511c0e51
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
