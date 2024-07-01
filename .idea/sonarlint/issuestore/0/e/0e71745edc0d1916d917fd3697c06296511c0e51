@@ -1,4 +1,13 @@
 
-G	java:S106u"+Replace this use of System.out by a logger.(í­ëë8ß¤û†2
+f
+java:S1128"DRemove this unused import 'esprit.experts.utils.DatabaseConnection'.(¨ÇÂ¬ûÿÿÿÿ8×Ãµ‡2
 Z
-java:S1128"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8…¥û†2
+java:S1128"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8×Ãµ‡2
+M
+java:S1128"0Remove this unused import 'java.nio.file.Paths'.(áè°¯8×Ãµ‡2
+M
+java:S1128"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8×Ãµ‡2
+Y
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8×Ãµ‡2
+O
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8ØÃµ‡2

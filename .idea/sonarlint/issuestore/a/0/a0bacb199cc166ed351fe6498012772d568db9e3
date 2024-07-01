@@ -1,20 +1,20 @@
 
 œ	java:S115
-"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(æñ·8‰ıÈ¾ÿ1J$c243229d-dc22-4122-b3d6-77a782c94036
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(˜Æ¼€úÿÿÿÿ8‰ıÈ¾ÿ1J$6c3c9fd3-3e32-4ad3-bfdc-efc916b4bbdc
-œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(æ„±Ñ8ŠıÈ¾ÿ1J$d09b07de-3ba1-4681-8fbd-d6d7f0b674c2
+"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(æñ·8‰ıÈ¾ÿ1J$4ce829da-8c0c-470d-8159-b874a804cb83
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(˜Æ¼€úÿÿÿÿ8‰ıÈ¾ÿ1J$84356a7b-61f7-4958-a538-6f9e2a862f55
+œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(æ„±Ñ8ŠıÈ¾ÿ1J$4900f95e-6cec-4c7a-84c9-b4ea5ab6fcf6
 }
-java:S1118":Add a private constructor to hide the implicit public one.(¿Àò€8‹ıÈ¾ÿ1J$e45d7ddb-d89b-4c02-af30-1daf48c779ca
+java:S1118":Add a private constructor to hide the implicit public one.(¿Àò€8‹ıÈ¾ÿ1J$cb03a3f2-bbcc-4442-a0c6-a97aeeabedf3
 ˆ
 java:S1124
-"EReorder the modifiers to comply with the Java Language Specification.(æñ·8ıÈ¾ÿ1J$25d6a8dc-6fb9-4419-8957-f47d933bfb07
+"EReorder the modifiers to comply with the Java Language Specification.(æñ·8ıÈ¾ÿ1J$f1e531d2-fe0e-48b2-9ff7-9651ee91e423
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(˜Æ¼€úÿÿÿÿ8ıÈ¾ÿ1J$89fadcca-dabf-4006-9d2f-6c900522dc68
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(˜Æ¼€úÿÿÿÿ8ıÈ¾ÿ1J$9ea43c3a-f1d5-4e01-addb-8cd715e08afe
 ˆ
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(æ„±Ñ8ıÈ¾ÿ1J$fa3a9d7f-9c3c-4bfa-a32c-9afd46f6c6f7
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(æ„±Ñ8ıÈ¾ÿ1J$089db3ac-9e6c-4d4a-94e8-593b83f9dcd4
 q
-java:S2115")Add password protection to this database.(ä¢ôŞüÿÿÿÿ8ıÈ¾ÿ1J$31eb5406-d1d5-4519-b0d6-db203b25a844
-r	java:S106"+Replace this use of System.out by a logger.(£ßâœûÿÿÿÿ8‘ıÈ¾ÿ1J$c1642d55-0c60-4a62-ad89-101dc5e8b514
-r	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8‘ıÈ¾ÿ1J$26e923a0-9d54-4d65-b4f0-a3eaafb6c54b
-r	java:S106"+Replace this use of System.out by a logger.(åÃŒŸùÿÿÿÿ8’ıÈ¾ÿ1J$1355703b-35c5-4f6f-8d29-cc16f839076b
-r	java:S106 "+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8“ıÈ¾ÿ1J$dde56d8a-11fb-43b6-9b1c-cd1137fdcfb6
+java:S2115")Add password protection to this database.(ä¢ôŞüÿÿÿÿ8ıÈ¾ÿ1J$aa77dfa7-a548-4082-bf6f-a927a019aa38
+r	java:S106"+Replace this use of System.out by a logger.(£ßâœûÿÿÿÿ8‘ıÈ¾ÿ1J$2dc73bd1-da3f-4e01-8bc8-e69076d35781
+r	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8‘ıÈ¾ÿ1J$eb121ad0-cd71-4c4e-9188-6120056ab77b
+r	java:S106"+Replace this use of System.out by a logger.(åÃŒŸùÿÿÿÿ8’ıÈ¾ÿ1J$e70d5670-5218-4eb7-8074-6ac425605251
+r	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8“ıÈ¾ÿ1J$7b1b4e41-9657-4d03-aa5a-7ce6649d84c0

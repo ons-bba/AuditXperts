@@ -1,0 +1,10 @@
+
+£
+java:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ğÌ¤Ëüÿÿÿÿ8ÌÙª‡2
+
+java:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8ÌÙª‡2
+G	java:S106 "+Replace this use of System.out by a logger.(ÌšÙ¬8ÑÙª‡2
+G	java:S106#"+Replace this use of System.out by a logger.(ƒŒ×8ÑÙª‡2
+L	java:S106&"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ÒÙª‡2
+H
+java:S11681"+Return an empty collection instead of null.(¥¹ï8ÔÙª‡2

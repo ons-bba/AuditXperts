@@ -7,7 +7,7 @@ public interface IService<O> {
     public void Update( O o);
     public List<O> Read();
     public void Delete(O o);
-    public O getbyId(long id) ;
+    public O getById(long id) ;
 
 
 

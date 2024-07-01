@@ -1,10 +1,5 @@
 
-“	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü›Öà8š’ªºÿ1J$5b91b2e4-8db8-464c-a64f-723d978086d3
 
-java:S3008"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÂ¨ô8¡’ªºÿ1J$a9942bc5-8aad-43bf-8efa-509c8fedaf70
-
-java:S1845"HRename field "id" to prevent any misunderstanding/clash with field "ID".(°µ€˜ıÿÿÿÿ8¢’ªºÿ1J$5eb61077-5f7e-41a6-b5d9-4ba74f155931
-“
-java:S1845*"PRename method "getId" to prevent any misunderstanding/clash with method "getID".(áÚ¦Ğ8£’ªºÿ1J$2d5a08c3-fd20-4cf8-b7d8-994a854f0685
-“
-java:S1845."PRename method "setId" to prevent any misunderstanding/clash with method "setID".(·³îì8£’ªºÿ1J$287492c4-cbba-40c4-b6e3-7cdbbc438caa
+java:S3008"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÂ¨ô8Æİàü†2J$5cd6f896-c97a-4d1d-985d-cfc60cff60a4
+j
+java:S1845"HRename field "id" to prevent any misunderstanding/clash with field "ID".(°µ€˜ıÿÿÿÿ8¡³ãü†2
