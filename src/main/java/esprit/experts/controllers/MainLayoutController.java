@@ -72,6 +72,7 @@ public class MainLayoutController {
 
         if (loggedInUser != null) {
             this.user = loggedInUser;
+            System.out.println(this.user);
         } else {
             System.out.println("User with email " + userEmail + " not found.");
         }

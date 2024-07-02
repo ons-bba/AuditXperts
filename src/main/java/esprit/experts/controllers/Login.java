@@ -1,7 +1,8 @@
 package esprit.experts.controllers;
 
+import esprit.experts.controllers.MainLayoutController;
 import esprit.experts.services.UserService;
-import javafx.application.Platform;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -56,29 +58,25 @@ public class Login {
         // Validate email
         if (email.isEmpty()) {
             emailErrorLabel.setText("Email is required.");
+            return;
         }
 
         // Validate password
         if (password.isEmpty()) {
             passwordErrorLabel.setText("Password is required.");
-        }
-
-        // Check if any error labels have been set
-        if (!emailErrorLabel.getText().isEmpty() || !passwordErrorLabel.getText().isEmpty()) {
-            // If there are errors, return without attempting to authenticate
             return;
         }
 
         // Authenticate user
         boolean isAuthenticated = userService.authenticateUser(email, password);
         if (isAuthenticated) {
-            showMainLayout(email);
+            fadeTransitionToMainLayout(email);
         } else {
             loginErrorLabel.setText("Invalid email or password.");
         }
     }
 
-    private void showMainLayout(String userEmail) {
+    private void fadeTransitionToMainLayout(String userEmail) {
         try {
             // Load the MainLayout.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/MainLayout.fxml"));
@@ -88,32 +86,30 @@ public class Login {
             MainLayoutController mainController = loader.getController();
             mainController.setLoggedInUser(userEmail);
 
-            // Show the scene containing the root layout
-            Scene scene = new Scene(root);
+            // Fade transition
+            FadeTransition ft = new FadeTransition(Duration.millis(1000), root);
+            ft.setFromValue(0.0);
+            ft.setToValue(1.0);
+            ft.play();
 
-            // Get the current stage
-            Stage stage = new Stage(); // Create a new stage instance
+            // Create a new stage for the main layout
+            Stage mainStage = new Stage();
+            mainStage.setScene(new Scene(root));
+            mainStage.setTitle("Main Layout");
+            mainStage.setMaximized(true); // Set the stage to maximized mode
 
-            // Set scene
-            stage.setScene(scene);
-
-            // Show the stage
-            stage.show();
-
-            // Maximize the stage after it's shown
-            Platform.runLater(() -> stage.setMaximized(true));
-
-            // Close the login stage if needed
+            // Close the login stage
             Stage loginStage = (Stage) emailField.getScene().getWindow();
             loginStage.close();
+
+            // Show the main stage
+            mainStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
             showError("Error loading main layout.");
         }
     }
-
-
 
 
 
