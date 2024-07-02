@@ -2,22 +2,53 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #ffffff;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.Login">
+   <Text styleClass="title" text="Welcome Back!">
+      <font>
+         <Font size="24" />
+      </font>
+   </Text>
+   <Text styleClass="description" text="Please login to your account.">
+      <font>
+         <Font size="16" />
+      </font>
+   </Text>
+   <GridPane alignment="CENTER" hgap="10" vgap="10" styleClass="grid">
+      <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+      <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+      <Label fx:id="emailErrorLabel" styleClass="error-label" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
 
-<AnchorPane fx:id="txtemail" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.Login">
-   <children>
-      <Label layoutX="306.0" layoutY="236.0" prefHeight="18.0" prefWidth="122.0" text="Email" />
-      <Label layoutX="306.0" layoutY="313.0" text="Password" />
-      <TextField layoutX="306.0" layoutY="275.0" />
-      <TextField fx:id="txtpassword" layoutX="307.0" layoutY="354.0" />
-      <Label layoutX="296.0" layoutY="98.0" prefHeight="77.0" prefWidth="354.0" text="Sign in ">
-         <font>
-            <Font name="System Bold" size="29.0" />
-         </font>
-      </Label>
-      <Button fx:id="txtlogin" layoutX="305.0" layoutY="432.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="158.0" text="Log in " />
-   </children>
-</AnchorPane>
+      <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+      <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label fx:id="passwordErrorLabel" styleClass="error-label" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+
+      <Label fx:id="loginErrorLabel" styleClass="error-label" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+
+      <HBox alignment="CENTER" spacing="10" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5">
+         <Button onAction="#handleLoginAction" text="Login" />
+         <Button onAction="#handleCancelAction" text="Cancel" />
+      </HBox>
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+   </GridPane>
+</VBox>

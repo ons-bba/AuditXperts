@@ -10,12 +10,13 @@ public class User {
     private String role;
     private String status;
     private String imagePath;
+    private String sex ;
 
     // Constructors (if needed)
     public User() {
     }
 
-    public User(String firstname, String lastname, String email, String password, String role, String status, String imagePath) {
+    public User(String firstname, String lastname, String email, String password, String role, String status, String imagePath, String sex) {
         this.id = ++ID;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -24,6 +25,7 @@ public class User {
         this.role = role;
         this.status = status;
         this.imagePath = imagePath;
+        this.sex = sex;
     }
 
     // Getters and Setters

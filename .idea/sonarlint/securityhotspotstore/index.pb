@@ -24,3 +24,7 @@ f
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 f
 6src/main/java/esprit/experts/services/UserService.java,5\a\5a17737a3576e06e50796f9f4bd2211028fc2a0a
+r
+Bsrc/main/java/esprit/experts/controllers/MainLayoutController.java,9\9\99efecd28b52ccd4150b5b4a78470d4361fb2512
+s
+Csrc/main/java/esprit/experts/controllers/ProfilePageController.java,e\4\e4742654cc5291851e919a2212fe38a29e8ee634

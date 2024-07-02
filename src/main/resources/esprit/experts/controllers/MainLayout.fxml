@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane  stylesheets="@mainLayout.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.MainLayoutController">
+    <left>
+        <VBox fx:id="sidebar" spacing="10" alignment="TOP_CENTER" styleClass="sidebar">
+            <Button text="Users" styleClass="sidebar-button" onAction="#showUsers"/>
+            <Button text="Profile Page" styleClass="sidebar-button" onAction="#showProfile"/>
+            <Button text="Planification" styleClass="sidebar-button" onAction="#showPlanification"/>
+            <Button text="Audits" styleClass="sidebar-button" onAction="#showAudits"/>
+            <Button text="WorkSpace" styleClass="sidebar-button" onAction="#showWorkspace"/>
+        </VBox>
+    </left>
+    <center>
+        <BorderPane fx:id="contentPane" />
+    </center>
+</BorderPane>

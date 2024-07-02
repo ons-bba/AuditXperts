@@ -1,5 +1,8 @@
 
 
-java:S3008"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÂ¨ô8Æİàü†2J$5cd6f896-c97a-4d1d-985d-cfc60cff60a4
+java:S3008"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÂ¨ô8ç„›—‡2J$32e362a4-012b-47b9-8127-94ff8dd2ab9e
+
+java:S1845"HRename field "id" to prevent any misunderstanding/clash with field "ID".(°µ€˜ıÿÿÿÿ8è„›—‡2J$02bae133-e69f-4fff-9c12-a46e576c02db
+ˆ	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(×ê¡üÿÿÿÿ8î„›—‡2J$bdf98b81-6eca-41dc-b972-5544f4540ff2
 j
-java:S1845"HRename field "id" to prevent any misunderstanding/clash with field "ID".(°µ€˜ıÿÿÿÿ8¡³ãü†2
+java:S1068"'Remove this unused "sex" private field.(ª†« 8ù„›—‡2J$defe85c5-ad84-4fe5-8c2f-8c5f5ca83e9f

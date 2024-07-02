@@ -1,10 +1,20 @@
 
-£
-java:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ğÌ¤Ëüÿÿÿÿ8ÌÙª‡2
-
-java:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8ÌÙª‡2
-G	java:S106 "+Replace this use of System.out by a logger.(ÌšÙ¬8ÑÙª‡2
-G	java:S106#"+Replace this use of System.out by a logger.(ƒŒ×8ÑÙª‡2
-L	java:S106&"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ÒÙª‡2
-H
-java:S11681"+Return an empty collection instead of null.(¥¹ï8ÔÙª‡2
+Å
+java:S1192'"}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 3 times.(›ÓÊ¡ùÿÿÿÿ8 ªÙ™‡2J$08b546a2-d2e5-46f8-9f03-57929b34081c
+É
+java:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ğÌ¤Ëüÿÿÿÿ8¸›ç—‡2J$baf1830c-ec5d-47cf-8412-7108d156b571
+Ä
+java:S11866"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8¸›ç—‡2J$2cbdfab7-1609-4b8d-a1c8-cc5ff35f4be0
+m	java:S106!"+Replace this use of System.out by a logger.(ÌšÙ¬8¼›ç—‡2J$b44224a7-94f4-41fc-b16e-ce2d9544e2db
+m	java:S106$"+Replace this use of System.out by a logger.(ƒŒ×8¾›ç—‡2J$77bd79e8-f9d3-4fe9-bebf-c5d8cfd2ea19
+r	java:S106'"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8¾›ç—‡2J$a0e648d9-4182-4d52-90e0-7b66538b0220
+n
+java:S11682"+Return an empty collection instead of null.(¥¹ï8¿›ç—‡2J$ec34e50e-9ddb-4283-8951-59ea9d24d34a
+<
+java:S6905B"Don't use the query "SELECT *".(¶âˆı8Šİ™‡2
+r	java:S106W"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8·ªÙ™‡2J$5991c408-8261-458f-8e31-17ff3a3e4858
+r	java:S106["+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8¸ªÙ™‡2J$c5882b69-29bc-45d7-9a4e-f6a2d6d45fb7
+g
+java:S6905d"Don't use the query "SELECT *".(°Œ÷Ñúÿÿÿÿ8¶ªÙ™‡2J$14225e66-8f4d-4950-b959-c9b19e360b4e
+L	java:S106k"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8İ™‡2
+L	java:S106o"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8İ™‡2

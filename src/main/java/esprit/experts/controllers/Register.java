@@ -2,14 +2,9 @@ package esprit.experts.controllers;
 
 import esprit.experts.entities.User;
 import esprit.experts.services.UserService;
-import esprit.experts.utils.DatabaseConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
@@ -18,11 +13,7 @@ import javafx.stage.FileChooser;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Pattern;
@@ -64,6 +55,15 @@ public class Register {
 
     @FXML
     private VBox imagePreviewContainer;
+
+    @FXML
+    private RadioButton maleRadioButton;
+
+    @FXML
+    private RadioButton femaleRadioButton;
+
+    @FXML
+    private ToggleGroup sexToggleGroup;
 
     private File selectedImageFile;
 
@@ -114,6 +114,9 @@ public class Register {
             isValid = false;
         }
 
+        RadioButton selectedSex = (RadioButton) sexToggleGroup.getSelectedToggle();
+        String sex = selectedSex.getText();
+
         if (isValid) {
             String imagePath = null;
             if (selectedImageFile != null) {
@@ -132,7 +135,7 @@ public class Register {
                 }
             }
 
-            User newUser = new User(firstname, lastname, email, password, role, status, imagePath);
+            User newUser = new User(firstname, lastname, email, password, role, status, imagePath, sex);
             UserService userService = new UserService();
             userService.Create(newUser);
 
@@ -145,6 +148,7 @@ public class Register {
             imageView.setImage(null);
             imagePreviewContainer.setVisible(false);
             selectedImageFile = null;
+            maleRadioButton.setSelected(true); // Reset the default selection to Male
         }
     }
 
@@ -171,5 +175,13 @@ public class Register {
             return "";
         }
         return name.substring(lastIndex + 1);
+    }
+
+    @FXML
+    public void initialize() {
+        sexToggleGroup = new ToggleGroup();
+        maleRadioButton.setToggleGroup(sexToggleGroup);
+        femaleRadioButton.setToggleGroup(sexToggleGroup);
+        maleRadioButton.setSelected(true); // Default selection
     }
 }
