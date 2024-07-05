@@ -1,0 +1,30 @@
+/* profile.css */
+
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.name-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.info-label {
+    -fx-font-size: 16px;
+    -fx-padding: 5px;
+}
+
+.edit-button {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+}
+
+.edit-button:hover {
+    -fx-background-color: #45a049; /* Darker Green */
+    -fx-cursor: hand;
+}

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.Label?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.ProfilePageController">
-    <center>
-        <Label text="Profile Page Content" />
-    </center>
-</BorderPane>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.ProfilePageController" fx:id="anchor" style="-fx-background-color: white;">
+    <children>
+        <Label fx:id="label" text="Profile Page Content" />
+    </children>
+</AnchorPane>

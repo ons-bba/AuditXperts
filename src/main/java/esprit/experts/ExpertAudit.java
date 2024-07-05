@@ -13,16 +13,21 @@ public class ExpertAudit extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         // Initialize database connection
-        DatabaseConnection.connectDB();
-        Parent root = FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/login.fxml"));
-        Scene scene = new Scene(root);
-        primaryStage.setTitle("Main Layout");
-        primaryStage.setScene(scene);
-        primaryStage.setMaximized(true); // Set the stage to maximized mode
+        // Initialize database connection
+        Parent root;
+        try {
+            DatabaseConnection.connectDB();
+            root = FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/login.fxml"));
+            Scene scene = new  Scene(root);
+            primaryStage.setTitle("Login Page");
+            primaryStage.setScene(scene);
+            primaryStage.setFullScreen(true); // Set the stage to maximized mode
 
-        primaryStage.show();
+            primaryStage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
     }
-
     public static void main(String[] args) {
         launch();
     }

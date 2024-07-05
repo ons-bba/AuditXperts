@@ -54,3 +54,8 @@
     -fx-padding: 50px;
 
 }
+
+.anchorPane {
+    -fx-min-width: 100%;
+    -fx-min-height: 100%;
+}

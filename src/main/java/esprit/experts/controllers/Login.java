@@ -1,13 +1,14 @@
 package esprit.experts.controllers;
 
-import esprit.experts.controllers.MainLayoutController;
 import esprit.experts.services.UserService;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -32,6 +33,8 @@ public class Login {
     private Label loginErrorLabel;
 
     private UserService userService;
+    @FXML
+    private AnchorPane anchor;
 
     public Login() {
         userService = new UserService();
@@ -80,7 +83,7 @@ public class Login {
         try {
             // Load the MainLayout.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/MainLayout.fxml"));
-            BorderPane root = loader.load();
+            Parent root = loader.load();
 
             // Access the controller and call setLoggedInUser
             MainLayoutController mainController = loader.getController();
@@ -93,17 +96,12 @@ public class Login {
             ft.play();
 
             // Create a new stage for the main layout
-            Stage mainStage = new Stage();
-            mainStage.setScene(new Scene(root));
-            mainStage.setTitle("Main Layout");
-            mainStage.setMaximized(true); // Set the stage to maximized mode
-
-            // Close the login stage
-            Stage loginStage = (Stage) emailField.getScene().getWindow();
-            loginStage.close();
-
+            Stage stage = (Stage) anchor.getScene().getWindow(); // Replace `button` with your actual button object
+            stage.setScene(new Scene(root));
+            stage.setTitle("Main Layout");
+            stage.setFullScreen(true); // Set the stage to maximized mode
             // Show the main stage
-            mainStage.show();
+            stage.show();
 
         } catch (IOException e) {
             e.printStackTrace();

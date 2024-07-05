@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -46,8 +47,32 @@ public class UserService implements  IService<User>{
     }
 
     @Override
-    public List<User> Read() {
-        return null;
+    public List<User> read() {
+        List<User> users = new ArrayList<>();
+        Connection connection = DatabaseConnection.getConnection();
+        if (connection != null) {
+            String sql = "SELECT * FROM users";
+            try (PreparedStatement statement = connection.prepareStatement(sql);
+                 ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    User user = new User();
+                    user.setId(resultSet.getLong("id"));
+                    user.setFirstname(resultSet.getString("firstname"));
+                    user.setLastname(resultSet.getString("lastname"));
+                    user.setEmail(resultSet.getString("email"));
+                    user.setPassword(resultSet.getString("password"));
+                    user.setRole(resultSet.getString("role"));
+                    user.setStatus(resultSet.getString("status"));
+                    user.setImagePath(resultSet.getString("image"));
+                    users.add(user);
+                }
+            } catch (SQLException e) {
+                System.out.println("Error retrieving users: " + e.getMessage());
+            }
+        } else {
+            System.out.println("Database connection is null. Check your database connection.");
+        }
+        return users;
     }
 
     @Override

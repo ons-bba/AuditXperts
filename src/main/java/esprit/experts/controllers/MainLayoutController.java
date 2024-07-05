@@ -2,32 +2,30 @@ package esprit.experts.controllers;
 
 import esprit.experts.entities.User;
 import esprit.experts.services.UserService;
+import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.Objects;
 
 public class MainLayoutController {
     private User user;
 
     @FXML
-    private BorderPane mainBorderPane;
-
-    @FXML
-    private VBox sidebar;
-
-    @FXML
-    private BorderPane contentPane;
+    AnchorPane holderPanel ;
+    AnchorPane dynamicContent ;
 
     @FXML
     private Label welcomeLabel;
@@ -38,45 +36,25 @@ public class MainLayoutController {
     @FXML
     private void initialize() {
         // Load default view
-        loadView("ProfilePage.fxml");
+        showUsers();
     }
 
-    private void loadView(String fxmlFile) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/" + fxmlFile));
-            BorderPane view = loader.load();
-            contentPane.setCenter(view);
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("Error loading FXML file: " + fxmlFile);
-            System.out.println("Check if the file exists and the path is correct.");
-        }
+
+    private void setNode(Node node ) {
+        holderPanel.getChildren().clear();
+        holderPanel.getChildren().add( (Node)node);
+        FadeTransition ft = new FadeTransition(Duration.millis(1000));
+        ft.setNode(node);
+        ft.setFromValue(0.5);
+        ft.setToValue(1);
+        ft.setCycleCount(1);
+        ft.setAutoReverse(false);
+        ft.play();
     }
 
-    @FXML
-    private void showUsers() {
-        loadView("Users.fxml");
-    }
 
-    @FXML
-    private void showProfile() {
-        loadView("ProfilePage.fxml");
-    }
 
-    @FXML
-    private void showPlanification() {
-        loadView("Planification.fxml");
-    }
 
-    @FXML
-    private void showAudits() {
-        loadView("Audits.fxml");
-    }
-
-    @FXML
-    private void showWorkspace() {
-        loadView("WorkSpace.fxml");
-    }
 
     public void setLoggedInUser(String userEmail) {
         UserService userService = new UserService();
@@ -116,5 +94,31 @@ public class MainLayoutController {
             System.out.println("User with email " + userEmail + " not found.");
         }
     }
-
+    @FXML
+    public void showUsers() {
+        try {
+            dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/UsersDashboard.fxml"));
+            setNode(dynamicContent);
+        }catch( Exception e ) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @FXML
+    public void showProfile() {
+        try {
+            dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/ProfilePage.fxml"));
+            setNode(dynamicContent);
+        }catch( Exception e ) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @FXML
+    public void showPlanification(ActionEvent actionEvent) {
+    }
+    @FXML
+    public void showAudits(ActionEvent actionEvent) {
+    }
+    @FXML
+    public void showWorkspace(ActionEvent actionEvent) {
+    }
 }
