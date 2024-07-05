@@ -103,6 +103,7 @@ public class UserService implements  IService<User>{
                     user.setRole(resultSet.getString("role"));
                     user.setStatus(resultSet.getString("status"));
                     user.setImagePath(resultSet.getString("image"));
+                    user.setSex(resultSet.getString("Sex"));
                     return user;
                 } else {
                     // User with given email not found

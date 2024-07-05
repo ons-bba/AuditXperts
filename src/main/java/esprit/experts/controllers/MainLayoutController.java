@@ -7,11 +7,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
@@ -19,9 +19,21 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainLayoutController {
-    private User user;
+    private static User user;
+    @FXML
+    public Button showUsersButton;
+    @FXML
+    public Button showProfileButton;
+    @FXML
+    public Button showPlanificationButton;
+    @FXML
+    public Button showAuditsButton;
+    @FXML
+    public Button showWorkspaceButton;
 
     @FXML
     AnchorPane holderPanel ;
@@ -39,6 +51,10 @@ public class MainLayoutController {
         showUsers();
     }
 
+
+    public static User getUser() {
+        return user;
+    }
 
     private void setNode(Node node ) {
         holderPanel.getChildren().clear();
@@ -100,16 +116,19 @@ public class MainLayoutController {
             dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/UsersDashboard.fxml"));
             setNode(dynamicContent);
         }catch( Exception e ) {
-            System.out.println(e.getMessage());
+            System.out.println("Error loading UsersDashboard.fxml: " + e.getMessage());
+
         }
     }
     @FXML
     public void showProfile() {
         try {
             dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/ProfilePage.fxml"));
+            this.setButtonFocused(this.showProfileButton);
             setNode(dynamicContent);
         }catch( Exception e ) {
-            System.out.println(e.getMessage());
+            System.out.println("Error loading ProfilePage.fxml: " + e.getMessage());
+            e.printStackTrace();
         }
     }
     @FXML
@@ -120,5 +139,27 @@ public class MainLayoutController {
     }
     @FXML
     public void showWorkspace(ActionEvent actionEvent) {
+    }
+
+    private void setButtonFocused(Button focusedButton) {
+        List<Button> allButtons = getAllButtons();
+
+        for (Button button : allButtons) {
+            if (button == focusedButton) {
+                button.getStyleClass().add("focused");
+                button.requestFocus(); // Optionally request focus programmatically
+            } else {
+                button.getStyleClass().remove("focused");
+            }
+        }
+    }
+    private List<Button> getAllButtons() {
+        List<Button> allButtons = new ArrayList<>();
+        allButtons.add(this.showWorkspaceButton);
+        allButtons.add(this.showUsersButton);
+        allButtons.add(this.showProfileButton);
+        allButtons.add(this.showAuditsButton);
+        allButtons.add(this.showPlanificationButton);
+        return  allButtons;
     }
 }

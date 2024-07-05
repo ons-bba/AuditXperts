@@ -59,3 +59,9 @@
     -fx-min-width: 100%;
     -fx-min-height: 100%;
 }
+.primary-color {
+    -fx-background-color: #13123A;
+}
+.secondary-color {
+    -fx-background-color: #00002c;
+}

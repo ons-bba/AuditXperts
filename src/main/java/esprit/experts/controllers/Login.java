@@ -9,7 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -97,9 +96,9 @@ public class Login {
 
             // Create a new stage for the main layout
             Stage stage = (Stage) anchor.getScene().getWindow(); // Replace `button` with your actual button object
-            stage.setScene(new Scene(root));
-            stage.setTitle("Main Layout");
-            stage.setFullScreen(true); // Set the stage to maximized mode
+            stage.setScene( new  Scene(root , 1350 , 750));
+            stage.setTitle("Accueil");
+//            stage.setFullScreen(true); // Set the stage to maximized mode
             // Show the main stage
             stage.show();
 

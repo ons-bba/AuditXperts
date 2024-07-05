@@ -18,10 +18,10 @@ public class ExpertAudit extends Application {
         try {
             DatabaseConnection.connectDB();
             root = FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/login.fxml"));
-            Scene scene = new  Scene(root);
+            Scene scene = new  Scene(root , 1350 , 850);
             primaryStage.setTitle("Login Page");
             primaryStage.setScene(scene);
-            primaryStage.setFullScreen(true); // Set the stage to maximized mode
+//            primaryStage.setFullScreen(true); // Set the stage to maximized mode
 
             primaryStage.show();
         } catch (IOException ex) {

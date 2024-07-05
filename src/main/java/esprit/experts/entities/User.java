@@ -45,6 +45,14 @@ public class User {
         this.firstname = firstname;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     public String getLastname() {
         return lastname;
     }
