@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0aeeb1c-f2f2-471f-b84f-6f60f9ddd907" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/AuditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/AuditController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/services/AuditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/services/AuditService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audit.fxml" afterDir="false" />
@@ -137,7 +136,7 @@
       <workItem from="1719998491338" duration="16000" />
       <workItem from="1720184946479" duration="2139000" />
       <workItem from="1720188655467" duration="36670000" />
-      <workItem from="1720276165978" duration="4972000" />
+      <workItem from="1720276165978" duration="6205000" />
     </task>
     <servers />
   </component>

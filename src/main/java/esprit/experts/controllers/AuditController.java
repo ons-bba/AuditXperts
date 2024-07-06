@@ -20,6 +20,8 @@ public class AuditController {
     private TableColumn<Audit, String> columnapproach;
     @FXML
     private DatePicker date1;
+    @FXML
+    private TextField recherche;
 
     @FXML
     private DatePicker date2;
@@ -251,5 +253,31 @@ public class AuditController {
             throw new RuntimeException(e);
         }
 
+    }
+    void loadAudits_recherche() throws SQLException {
+        String  recherches=recherche.getText();
+
+
+
+
+        List<Audit> audits =auditService.recherhe(recherches);
+        System.out.println(audits);
+        auditsTable.getItems().setAll(audits);
+        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        startdate.setCellValueFactory(new PropertyValueFactory<>("startdate"));
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        columndeficiency.setCellValueFactory(new PropertyValueFactory<>("deficiency"));
+        columnreport.setCellValueFactory(new PropertyValueFactory<>("report"));
+        columnduration.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        columnstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        columnapproach.setCellValueFactory(new PropertyValueFactory<>("approach"));
+    }
+    @FXML
+    void onRecherche(ActionEvent event) {
+        try {
+            loadAudits_recherche();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

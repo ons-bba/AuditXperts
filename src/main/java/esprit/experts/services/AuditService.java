@@ -85,7 +85,38 @@ public class AuditService implements IService<Audit> {
         }
 
         return audits;    }
+    public List<Audit> recherhe(String recherche){
+        ObservableList<Audit> audits = null;
 
+
+        try{
+            String query = "SELECT * FROM audit where Title LIKE ?";
+            PreparedStatement preparedStatement = db.prepareStatement(query);
+            preparedStatement.setString(1, recherche);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            System.out.println(preparedStatement);
+
+            audits = FXCollections.observableArrayList();
+
+            while (resultSet.next()) {
+                audits.add(new Audit(
+                        resultSet.getInt("id"),
+                        resultSet.getString("title"),
+                        resultSet.getString("startdate"),
+                        resultSet.getString("returndate"),
+                        resultSet.getString("deficiency"),
+                        resultSet.getString("report"),
+                        resultSet.getString("duration"),
+                        resultSet.getString("status"),
+                        resultSet.getString("approach")
+
+                ));
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return audits;    }
     public List<Audit> auditbetweendates(String date1,String date2){
         ObservableList<Audit> audits = null;
 
