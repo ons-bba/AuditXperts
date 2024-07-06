@@ -5,20 +5,24 @@ import esprit.experts.entities.Audit;
 import esprit.experts.services.AuditService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Locale;
 
 public class AuditController {
     AuditService auditService = new AuditService();
     Audit selectedAudit = null;
     @FXML
     private TableColumn<Audit, String> columnapproach;
+    @FXML
+    private DatePicker date1;
+
+    @FXML
+    private DatePicker date2;
 
     @FXML
     private TableColumn<Audit, String> columndeficiency;
@@ -157,7 +161,14 @@ public class AuditController {
             System.out.println(e.getMessage());
         }
     }
-
+    @FXML
+    void onTri(ActionEvent event) {
+        try {
+            loadAudits_trier();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
     void loadAudits_trier() throws SQLException {
         List<Audit> audits = auditService.tri_audits();
         System.out.println(audits);
@@ -212,4 +223,10 @@ public class AuditController {
         }
     }
 
+
+    @FXML
+    void onbetweendates(ActionEvent event) {
+        LocalDate date_loula = date1.getValue();
+        System.out.printf(date_loula.toString());
+    }
 }

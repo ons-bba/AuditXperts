@@ -60,7 +60,7 @@ public class AuditService implements IService<Audit> {
     public List<Audit> tri_audits(){
         ObservableList<Audit> audits=null;
         try{
-            String query = "SELECT * FROM audit ORDER BY id ASC ";
+            String query = "SELECT * FROM audit ORDER BY title ASC ";
             PreparedStatement preparedStatement = db.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
             audits = FXCollections.observableArrayList();
