@@ -5,7 +5,9 @@ import esprit.experts.services.UserService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -14,38 +16,84 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class UsersDashboardController implements Initializable {
+    @FXML
+    private ImageView addImage;
 
     @FXML
-    private VBox userListContainer;
+    private Button addbtn;
 
-    private UserService userService;
+    @FXML
+    private TextField addemail;
 
+    @FXML
+    private TextField addfirstname;
+
+    @FXML
+    private TextField addlastname;
+
+    @FXML
+    private ComboBox<?> addrole;
+
+    @FXML
+    private TextField addsex;
+
+    @FXML
+    private ComboBox<?> addstatus;
+
+    @FXML
+    private Button clearbtn;
+
+    @FXML
+    private Button deletebtn;
+
+    @FXML
+    private Button importBtn;
+
+    @FXML
+    private TableColumn<?, ?> t_email;
+
+    @FXML
+    private TableColumn<?, ?> t_firstname;
+
+    @FXML
+    private TableColumn<?, ?> t_id;
+
+    @FXML
+    private TableColumn<?, ?> t_lastname;
+
+    @FXML
+    private TableColumn<?, ?> t_role;
+
+    @FXML
+    private TableColumn<?, ?> t_sex;
+
+    @FXML
+    private TableColumn<?, ?> t_status;
+
+    @FXML
+    private TableView<?> t_tableView;
+
+    @FXML
+    private TextField tableSearch;
+
+    @FXML
+    private Button updatebtn;
+
+    @FXML
+    private AnchorPane usersBg;
+
+    List<User> users ;
+    UserService userService ;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         userService = new UserService();
-//        loadUsers();
+        users =  loadUsers();
     }
 
-    private void loadUsers() {
-        List<User> users = userService.read();
+    private  List<User> loadUsers() {
+      return  userService.read();
 
-        for (User user : users) {
-            HBox userCard = createUserCard(user);
-            userListContainer.getChildren().add(userCard);
-        }
     }
 
-    private HBox createUserCard(User user) {
-        HBox card = new HBox();
-        card.getStyleClass().add("user-card");
-        card.setSpacing(10);
-        card.setPadding(new Insets(10));
 
-        Label nameLabel = new Label(user.getFirstname() + " " + user.getLastname());
-        Label statusLabel = new Label("Status: " + user.getStatus());
-        Label roleLabel = new Label("Role: " + user.getRole());
-
-        card.getChildren().addAll(nameLabel, statusLabel, roleLabel);
-        return card;
-    }
 }

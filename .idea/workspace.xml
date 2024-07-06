@@ -5,18 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0aeeb1c-f2f2-471f-b84f-6f60f9ddd907" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/AuditController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/entities/Audit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/services/AuditService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audit.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a17737a3576e06e50796f9f4bd2211028fc2a0a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a17737a3576e06e50796f9f4bd2211028fc2a0a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/users.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7c42964eee1cf8349b6782e669e07aa8be0c499" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7c42964eee1cf8349b6782e669e07aa8be0c499" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/EditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/EditProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/ProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/UsersDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/UsersDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/MainLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/MainLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/UsersDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/UsersDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/editprofile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/editprofile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/mainLayout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/mainLayout.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +61,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "ons",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/baham/OneDrive/Desktop/data/perso/cours/AuditXperts/src/main/java/esprit/experts/controllers",
@@ -70,7 +71,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "settings.editor.selected.configurable": "build.tools",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -167,7 +168,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java</url>
-          <line>59</line>
+          <line>58</line>
           <properties class="esprit.experts.controllers.MainLayoutController" method="setNode">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

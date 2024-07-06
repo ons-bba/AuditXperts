@@ -47,8 +47,7 @@ public class MainLayoutController {
     private ImageView userImageView;
 
     @FXML
-    private void initialize() {
-        // Load default view
+    private void initialize() {// Load default view
         showUsers();
     }
 
@@ -94,6 +93,9 @@ public class MainLayoutController {
                     userImageView.setFitWidth(50); // Adjust size as needed
                     userImageView.setFitHeight(50);
                     userImageView.setPreserveRatio(true);
+                    System.out.println("set up  ;" + user.getId());
+
+                    this.buttonSetting();
 
                 } catch (FileNotFoundException e) {
                     System.out.println("File not found: " + loggedInUser.getImagePath());
@@ -194,5 +196,38 @@ public class MainLayoutController {
         User newUser = us.getById(this.user.getId());
         System.out.println(newUser);
         user = newUser;
+        this.buttonSetting();
+    }
+
+    private void buttonSetting(){
+        // Hide all buttons initially
+        showUsersButton.setVisible(false);
+        showProfileButton.setVisible(false);
+        showPlanificationButton.setVisible(false);
+        showAuditsButton.setVisible(false);
+        showWorkspaceButton.setVisible(false);
+        switch (user.getRole()) {
+            case "AUDITEUR":
+                System.out.println("Setting buttons for AUDITEUR");
+                showProfileButton.setVisible(true);
+                showWorkspaceButton.setVisible(true);
+                break;
+            case "ADMIN":
+                System.out.println("Setting buttons for ADMIN");
+                showUsersButton.setVisible(true);
+                showAuditsButton.setVisible(true);
+                showProfileButton.setVisible(true);
+                break;
+            case "SUPERVISOR":
+                System.out.println("Setting buttons for SUPERVISOR");
+                showProfileButton.setVisible(true);
+                showPlanificationButton.setVisible(true);
+                showWorkspaceButton.setVisible(true);
+                break;
+            default:
+                System.out.println("No role matched.");
+                break;
+        }
+
     }
 }

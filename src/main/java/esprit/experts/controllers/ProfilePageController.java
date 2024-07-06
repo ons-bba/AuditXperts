@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -39,6 +40,10 @@ public class ProfilePageController implements Initializable {
     @FXML
     private TextField email;
     private User user;
+    @FXML
+    private ImageView selectedImage;
+
+    private String selectedImageUrl;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -71,14 +76,26 @@ public class ProfilePageController implements Initializable {
         MainLayoutController mainController = loader.getController();
 
         Stage stage = (Stage) nameLabel.getScene().getWindow(); // Replace `button` with your actual button object
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        mainController.editProfile(this.user.getId());
+        Scene scene = new Scene(root , 1350 , 750);
+        stage.setScene(scene );
+            mainController.editProfile(this.user.getId());
         stage.show();
 
     } catch(IOException ex ) {
         System.out.println(ex.getMessage());
     }
-}
-
+    }
+    @FXML
+    private void selectImage() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Choose Profile Picture");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
+        );
+        File selectedFile = fileChooser.showOpenDialog(new Stage());
+        if (selectedFile != null) {
+            selectedImageUrl = selectedFile.toURI().toString();
+            selectedImage.setImage(new Image(selectedImageUrl));
+        }
+    }
 }

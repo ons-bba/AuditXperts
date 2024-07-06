@@ -25,6 +25,12 @@ public class EditProfile implements Initializable {
     @FXML
     public TextField lastname;
     @FXML
+    public PasswordField newPassword;
+    @FXML
+    public PasswordField confirmPassword;
+    @FXML
+    public PasswordField currentPassword;
+    @FXML
     private ImageView profileImage;
 
     @FXML
@@ -142,7 +148,7 @@ public class EditProfile implements Initializable {
             MainLayoutController mainController = loader.getController();
 
             Stage stage = (Stage) nameLabel.getScene().getWindow(); // Replace `button` with your actual button object
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root , 1350 , 750);
             stage.setScene(scene);
             mainController.showProfile();
             stage.show();
@@ -151,5 +157,65 @@ public class EditProfile implements Initializable {
             System.out.println(ex.getMessage());
         }
     }
+    @FXML
+    public void selectImage(ActionEvent actionEvent) {
+    }
+    @FXML
+    public void saveProfile(ActionEvent actionEvent) {
+    }
+    @FXML
+    public void saveChanges(ActionEvent actionEvent) {
+        String currentPasswordS = currentPassword.getText();
+        String newPasswordS = newPassword.getText();
+        String confirmNewPasswordS = confirmPassword.getText();
 
+        // Validate old password
+        if (!currentPasswordS.equals(user.getPassword())) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Password Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Current password is incorrect.");
+            alert.showAndWait();
+            return; // Exit method if old password is incorrect
+        }
+
+        // Validate new password using regex
+        if (!PASSWORD_REGEX.matcher(newPasswordS).matches()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Password Error");
+            alert.setHeaderText(null);
+            alert.setContentText("New password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit.");
+            alert.showAndWait();
+            return; // Exit method if new password doesn't match regex
+        }
+
+        // Check if new password matches confirm password
+        if (!newPasswordS.equals(confirmNewPasswordS)) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Password Error");
+            alert.setHeaderText(null);
+            alert.setContentText("New password and confirmed password do not match.");
+            alert.showAndWait();
+            return; // Exit method if passwords don't match
+        }
+
+        // Update user object with form values
+        user.setPassword(newPasswordS); // Update with new password
+
+        // Call UserService to update user
+        UserService userService = new UserService();
+        userService.Update(user);
+
+        // Optionally, show success message or navigate to another view
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Profile Updated");
+        alert.setHeaderText(null);
+        alert.setContentText("Your profile and password have been updated successfully!");
+        alert.showAndWait();
+        this.cancelEdit();
+
+    }
+
+    public void chooseImage(ActionEvent actionEvent) {
+    }
 }
