@@ -1,45 +1,34 @@
 package esprit.experts.entities;
 
 public class User {
-    private static long ID =0 ;
-     private long id ;
-     private String firstname ;
-     private  String lastname;
-     private String password ;
-     private String role ;
-     private  String email  ;
+    private static long ID = 0;
+    private long id;
+    private String firstname;
+    private String lastname;
+    private String email;
+    private String password;
+    private String role;
+    private String status;
+    private String imagePath;
+    private String sex ;
 
-    public User( String firstname,String lastname ,  String password, String role, String email) {
-        this.id = ID++;
+    // Constructors (if needed)
+    public User() {
+    }
+
+    public User(String firstname, String lastname, String email, String password, String role, String status, String imagePath, String sex) {
+        this.id = ++ID;
         this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
         this.password = password;
         this.role = role;
-        this.email = email;
-        this.lastname = lastname;
-
+        this.status = status;
+        this.imagePath = imagePath;
+        this.sex = sex;
     }
 
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", password='" + password + '\'' +
-                ", role='" + role + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
-
-    public static long getID() {
-        return ID;
-    }
-
-    public static void setID(long ID) {
-        User.ID = ID;
-    }
-
+    // Getters and Setters
     public long getId() {
         return id;
     }
@@ -56,12 +45,28 @@ public class User {
         this.firstname = firstname;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     public String getLastname() {
         return lastname;
     }
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -80,11 +85,34 @@ public class User {
         this.role = role;
     }
 
-    public String getEmail() {
-        return email;
+    public String getStatus() {
+        return status;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    // Optional: Override toString() method for debugging purposes
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
+                ", status='" + status + '\'' +
+                ", imagePath='" + imagePath + '\'' +
+                '}';
     }
 }

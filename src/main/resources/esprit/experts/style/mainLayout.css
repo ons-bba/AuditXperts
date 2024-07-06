@@ -1,0 +1,49 @@
+/* Styling for the sidebar */
+.sidebar {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 10;
+}
+
+.sidebar-button {
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ecf0f1;
+    -fx-padding: 10;
+    -fx-font-size: 16px;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 0, 0);
+    -fx-cursor: hand;
+    -fx-pref-width: 200px; /* Set a fixed width for all buttons */
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.focused {
+    -fx-background-color: #3498db;
+}
+
+.sidebar-button:pressed {
+    -fx-background-color: #1abc9c;
+}
+
+/* Styling for the top section */
+.VBox {
+    -fx-background-color: rgba(150, 237, 144, 0.52); /* Light gray background */
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-min-width: 1200px; /* Minimum width of 1200px */
+    -fx-min-height: 150px;
+}
+
+/* Styling for the welcome label */
+.welcome-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold; /* Make the text bold */
+    -fx-text-fill: #2a9df4; /* Blue color for text */
+}
+
+/* Styling for the user image */
+#userImageView {
+    -fx-alignment: center-right; /* Align image to the far right */
+}

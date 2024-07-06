@@ -11,7 +11,7 @@ target/
 *.iws
 *.iml
 *.ipr
-
+/.idea/sonarlint
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -20,7 +20,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
-
+.idea
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -36,3 +36,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+./.idea
+./mvn
+/.idea
+/.idea/
+target
+./target

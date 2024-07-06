@@ -1,10 +1,6 @@
 
-“	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü›Öà8š’ªºÿ1J$87483417-b5b1-401c-b4bc-13293e8392d3
 
-java:S3008"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÂ¨ô8¡’ªºÿ1J$dc8a2cc2-0cd2-4de1-8fc9-c5915de7131f
+java:S3008"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÂ¨ô8ÃÎ²¢‡2J$c86eac35-380e-4e1a-9843-5e27892f7103
 
-java:S1845"HRename field "id" to prevent any misunderstanding/clash with field "ID".(°µ€˜ıÿÿÿÿ8¢’ªºÿ1J$971dc33e-5b47-45a1-9f11-9ae760149a39
-“
-java:S1845+"PRename method "getId" to prevent any misunderstanding/clash with method "getID".(áÚ¦Ğ8£’ªºÿ1J$bfa8f4a7-037b-4531-b308-d25876d56341
-“
-java:S1845/"PRename method "setId" to prevent any misunderstanding/clash with method "setID".(·³îì8£’ªºÿ1J$3713b386-6a0d-449d-8cd0-94bfc53d4eb6
+java:S1845"HRename field "id" to prevent any misunderstanding/clash with field "ID".(°µ€˜ıÿÿÿÿ8ÄÎ²¢‡2J$3d48ea6d-805d-4784-8898-d1ad7463defd
+ˆ	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(×ê¡üÿÿÿÿ8ÅÎ²¢‡2J$233179d9-b605-4c44-9a0b-27d319f7a6ce

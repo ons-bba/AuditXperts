@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<VBox alignment="CENTER" maxWidth="1271.0" prefHeight="640.0" prefWidth="1271.0" spacing="10" styleClass="root-pane" stylesheets="@../style/register.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.Register">
+    <Text styleClass="title" text="Register">
+        <font>
+            <Font size="24" />
+        </font>
+    </Text>
+    <Text styleClass="description" text="Please fill in the form to create an account.">
+        <font>
+            <Font size="16" />
+        </font>
+    </Text>
+    <HBox spacing="20">
+        <VBox spacing="10" styleClass="form-container" HBox.hgrow="ALWAYS">
+            <!-- Form Fields -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label minWidth="100" text="First Name:" />
+                <VBox>
+                    <TextField fx:id="firstnameField" maxWidth="300" />
+                    <Label fx:id="firstnameError" styleClass="error-label" />
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label minWidth="100" text="Last Name:" />
+                <VBox>
+                    <TextField fx:id="lastnameField" maxWidth="300" />
+                    <Label fx:id="lastnameError" styleClass="error-label" />
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label minWidth="100" text="Email:" />
+                <VBox>
+                    <TextField fx:id="emailField" maxWidth="300" />
+                    <Label fx:id="emailError" styleClass="error-label" />
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label minWidth="100" text="Password:" />
+                <VBox>
+                    <PasswordField fx:id="passwordField" maxWidth="300" />
+                    <Label fx:id="passwordError" styleClass="error-label" />
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label minWidth="100" text="Role:" />
+                <VBox>
+                    <ComboBox fx:id="roleField" maxWidth="300">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Admin" />
+                                <String fx:value="AUDITEUR" />
+                                <String fx:value="GUEST" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <Label fx:id="roleError" styleClass="error-label" />
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label minWidth="100" text="Sex:" />
+                <HBox spacing="10">
+                    <RadioButton fx:id="maleRadioButton" text="Male">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="sexToggleGroup" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton fx:id="femaleRadioButton" text="Female" toggleGroup="$sexToggleGroup"/>
+                </HBox>
+            </HBox>
+
+            <!-- Image Upload Section -->
+            <HBox alignment="BASELINE_CENTER" spacing="10">
+                <Button onAction="#handleImageUploadAction" prefHeight="27.0" prefWidth="271.0" text="Upload Image" />
+            </HBox>
+
+            <!-- Submit Button -->
+            <HBox alignment="CENTER" spacing="10">
+                <Button onAction="#handleRegisterAction" prefHeight="27.0" prefWidth="272.0" text="Register" />
+            </HBox>
+        </VBox>
+
+        <!-- Image Preview Section -->
+        <VBox fx:id="imagePreviewContainer" prefHeight="462.0" prefWidth="294.0" visible="false">
+            <Label text="Image Preview:" />
+            <ImageView fx:id="imageView" fitHeight="150" fitWidth="150" preserveRatio="true" />
+        </VBox>
+    </HBox>
+</VBox>

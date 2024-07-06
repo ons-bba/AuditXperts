@@ -1,0 +1,67 @@
+.root {
+    -fx-padding: 50;
+    -fx-alignment: center;
+    -fx-background-color: #f0f0f0; /* Light gray background */
+}
+
+.title {
+    -fx-fill: #2a9df4; /* Blue title color */
+}
+
+.description {
+    -fx-fill: #6c757d; /* Gray description color */
+}
+
+.form-container {
+    -fx-background-color: #ffffff; /* White background for form */
+    -fx-border-color: #dee2e6; /* Light border color */
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 20;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+.text-field, .password-field {
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-color-label-visible: white;
+}
+
+.error-label {
+    -fx-text-fill: red;
+    -fx-wrap-text: true;
+    -fx-max-width: 300px;
+    -fx-padding-top: 10;;
+}
+
+.button {
+    -fx-background-color: white; /* White button background */
+    -fx-text-fill: #007bff; /* Blue button text */
+    -fx-padding: 8 16;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold; /* Bold text */
+}
+
+.button:hover {
+    -fx-background-color: #f0f0f0; /* Light gray on hover */
+    -fx-text-fill: #0056b3; /* Darker blue text on hover */
+}
+.grid {
+    -fx-background-color: rgba(165, 244, 175, 0.45);
+    -fx-padding: 50px;
+
+}
+
+.anchorPane {
+    -fx-min-width: 100%;
+    -fx-min-height: 100%;
+}
+.primary-color {
+    -fx-background-color: #13123A;
+}
+.secondary-color {
+    -fx-background-color: #00002c;
+}

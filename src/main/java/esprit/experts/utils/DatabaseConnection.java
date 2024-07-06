@@ -20,7 +20,6 @@ public class DatabaseConnection {
                 System.out.println(e.getMessage());
             }
         }
-
     }
 
     public static void closeConnection() {

@@ -10,7 +10,12 @@ module esprit.experts {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires java.desktop;
 
     opens esprit.experts to javafx.fxml;
     exports esprit.experts;
+    exports esprit.experts.controllers;
+    opens esprit.experts.controllers to javafx.fxml;
+    opens esprit.experts.entities to javafx.base;
+
 }

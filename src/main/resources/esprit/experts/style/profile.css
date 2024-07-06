@@ -1,0 +1,55 @@
+.primary-color {
+    -fx-background-color: #13123A;
+}
+.secondary-color {
+    -fx-background-color: #00002c;
+}
+
+.button{
+    -fx-background-color: #242551;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-transition: background-color 0.3s ease, color 0.3s ease;
+    -fx-cursor: hand; /* Adds cursor pointer effect */
+    -fx-font-size: 17px; /* Sets font size to 17 */
+
+}
+
+.button:hover {
+    -fx-background-color: #1d1f4a; /* Slightly darker shade for hover effect */
+    -fx-text-fill: white;
+    -fx-font-size: 17px; /* Sets font size to 17 */
+
+}
+.button2 {
+    -fx-background-color: #076e6e;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-transition: background-color 0.3s ease, color 0.3s ease;
+    -fx-cursor: hand; /* Adds cursor pointer effect */
+
+}
+
+.button2:hover {
+    -fx-background-color: #0c7da5; /* Contrasting color for hover effect */
+    -fx-text-fill: white;
+}
+
+.text-input {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #242551;
+    -fx-text-inner-color: #ffffff
+}
+.white {
+    -fx-background-color : #ffffff ;
+}
+.text-input2 {
+    -fx-background-color : #ffffff ;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ffffff;
+    -fx-text-inner-color: #000000 ;
+    -fx-font-weight: bold;
+}
