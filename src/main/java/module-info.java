@@ -16,4 +16,6 @@ module esprit.experts {
     exports esprit.experts;
     exports esprit.experts.controllers;
     opens esprit.experts.controllers to javafx.fxml;
+    opens esprit.experts.entities to javafx.base;
+
 }

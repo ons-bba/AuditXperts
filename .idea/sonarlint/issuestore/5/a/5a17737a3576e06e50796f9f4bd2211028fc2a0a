@@ -1,39 +1,45 @@
 
-
-java:S1192Z"FDefine a constant instead of duplicating this literal "image" 3 times.(³Õş¹øÿÿÿÿ8ÿ‚şµˆ2J$f933060d-96c6-4edb-9353-eae15d2e4da4
 ’
-java:S1192T"JDefine a constant instead of duplicating this literal "firstname" 3 times.(»Ù•¹ùÿÿÿÿ8ÿ‚şµˆ2J$aa7d11de-67ab-4b1e-8569-b6cbb6c41fba
+java:S1192U"JDefine a constant instead of duplicating this literal "firstname" 3 times.(»Ù•¹ùÿÿÿÿ8ÿ‚şµˆ2J$c887c606-229e-4a7d-b111-c8c2023ea18b
 Œ
-java:S1192U"IDefine a constant instead of duplicating this literal "lastname" 3 times.(¹„ù8€ƒşµˆ2J$c866bee8-fa97-4805-8f79-81a7d83509ee
-Œ
-java:S1192W"IDefine a constant instead of duplicating this literal "password" 3 times.(‡ıªˆ8€ƒşµˆ2J$3b8560ec-941e-4085-abff-e7739fb973fd
+java:S1192X"IDefine a constant instead of duplicating this literal "password" 3 times.(‡ıªˆ8€ƒşµˆ2J$2219feb5-5f7e-4858-bf2f-950a070602e7
 Å
-java:S1192("}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 6 times.(›ÓÊ¡ùÿÿÿÿ8¤ÿ‰§ˆ2J$c68504b6-0d02-468f-85ec-519e2105379d
+java:S1192)"}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 8 times.(›ÓÊ¡ùÿÿÿÿ8¤ÿ‰§ˆ2J$f57bb6bf-ecd7-46c5-b61e-a68b8d5b75f2
 ‰
-java:S1192V"FDefine a constant instead of duplicating this literal "email" 3 times.(ø‹¬¶8€ƒşµˆ2J$2ab03861-dfd4-4601-b516-34355b8b4bda
+java:S1192W"FDefine a constant instead of duplicating this literal "email" 3 times.(ø‹¬¶8€ƒşµˆ2J$94dbffa6-9e42-4149-bdab-7e9802c74b10
+
+java:S1192["FDefine a constant instead of duplicating this literal "image" 3 times.(³Õş¹øÿÿÿÿ8ÿ‚şµˆ2J$389e5346-2194-4e48-9ad9-cf292563f011
+Œ
+java:S1192V"IDefine a constant instead of duplicating this literal "lastname" 3 times.(¹„ù8€ƒşµˆ2J$d3af0461-b423-48fa-b36f-60d4f55b5787
 
-java:S1192Y"GDefine a constant instead of duplicating this literal "status" 3 times.(ÁŒ¡…ÿÿÿÿÿ8€ƒşµˆ2J$f5235ce5-b675-4bbb-894f-6022a8d5c006
+java:S1192Z"GDefine a constant instead of duplicating this literal "status" 3 times.(ÁŒ¡…ÿÿÿÿÿ8€ƒşµˆ2J$674d9167-bf93-47b0-a5b0-348eb1859e8c
 Ä
-java:S1186g"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8¥ÿ‰§ˆ2J$3e4464ef-dc93-41fa-95da-bf7f87f3d67e
-m	java:S106""+Replace this use of System.out by a logger.(ÌšÙ¬8ªÿ‰§ˆ2J$90e1dafd-6237-4d1b-bd85-3a19a8020ac5
-m	java:S106%"+Replace this use of System.out by a logger.(ƒŒ×8ªÿ‰§ˆ2J$d60164f4-ceb0-41f5-ad54-aa27406044fe
-r	java:S106("+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ªÿ‰§ˆ2J$4fe615ba-3e4e-41be-93af-8116590c1eb3
-l	java:S106?"+Replace this use of System.out by a logger.(ñÔ«/8¯ÿ‰§ˆ2J$b7060129-f43d-4421-a221-a397fb004327
-l	java:S106B"+Replace this use of System.out by a logger.(ÈÓôU8¯ÿ‰§ˆ2J$aed728db-a91d-4689-bfe3-38d8c2f992a1
-r	java:S106E"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8´ÿ‰§ˆ2J$e63d8a61-c1bc-49c4-8940-117f1e37b152
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8¥ÿ‰§ˆ2J$f725dfc0-d6ec-4d82-9174-987fefaf6987
+m	java:S106#"+Replace this use of System.out by a logger.(ÌšÙ¬8ªÿ‰§ˆ2J$94c61957-6e12-42a9-b598-a0d40562c59a
+m	java:S106&"+Replace this use of System.out by a logger.(ƒŒ×8ªÿ‰§ˆ2J$343a5d81-8739-43c9-9e35-1b660bcb1bda
+r	java:S106)"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ªÿ‰§ˆ2J$1804b7f8-491e-4226-85cb-328f3923a727
+l	java:S106@"+Replace this use of System.out by a logger.(ñÔ«/8¯ÿ‰§ˆ2J$186a20a0-8408-42b2-bfe9-86f5eec6c39c
+l	java:S106C"+Replace this use of System.out by a logger.(ÈÓôU8¯ÿ‰§ˆ2J$404edc0e-1fee-4b46-bf03-85ce6051842a
+r	java:S106F"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8´ÿ‰§ˆ2J$35fd382a-5d35-426d-93d5-3de8fb592f1e
 g
-java:S6905N"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8¬ÿ‰§ˆ2J$66acb61f-b873-492b-ab1c-753b88d671eb
-m	java:S106^"+Replace this use of System.out by a logger.(ÔéêÅ8µÿ‰§ˆ2J$f69c8855-ea69-4043-8537-dab0295e6ad3
-r	java:S106a"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8·ÿ‰§ˆ2J$59aa2973-7bc7-4ec4-94d1-ac987750e775
+java:S6905O"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8¬ÿ‰§ˆ2J$aa111865-6914-4f3a-b831-b57a1f172ffe
+m	java:S106_"+Replace this use of System.out by a logger.(ÔéêÅ8µÿ‰§ˆ2J$4326ebd9-6e66-45b4-aee0-eff9d057cf21
+r	java:S106b"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8·ÿ‰§ˆ2J$e4f19c39-4390-4dbd-9277-52161859f261
 b
-java:S6905o"Don't use the query "SELECT *".(‹šü–8Œƒşµˆ2J$18e8e97f-f282-4043-b8d0-437336e6e18f
-s	java:S106„"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8·ÿ‰§ˆ2J$fe7ec0ef-95bd-4508-8b4a-f569618bfe75
-s	java:S106ˆ"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8‘ƒşµˆ2J$4e3674a3-1d8f-446c-ac05-3270027f3d4f
+java:S6905p"Don't use the query "SELECT *".(‹šü–8Œƒşµˆ2J$fc62b551-963a-4b2b-bd6f-422bdd42ab5b
+s	java:S106…"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8·ÿ‰§ˆ2J$ae7a216b-9c32-46a6-9341-58500b7c79d1
+s	java:S106‰"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8‘ƒşµˆ2J$230c13e5-6112-485e-bc7b-658e1b5d71c6
 c
-java:S6905"Don't use the query "SELECT *".(¶âˆı8²ÿ‰§ˆ2J$474edc47-0b0d-48d0-8877-4ae548cbe22b
-s	java:S106¦"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8‘ƒşµˆ2J$f5e4a61b-7d5a-4f62-be49-4fe217c23bfe
-s	java:S106ª"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ï±§·ˆ2J$2c4e6bb4-aefa-4759-a1d2-ffbb6071ed33
+java:S6905‘"Don't use the query "SELECT *".(¶âˆı8²ÿ‰§ˆ2J$5347ce38-2627-4cfb-83f2-c21563755be2
+s	java:S106§"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8‘ƒşµˆ2J$bfb7a744-346d-4f0d-bd48-125c02d5a11e
+s	java:S106«"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ï±§·ˆ2J$5d2eda6a-cf1a-48cf-9732-9c0961643cb2
 h
-java:S6905³"Don't use the query "SELECT *".(°Œ÷Ñúÿÿÿÿ8¶ÿ‰§ˆ2J$58802aba-1d58-4191-8aef-7464203b61ab
-s	java:S106º"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8ğ±§·ˆ2J$a2ff245d-9495-471e-be56-1820e991b6cc
-s	java:S106¾"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ğ±§·ˆ2J$fbf0f0ad-4bdc-4d68-97f0-b8f9d772b468
+java:S6905´"Don't use the query "SELECT *".(°Œ÷Ñúÿÿÿÿ8¶ÿ‰§ˆ2J$bb4f9ff2-a92f-4b15-bb2b-124944b41d6f
+s	java:S106»"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8ğ±§·ˆ2J$394621f6-0126-4029-9729-1018edc56965
+s	java:S106¿"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ğ±§·ˆ2J$babc9423-5663-4443-aeb1-2bb91c8e701a
+s	java:S106Ï"+Replace this use of System.out by a logger.(‘²ƒæúÿÿÿÿ8íù„¸ˆ2J$c024b2da-fe80-4bf8-8934-86d37974924f
+n	java:S106Õ"+Replace this use of System.out by a logger.(€¨²Š8íù„¸ˆ2J$e2554b37-79e5-40c6-b9ce-87c34aabe836
+b
+java:S6905ã"Don't use the query "SELECT *".(¦ššW8íù„¸ˆ2J$7d110b68-2899-4fe7-9cd0-2dc368ab9177
+s	java:S106ê"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8íù„¸ˆ2J$d24a79cd-fedd-4410-b6f1-3c15350da55e
+s	java:S106î"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8íù„¸ˆ2J$d93b4dfc-d359-410d-993b-71733f04a8ac

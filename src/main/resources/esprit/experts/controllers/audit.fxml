@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.AuditController">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1200.0" styleClass="dashboard">
+         <children>
+            <VBox alignment="CENTER" prefHeight="670.0" prefWidth="200.0" styleClass="sidebar">
+               <children>
+                  <VBox alignment="CENTER" spacing="10.0" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Audit">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Text>
+                  <HBox>
+                     <children>
+                        <TableView fx:id="auditsTable" prefHeight="539.0" prefWidth="785.0">
+                           <columns>
+                              <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="startdate" prefWidth="88.80004119873047" text="START_DATE" />
+                              <TableColumn fx:id="titlecolumn" prefWidth="75.0" text="TITLE" />
+                              <TableColumn fx:id="columndeficiency" prefWidth="75.0" text="Deficiency" />
+                              <TableColumn fx:id="columnreport" prefWidth="75.0" text="report" />
+                              <TableColumn fx:id="columnduration" prefWidth="75.0" text="duration" />
+                              <TableColumn fx:id="columnstatus" prefWidth="102.39999389648438" text="status" />
+                              <TableColumn fx:id="columnapproach" prefWidth="152.00007324218745" text="approach" />
+                              <TableColumn fx:id="startdate1" prefWidth="88.80004119873047" text="START_DATE" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <VBox prefHeight="471.0" prefWidth="765.0" spacing="15.0" styleClass="addForm" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" />
+                              <Pane prefHeight="311.0" prefWidth="610.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="40.0" text="Titile" textFill="#171817" />
+                                    <Label layoutX="294.0" layoutY="14.0" text="Start_date" textFill="#171817" />
+                                    <Label layoutX="573.0" layoutY="14.0" text="return_date" textFill="#171817" />
+                                    <Label layoutX="8.0" layoutY="74.0" text="deficiency" textFill="#171817" />
+                                    <Label layoutX="304.0" layoutY="74.0" text="report" textFill="#171817" />
+                                    <Label layoutX="577.0" layoutY="74.0" prefHeight="17.0" prefWidth="53.0" text="duration" textFill="#171817" />
+                                    <Label layoutX="14.0" layoutY="135.0" prefHeight="17.0" prefWidth="53.0" text="status" textFill="#171817" />
+                                    <Label layoutX="294.0" layoutY="135.0" prefHeight="17.0" prefWidth="53.0" text="approach" textFill="#171817" />
+                                    <TextField fx:id="title" layoutX="105.0" layoutY="10.0" />
+                                    <TextField fx:id="sartdate" layoutX="378.0" layoutY="10.0" />
+                                    <TextField fx:id="returndate" layoutX="647.0" layoutY="10.0" />
+                                    <TextField fx:id="deficiency" layoutX="105.0" layoutY="70.0" />
+                                    <TextField fx:id="report" layoutX="378.0" layoutY="70.0" />
+                                    <TextField fx:id="duration" layoutX="647.0" layoutY="70.0" />
+                                    <TextField fx:id="status" layoutX="105.0" layoutY="131.0" />
+                                    <TextField fx:id="approach" layoutX="378.0" layoutY="131.0" />
+                                    <Button fx:id="submit_btn" layoutX="347.0" layoutY="217.0" mnemonicParsing="false" onAction="#onSubmit" style="-fx-background-color: #3cbd33;" styleClass="action-button" text="Ajouter" />
+                                    <Button layoutX="183.0" layoutY="214.0" mnemonicParsing="false" onAction="#onEdit" style="-fx-background-color: #c5bb2c;" styleClass="action-button" text="Modifier" />
+                                    <Button layoutX="519.0" layoutY="217.0" mnemonicParsing="false" onAction="#onDelete" style="-fx-background-color: #d74848;" styleClass="action-button" text="Supprimer" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="563.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

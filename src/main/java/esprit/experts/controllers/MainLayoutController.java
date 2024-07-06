@@ -138,6 +138,15 @@ public class MainLayoutController {
     }
     @FXML
     public void showAudits(ActionEvent actionEvent) {
+        try {
+            refreshUser();
+            dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/audit.fxml"));
+            this.setButtonFocused(this.showAuditsButton);
+            setNode(dynamicContent);
+        }catch( Exception e ) {
+            System.out.println("Error loading ProfilePage.fxml: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
     @FXML
     public void showWorkspace(ActionEvent actionEvent) {

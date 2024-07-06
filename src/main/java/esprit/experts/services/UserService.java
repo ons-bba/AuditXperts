@@ -2,6 +2,7 @@ package esprit.experts.services;
 
 import esprit.experts.entities.User;
 import esprit.experts.utils.DatabaseConnection;
+import javafx.scene.control.Alert;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -190,5 +191,72 @@ public class UserService implements  IService<User>{
             System.out.println("Database connection is null. Check your database connection.");
             return false;
         }
+    }
+    public void updatePassword(long userId, String oldPassword, String newPassword) {
+        Connection connection = DatabaseConnection.getConnection();
+        if (connection != null) {
+            // First, check if the old password matches the current password in the database
+            if (authenticateUserById(userId, oldPassword)) {
+                String sql = "UPDATE users SET password = ? WHERE id = ?";
+                try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                    statement.setString(1, newPassword);
+                    statement.setLong(2, userId);
+
+                    int rowsUpdated = statement.executeUpdate();
+                    if (rowsUpdated > 0) {
+                        System.out.println("Password updated successfully for user with ID " + userId);
+                        showInformationAlert("Password Updated", "Password updated successfully!");
+                    } else {
+                        showErrorAlert("Update Failed", "Failed to update password. Please try again.");
+                    }
+                } catch (SQLException e) {
+                    System.out.println("Error updating password: " + e.getMessage());
+                    showErrorAlert("Update Error", "Failed to update password. Error: " + e.getMessage());
+                }
+            } else {
+                showErrorAlert("Authentication Failed", "Old password does not match. Password update failed.");
+            }
+        } else {
+            showErrorAlert("Database Error", "Database connection is null. Check your database connection.");
+        }
+    }
+
+    private boolean authenticateUserById(long userId, String password) {
+        Connection connection = DatabaseConnection.getConnection();
+        if (connection != null) {
+            String sql = "SELECT * FROM users WHERE id = ? AND password = ?";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setLong(1, userId);
+                statement.setString(2, password);
+                ResultSet resultSet = statement.executeQuery();
+                return resultSet.next(); // true if user exists with given ID and password
+            } catch (SQLException e) {
+                System.out.println("Error authenticating user: " + e.getMessage());
+                return false;
+            }
+        } else {
+            System.out.println("Database connection is null. Check your database connection.");
+            return false;
+        }
+    }
+
+    // Other methods for user management (getUserByEmail, authenticateUser, etc.)
+
+    // Helper method to show an information alert
+    private void showInformationAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    // Helper method to show an error alert
+    private void showErrorAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

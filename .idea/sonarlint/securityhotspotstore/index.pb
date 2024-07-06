@@ -32,3 +32,9 @@ v
 Fsrc/main/java/esprit/experts/controllers/UsersDashboardController.java,9\4\94d603444d0be372fa3009e2e171cf1c91c98fef
 i
 9src/main/java/esprit/experts/controllers/EditProfile.java,3\b\3be22b243f6b9b7a3fdeb8697cd28c125dbe0c60
+`
+0src/main/java/esprit/experts/entities/Audit.java,4\9\49b4de6d8be8ad744291f0e131ac616942b6f87f
+g
+7src/main/java/esprit/experts/services/AuditService.java,2\3\232b6f623ca253dc976b18611ce3aceae5a3c7a0
+m
+=src/main/java/esprit/experts/controllers/AuditController.java,3\e\3e5493665ee89d38d52e3079bbd24c2bb4f07cec

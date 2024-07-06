@@ -4,15 +4,16 @@ import esprit.experts.entities.User;
 import esprit.experts.services.UserService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -111,6 +112,7 @@ public class EditProfile implements Initializable {
             alert.setHeaderText(null);
             alert.setContentText("Your profile has been updated successfully!");
             alert.showAndWait();
+            this.cancelEdit();
         } else {
             // Show error pop-up for validation errors
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -132,6 +134,22 @@ public class EditProfile implements Initializable {
 
     @FXML
     public void cancelEdit() {
-        // Cancel logic here
+        try {
+            // Load the MainLayout.fxml
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/MainLayout.fxml"));
+            Parent root = loader.load();
+            // Access the controller and call setLoggedInUser
+            MainLayoutController mainController = loader.getController();
+
+            Stage stage = (Stage) nameLabel.getScene().getWindow(); // Replace `button` with your actual button object
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            mainController.showProfile();
+            stage.show();
+
+        } catch(IOException ex ) {
+            System.out.println(ex.getMessage());
+        }
     }
+
 }
