@@ -223,10 +223,33 @@ public class AuditController {
         }
     }
 
+    void loadAudits_tribetweendates() throws SQLException {
+        String  date_loula = date1.getValue().toString();
+        String date_thenya = date2.getValue().toString();
 
+
+        System.out.println(date_loula);
+
+        System.out.println(date_thenya);
+        List<Audit> audits =auditService.auditbetweendates(date_loula,date_thenya);
+        System.out.println(audits);
+        auditsTable.getItems().setAll(audits);
+        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        startdate.setCellValueFactory(new PropertyValueFactory<>("startdate"));
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        columndeficiency.setCellValueFactory(new PropertyValueFactory<>("deficiency"));
+        columnreport.setCellValueFactory(new PropertyValueFactory<>("report"));
+        columnduration.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        columnstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        columnapproach.setCellValueFactory(new PropertyValueFactory<>("approach"));
+    }
     @FXML
     void onbetweendates(ActionEvent event) {
-        LocalDate date_loula = date1.getValue();
-        System.out.printf(date_loula.toString());
+        try {
+            loadAudits_tribetweendates();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
