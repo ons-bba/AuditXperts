@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0aeeb1c-f2f2-471f-b84f-6f60f9ddd907" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/EditProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/editprofile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2ded748b031ae25848301562fe317da08fdd6698" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2ded748b031ae25848301562fe317da08fdd6698" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a17737a3576e06e50796f9f4bd2211028fc2a0a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a17737a3576e06e50796f9f4bd2211028fc2a0a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/ProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/EditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/EditProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/MainLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/MainLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/ProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/ProfilePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/mainLayout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/mainLayout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/editprofile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/editprofile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +134,7 @@
       <workItem from="1719941861249" duration="3709000" />
       <workItem from="1719998491338" duration="16000" />
       <workItem from="1720184946479" duration="2139000" />
-      <workItem from="1720188655467" duration="30282000" />
+      <workItem from="1720188655467" duration="32654000" />
     </task>
     <servers />
   </component>

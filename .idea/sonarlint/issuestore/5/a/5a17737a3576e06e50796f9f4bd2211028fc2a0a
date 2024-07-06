@@ -1,38 +1,39 @@
 
-h
-java:S1192B"FDefine a constant instead of duplicating this literal "image" 3 times.(³Õş¹øÿÿÿÿ8ÿ‚şµˆ2
-l
-java:S1192<"JDefine a constant instead of duplicating this literal "firstname" 3 times.(»Ù•¹ùÿÿÿÿ8ÿ‚şµˆ2
-f
-java:S1192="IDefine a constant instead of duplicating this literal "lastname" 3 times.(¹„ù8€ƒşµˆ2
-f
-java:S1192?"IDefine a constant instead of duplicating this literal "password" 3 times.(‡ıªˆ8€ƒşµˆ2
+
+java:S1192Z"FDefine a constant instead of duplicating this literal "image" 3 times.(³Õş¹øÿÿÿÿ8ÿ‚şµˆ2J$f933060d-96c6-4edb-9353-eae15d2e4da4
+’
+java:S1192T"JDefine a constant instead of duplicating this literal "firstname" 3 times.(»Ù•¹ùÿÿÿÿ8ÿ‚şµˆ2J$aa7d11de-67ab-4b1e-8569-b6cbb6c41fba
+Œ
+java:S1192U"IDefine a constant instead of duplicating this literal "lastname" 3 times.(¹„ù8€ƒşµˆ2J$c866bee8-fa97-4805-8f79-81a7d83509ee
+Œ
+java:S1192W"IDefine a constant instead of duplicating this literal "password" 3 times.(‡ıªˆ8€ƒşµˆ2J$3b8560ec-941e-4085-abff-e7739fb973fd
 Å
-java:S1192("}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 5 times.(›ÓÊ¡ùÿÿÿÿ8¤ÿ‰§ˆ2J$ba535ecb-526c-4505-a1d9-685aafcef4ee
-c
-java:S1192>"FDefine a constant instead of duplicating this literal "email" 3 times.(ø‹¬¶8€ƒşµˆ2
-i
-java:S1192A"GDefine a constant instead of duplicating this literal "status" 3 times.(ÁŒ¡…ÿÿÿÿÿ8€ƒşµˆ2
-É
-java:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ğÌ¤Ëüÿÿÿÿ8¥ÿ‰§ˆ2J$2ddff587-fa84-4c33-bfb2-9826df223d98
+java:S1192("}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 6 times.(›ÓÊ¡ùÿÿÿÿ8¤ÿ‰§ˆ2J$c68504b6-0d02-468f-85ec-519e2105379d
+‰
+java:S1192V"FDefine a constant instead of duplicating this literal "email" 3 times.(ø‹¬¶8€ƒşµˆ2J$2ab03861-dfd4-4601-b516-34355b8b4bda
+
+java:S1192Y"GDefine a constant instead of duplicating this literal "status" 3 times.(ÁŒ¡…ÿÿÿÿÿ8€ƒşµˆ2J$f5235ce5-b675-4bbb-894f-6022a8d5c006
 Ä
-java:S1186O"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8¥ÿ‰§ˆ2J$e45ebd4d-efee-49cf-875e-500c550f74f9
-m	java:S106""+Replace this use of System.out by a logger.(ÌšÙ¬8ªÿ‰§ˆ2J$953b336b-9629-489c-a99e-6da096b5e7c9
-m	java:S106%"+Replace this use of System.out by a logger.(ƒŒ×8ªÿ‰§ˆ2J$ee7b5a49-2692-45d1-8774-b11ae8ac6935
-r	java:S106("+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ªÿ‰§ˆ2J$848e8183-cb3d-4569-bbfa-1ea9349cfe8a
+java:S1186g"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8¥ÿ‰§ˆ2J$3e4464ef-dc93-41fa-95da-bf7f87f3d67e
+m	java:S106""+Replace this use of System.out by a logger.(ÌšÙ¬8ªÿ‰§ˆ2J$90e1dafd-6237-4d1b-bd85-3a19a8020ac5
+m	java:S106%"+Replace this use of System.out by a logger.(ƒŒ×8ªÿ‰§ˆ2J$d60164f4-ceb0-41f5-ad54-aa27406044fe
+r	java:S106("+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ªÿ‰§ˆ2J$4fe615ba-3e4e-41be-93af-8116590c1eb3
+l	java:S106?"+Replace this use of System.out by a logger.(ñÔ«/8¯ÿ‰§ˆ2J$b7060129-f43d-4421-a221-a397fb004327
+l	java:S106B"+Replace this use of System.out by a logger.(ÈÓôU8¯ÿ‰§ˆ2J$aed728db-a91d-4689-bfe3-38d8c2f992a1
+r	java:S106E"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8´ÿ‰§ˆ2J$e63d8a61-c1bc-49c4-8940-117f1e37b152
 g
-java:S69056"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8¬ÿ‰§ˆ2J$4100f59a-3e60-4b9c-8320-7c16f42f9434
-m	java:S106F"+Replace this use of System.out by a logger.(ÔéêÅ8¯ÿ‰§ˆ2J$a593e68e-f872-426a-b66d-486fc008daec
-r	java:S106I"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8¯ÿ‰§ˆ2J$0ea3dc19-1c46-4bc7-9299-5880d7e22cee
-<
-java:S6905W"Don't use the query "SELECT *".(‹šü–8Œƒşµˆ2
-r	java:S106l"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8´ÿ‰§ˆ2J$ebaf2d43-bb7f-4fff-964e-960df75ee697
-r	java:S106p"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8µÿ‰§ˆ2J$caa8928c-8318-43e2-8ac9-327b95c1d6e2
+java:S6905N"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8¬ÿ‰§ˆ2J$66acb61f-b873-492b-ab1c-753b88d671eb
+m	java:S106^"+Replace this use of System.out by a logger.(ÔéêÅ8µÿ‰§ˆ2J$f69c8855-ea69-4043-8537-dab0295e6ad3
+r	java:S106a"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8·ÿ‰§ˆ2J$59aa2973-7bc7-4ec4-94d1-ac987750e775
 b
-java:S6905x"Don't use the query "SELECT *".(¶âˆı8²ÿ‰§ˆ2J$3430233e-fa32-4aae-a5e5-0b58fd93672c
-s	java:S106"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8·ÿ‰§ˆ2J$c405ade6-90fd-473d-988a-bee3d54527d4
-s	java:S106’"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8·ÿ‰§ˆ2J$b903d01b-c14b-4a7d-8bf1-557ca9278322
+java:S6905o"Don't use the query "SELECT *".(‹šü–8Œƒşµˆ2J$18e8e97f-f282-4043-b8d0-437336e6e18f
+s	java:S106„"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8·ÿ‰§ˆ2J$fe7ec0ef-95bd-4508-8b4a-f569618bfe75
+s	java:S106ˆ"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8‘ƒşµˆ2J$4e3674a3-1d8f-446c-ac05-3270027f3d4f
+c
+java:S6905"Don't use the query "SELECT *".(¶âˆı8²ÿ‰§ˆ2J$474edc47-0b0d-48d0-8877-4ae548cbe22b
+s	java:S106¦"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8‘ƒşµˆ2J$f5e4a61b-7d5a-4f62-be49-4fe217c23bfe
+s	java:S106ª"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ï±§·ˆ2J$2c4e6bb4-aefa-4759-a1d2-ffbb6071ed33
 h
-java:S6905›"Don't use the query "SELECT *".(°Œ÷Ñúÿÿÿÿ8¶ÿ‰§ˆ2J$1e2e07e1-8d3d-40f3-bfe6-08439ab1c207
-M	java:S106¢"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8‘ƒşµˆ2
-M	java:S106¦"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8‘ƒşµˆ2
+java:S6905³"Don't use the query "SELECT *".(°Œ÷Ñúÿÿÿÿ8¶ÿ‰§ˆ2J$58802aba-1d58-4191-8aef-7464203b61ab
+s	java:S106º"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8ğ±§·ˆ2J$a2ff245d-9495-471e-be56-1820e991b6cc
+s	java:S106¾"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ğ±§·ˆ2J$fbf0f0ad-4bdc-4d68-97f0-b8f9d772b468

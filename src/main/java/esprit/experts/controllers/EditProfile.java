@@ -5,9 +5,7 @@ import esprit.experts.services.UserService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -35,10 +33,10 @@ public class EditProfile implements Initializable {
     @FXML
     private Button editButton;
     @FXML
-    private TextField role;
+    private ComboBox<String> role;
 
     @FXML
-    private TextField sex;
+    private ComboBox<String> sex;
 
     @FXML
     private TextField status;
@@ -51,26 +49,29 @@ public class EditProfile implements Initializable {
     private static final Pattern EMAIL_REGEX = Pattern.compile("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$");
     private static final Pattern PASSWORD_REGEX = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)\\S{8,}$");
     private String[] roles = {"SUPERVISOR", "ADMIN", "AUDITEUR"};
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        this.userConnected = MainLayoutController.getUser() ;
+        this.userConnected = MainLayoutController.getUser();
+        role.getItems().addAll(roles);
     }
 
-    public void   getUserProfile(Long id) {
+    public void getUserProfile(Long id) {
         System.out.println(id);
-        UserService us =new UserService();
-        this.user =us.getById(id);
-        if(Objects.isNull(this.user)){
+        UserService us = new UserService();
+        this.user = us.getById(id);
+        if (Objects.isNull(this.user)) {
             System.out.println("User is not found");
         }
         this.populatePage();
 
     }
+
     private void populatePage() {
         System.out.println("Starting");
         nameLabel.setText(user.getFirstname() + " " + user.getLastname());
-        role.setText(user.getRole());
-        sex.setText(user.getSex());
+        role.setValue(user.getRole());
+        sex.setValue(user.getSex());
         status.setText(user.getStatus());
         email.setText(user.getEmail());
         firstname.setText(user.getFirstname());
@@ -87,7 +88,50 @@ public class EditProfile implements Initializable {
         }
 
     }
+
     @FXML
     public void editProfile() {
+        // Save changes logic here
+        if (validateFields()) {
+            // Update user object with form values
+            user.setFirstname(firstname.getText());
+            user.setLastname(lastname.getText());
+            user.setEmail(email.getText());
+            user.setRole(role.getValue());
+            user.setSex(sex.getValue());
+            user.setStatus(status.getText());
+
+            // Call UserService to update user
+            UserService userService = new UserService();
+            userService.Update(user);
+
+            // Optionally, show success message or navigate to another view
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Profile Updated");
+            alert.setHeaderText(null);
+            alert.setContentText("Your profile has been updated successfully!");
+            alert.showAndWait();
+        } else {
+            // Show error pop-up for validation errors
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Validation Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please fill out all fields correctly.");
+            alert.showAndWait();
+        }
+    }
+    private boolean validateFields() {
+        String firstName = firstname.getText();
+        String lastName = lastname.getText();
+        String userEmail = email.getText();
+        String userStatus = status.getText();
+
+        // Perform basic validation
+        return !firstName.isEmpty() && !lastName.isEmpty() && EMAIL_REGEX.matcher(userEmail).matches() && !userStatus.isEmpty();
+    }
+
+    @FXML
+    public void cancelEdit() {
+        // Cancel logic here
     }
 }

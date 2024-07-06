@@ -42,8 +42,32 @@ public class UserService implements  IService<User>{
     }
 
     @Override
-    public void Update(User o) {
+    public void Update(User user) {
+        Connection connection = DatabaseConnection.getConnection();
+        if (connection != null) {
+            String sql = "UPDATE users SET firstname=?, lastname=?, email=?, password=?, role=?, status=?, image=?, sex=? WHERE id=?";
 
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, user.getFirstname());
+                statement.setString(2, user.getLastname());
+                statement.setString(3, user.getEmail());
+                statement.setString(4, user.getPassword());
+                statement.setString(5, user.getRole());
+                statement.setString(6, user.getStatus());
+                statement.setString(7, user.getImagePath());
+                statement.setString(8, user.getSex());
+                statement.setLong(9, user.getId());
+
+                int rowsUpdated = statement.executeUpdate();
+                if (rowsUpdated > 0) {
+                    System.out.println("User with ID " + user.getId() + " was updated successfully!");
+                }
+            } catch (SQLException e) {
+                System.out.println("Error updating user: " + e.getMessage());
+            }
+        } else {
+            System.out.println("Database connection is null. Check your database connection.");
+        }
     }
 
     @Override

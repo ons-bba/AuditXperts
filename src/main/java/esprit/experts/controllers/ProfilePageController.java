@@ -1,5 +1,6 @@
 package esprit.experts.controllers;
 import esprit.experts.entities.User;
+import esprit.experts.services.UserService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -42,7 +43,6 @@ public class ProfilePageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.user = MainLayoutController.getUser(); // Fetch the user data
-
         // Populate UI elements with user data
         nameLabel.setText(user.getFirstname() + " " + user.getLastname());
         email.setText(user.getEmail());

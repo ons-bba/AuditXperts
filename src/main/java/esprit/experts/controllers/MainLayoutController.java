@@ -124,6 +124,7 @@ public class MainLayoutController {
     @FXML
     public void showProfile() {
         try {
+            refreshUser();
             dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/ProfilePage.fxml"));
             this.setButtonFocused(this.showProfileButton);
             setNode(dynamicContent);
@@ -165,6 +166,7 @@ public class MainLayoutController {
     }
     public void editProfile(Long id) {
         try {
+            refreshUser();
             FXMLLoader loader =   new FXMLLoader(getClass().getResource("/esprit/experts/controllers/editProfile.fxml"));
             Parent root = loader.load();
 
@@ -177,5 +179,11 @@ public class MainLayoutController {
             System.out.println("Error loading ProfilePage.fxml: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+    private void  refreshUser(){
+        UserService us = new UserService();
+        User newUser = us.getById(this.user.getId());
+        System.out.println(newUser);
+        user = newUser;
     }
 }
