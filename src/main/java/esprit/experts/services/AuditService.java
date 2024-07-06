@@ -57,7 +57,33 @@ public class AuditService implements IService<Audit> {
     public Audit findById(int id) throws SQLException {
         return null;
     }
+    public List<Audit> tri_audits(){
+        ObservableList<Audit> audits=null;
+        try{
+            String query = "SELECT * FROM audit ORDER BY id ASC ";
+            PreparedStatement preparedStatement = db.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            audits = FXCollections.observableArrayList();
 
+            while (resultSet.next()) {
+                audits.add(new Audit(
+                        resultSet.getInt("id"),
+                        resultSet.getString("title"),
+                        resultSet.getString("startdate"),
+                        resultSet.getString("returndate"),
+                        resultSet.getString("deficiency"),
+                        resultSet.getString("report"),
+                        resultSet.getString("duration"),
+                        resultSet.getString("status"),
+                        resultSet.getString("approach")
+
+                ));
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return audits;    }
     public List<Audit> findAll() throws SQLException {
         ObservableList<Audit> audits = null; 
             try{

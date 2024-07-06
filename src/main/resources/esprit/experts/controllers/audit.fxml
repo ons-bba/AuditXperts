@@ -13,19 +13,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.AuditController">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.AuditController">
    <children>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1200.0" styleClass="dashboard">
          <children>
-            <VBox alignment="CENTER" prefHeight="670.0" prefWidth="200.0" styleClass="sidebar">
-               <children>
-                  <VBox alignment="CENTER" spacing="10.0" />
-               </children>
-               <HBox.margin>
-                  <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
-               </HBox.margin>
-            </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
@@ -41,7 +32,7 @@
                   </Text>
                   <HBox>
                      <children>
-                        <TableView fx:id="auditsTable" prefHeight="539.0" prefWidth="785.0">
+                        <TableView fx:id="auditsTable" prefHeight="258.0" prefWidth="786.0">
                            <columns>
                               <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
                               <TableColumn fx:id="startdate" prefWidth="88.80004119873047" text="START_DATE" />
@@ -56,12 +47,12 @@
                         </TableView>
                      </children>
                   </HBox>
-                  <HBox>
+                  <HBox prefHeight="202.0" prefWidth="1118.0">
                      <children>
-                        <VBox prefHeight="471.0" prefWidth="765.0" spacing="15.0" styleClass="addForm" HBox.hgrow="ALWAYS">
+                        <VBox prefHeight="254.0" prefWidth="942.0" spacing="15.0" styleClass="addForm" HBox.hgrow="ALWAYS">
                            <children>
-                              <VBox alignment="CENTER" />
-                              <Pane prefHeight="311.0" prefWidth="610.0" style="-fx-background-color: white;">
+                              <VBox alignment="CENTER" prefHeight="0.0" prefWidth="875.0" />
+                              <Pane prefHeight="308.0" prefWidth="942.0" style="-fx-background-color: white;">
                                  <children>
                                     <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="40.0" text="Titile" textFill="#171817" />
                                     <Label layoutX="294.0" layoutY="14.0" text="Start_date" textFill="#171817" />
@@ -79,9 +70,9 @@
                                     <TextField fx:id="duration" layoutX="647.0" layoutY="70.0" />
                                     <TextField fx:id="status" layoutX="105.0" layoutY="131.0" />
                                     <TextField fx:id="approach" layoutX="378.0" layoutY="131.0" />
-                                    <Button fx:id="submit_btn" layoutX="347.0" layoutY="217.0" mnemonicParsing="false" onAction="#onSubmit" style="-fx-background-color: #3cbd33;" styleClass="action-button" text="Ajouter" />
-                                    <Button layoutX="183.0" layoutY="214.0" mnemonicParsing="false" onAction="#onEdit" style="-fx-background-color: #c5bb2c;" styleClass="action-button" text="Modifier" />
-                                    <Button layoutX="519.0" layoutY="217.0" mnemonicParsing="false" onAction="#onDelete" style="-fx-background-color: #d74848;" styleClass="action-button" text="Supprimer" />
+                                    <Button fx:id="submit_btn" layoutX="666.0" layoutY="144.0" mnemonicParsing="false" onAction="#onSubmit" style="-fx-background-color: #3cbd33;" styleClass="action-button" text="Ajouter" />
+                                    <Button layoutX="560.0" layoutY="144.0" mnemonicParsing="false" onAction="#onEdit" style="-fx-background-color: #c5bb2c;" styleClass="action-button" text="Modifier" />
+                                    <Button layoutX="771.0" layoutY="144.0" mnemonicParsing="false" onAction="#onDelete" style="-fx-background-color: #d74848;" styleClass="action-button" text="Supprimer" />
                                  </children>
                               </Pane>
                            </children>

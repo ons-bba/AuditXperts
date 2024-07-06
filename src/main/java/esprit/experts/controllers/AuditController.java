@@ -158,7 +158,19 @@ public class AuditController {
         }
     }
 
-
+    void loadAudits_trier() throws SQLException {
+        List<Audit> audits = auditService.tri_audits();
+        System.out.println(audits);
+        auditsTable.getItems().setAll(audits);
+        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        startdate.setCellValueFactory(new PropertyValueFactory<>("startdate"));
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        columndeficiency.setCellValueFactory(new PropertyValueFactory<>("deficiency"));
+        columnreport.setCellValueFactory(new PropertyValueFactory<>("report"));
+        columnduration.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        columnstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        columnapproach.setCellValueFactory(new PropertyValueFactory<>("approach"));
+    }
         void loadAudits() throws SQLException {
         List<Audit> audits = auditService.findAll();
             System.out.println(audits);
