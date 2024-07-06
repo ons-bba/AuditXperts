@@ -30,3 +30,5 @@ s
 Csrc/main/java/esprit/experts/controllers/ProfilePageController.java,e\4\e4742654cc5291851e919a2212fe38a29e8ee634
 v
 Fsrc/main/java/esprit/experts/controllers/UsersDashboardController.java,9\4\94d603444d0be372fa3009e2e171cf1c91c98fef
+i
+9src/main/java/esprit/experts/controllers/EditProfile.java,3\b\3be22b243f6b9b7a3fdeb8697cd28c125dbe0c60

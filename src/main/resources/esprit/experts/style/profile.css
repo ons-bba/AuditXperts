@@ -43,3 +43,13 @@
     -fx-border-color: #242551;
     -fx-text-inner-color: #ffffff
 }
+.white {
+    -fx-background-color : #ffffff ;
+}
+.text-input2 {
+    -fx-background-color : #ffffff ;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ffffff;
+    -fx-text-inner-color: #000000 ;
+    -fx-font-weight: bold;
+}

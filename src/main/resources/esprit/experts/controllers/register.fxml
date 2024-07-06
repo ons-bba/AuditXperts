@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.ToggleGroup?>
 
-<VBox alignment="CENTER" maxWidth="1271.0" prefHeight="640.0" prefWidth="1271.0" spacing="10" styleClass="root-pane" stylesheets="@register.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.Register">
+<VBox alignment="CENTER" maxWidth="1271.0" prefHeight="640.0" prefWidth="1271.0" spacing="10" styleClass="root-pane" stylesheets="@../style/register.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.Register">
     <Text styleClass="title" text="Register">
         <font>
             <Font size="24" />

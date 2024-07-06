@@ -1,22 +1,38 @@
 
+h
+java:S1192B"FDefine a constant instead of duplicating this literal "image" 3 times.(³Õş¹øÿÿÿÿ8ÿ‚şµˆ2
+l
+java:S1192<"JDefine a constant instead of duplicating this literal "firstname" 3 times.(»Ù•¹ùÿÿÿÿ8ÿ‚şµˆ2
+f
+java:S1192="IDefine a constant instead of duplicating this literal "lastname" 3 times.(¹„ù8€ƒşµˆ2
+f
+java:S1192?"IDefine a constant instead of duplicating this literal "password" 3 times.(‡ıªˆ8€ƒşµˆ2
 Å
-java:S1192("}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 4 times.(›ÓÊ¡ùÿÿÿÿ8¤ÿ‰§ˆ2J$3042f8fa-9b68-4871-8c3c-4ccaeafe4b32
+java:S1192("}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 5 times.(›ÓÊ¡ùÿÿÿÿ8¤ÿ‰§ˆ2J$ba535ecb-526c-4505-a1d9-685aafcef4ee
+c
+java:S1192>"FDefine a constant instead of duplicating this literal "email" 3 times.(ø‹¬¶8€ƒşµˆ2
+i
+java:S1192A"GDefine a constant instead of duplicating this literal "status" 3 times.(ÁŒ¡…ÿÿÿÿÿ8€ƒşµˆ2
 É
-java:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ğÌ¤Ëüÿÿÿÿ8¥ÿ‰§ˆ2J$c75005ba-ca08-4935-a817-01d99c945927
+java:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ğÌ¤Ëüÿÿÿÿ8¥ÿ‰§ˆ2J$2ddff587-fa84-4c33-bfb2-9826df223d98
 Ä
-java:S1186O"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8¥ÿ‰§ˆ2J$d70ad7ca-1cba-41a7-8e46-6fe899221d74
-m	java:S106""+Replace this use of System.out by a logger.(ÌšÙ¬8ªÿ‰§ˆ2J$730a6039-36db-4505-b97e-8c92b10e336b
-m	java:S106%"+Replace this use of System.out by a logger.(ƒŒ×8ªÿ‰§ˆ2J$3d7454ed-b92f-48d8-9f0e-0f652b7a8cb8
-r	java:S106("+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ªÿ‰§ˆ2J$0c5f082f-3403-43ab-9fc8-75ae8c077ba8
+java:S1186O"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8¥ÿ‰§ˆ2J$e45ebd4d-efee-49cf-875e-500c550f74f9
+m	java:S106""+Replace this use of System.out by a logger.(ÌšÙ¬8ªÿ‰§ˆ2J$953b336b-9629-489c-a99e-6da096b5e7c9
+m	java:S106%"+Replace this use of System.out by a logger.(ƒŒ×8ªÿ‰§ˆ2J$ee7b5a49-2692-45d1-8774-b11ae8ac6935
+r	java:S106("+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ªÿ‰§ˆ2J$848e8183-cb3d-4569-bbfa-1ea9349cfe8a
 g
-java:S69056"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8¬ÿ‰§ˆ2J$e5506743-2a56-49ca-a8f4-92307bed286b
-m	java:S106F"+Replace this use of System.out by a logger.(ÔéêÅ8¯ÿ‰§ˆ2J$50b512de-8c2d-440e-b059-1951d77d473b
-r	java:S106I"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8¯ÿ‰§ˆ2J$44ee634b-9d44-4553-976d-06430ff71058
+java:S69056"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8¬ÿ‰§ˆ2J$4100f59a-3e60-4b9c-8320-7c16f42f9434
+m	java:S106F"+Replace this use of System.out by a logger.(ÔéêÅ8¯ÿ‰§ˆ2J$a593e68e-f872-426a-b66d-486fc008daec
+r	java:S106I"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8¯ÿ‰§ˆ2J$0ea3dc19-1c46-4bc7-9299-5880d7e22cee
+<
+java:S6905W"Don't use the query "SELECT *".(‹šü–8Œƒşµˆ2
+r	java:S106l"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8´ÿ‰§ˆ2J$ebaf2d43-bb7f-4fff-964e-960df75ee697
+r	java:S106p"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8µÿ‰§ˆ2J$caa8928c-8318-43e2-8ac9-327b95c1d6e2
 b
-java:S6905["Don't use the query "SELECT *".(¶âˆı8²ÿ‰§ˆ2J$7baf22f3-2791-4533-bd95-481ab9b57c34
-r	java:S106q"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8´ÿ‰§ˆ2J$ff6b6c50-c429-4513-9273-a0867db453f2
-r	java:S106u"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8µÿ‰§ˆ2J$ac6cb8e5-72cf-41f6-9745-435090cc5745
-g
-java:S6905~"Don't use the query "SELECT *".(°Œ÷Ñúÿÿÿÿ8¶ÿ‰§ˆ2J$411d504b-1aee-4a45-8ae1-8e59b0625645
-s	java:S106…"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8·ÿ‰§ˆ2J$fd01d63a-88f9-4243-ae6a-b74e8a428405
-s	java:S106‰"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8·ÿ‰§ˆ2J$bc711664-5801-4b40-9cd3-cf2d362390d8
+java:S6905x"Don't use the query "SELECT *".(¶âˆı8²ÿ‰§ˆ2J$3430233e-fa32-4aae-a5e5-0b58fd93672c
+s	java:S106"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8·ÿ‰§ˆ2J$c405ade6-90fd-473d-988a-bee3d54527d4
+s	java:S106’"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8·ÿ‰§ˆ2J$b903d01b-c14b-4a7d-8bf1-557ca9278322
+h
+java:S6905›"Don't use the query "SELECT *".(°Œ÷Ñúÿÿÿÿ8¶ÿ‰§ˆ2J$1e2e07e1-8d3d-40f3-bfe6-08439ab1c207
+M	java:S106¢"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8‘ƒşµˆ2
+M	java:S106¦"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8‘ƒşµˆ2

@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -161,5 +162,20 @@ public class MainLayoutController {
         allButtons.add(this.showAuditsButton);
         allButtons.add(this.showPlanificationButton);
         return  allButtons;
+    }
+    public void editProfile(Long id) {
+        try {
+            FXMLLoader loader =   new FXMLLoader(getClass().getResource("/esprit/experts/controllers/editProfile.fxml"));
+            Parent root = loader.load();
+
+            // Access the controller and call setLoggedInUser
+            EditProfile editProfileController = loader.getController();
+            editProfileController.getUserProfile(id);
+            this.setButtonFocused(this.showProfileButton);
+            setNode(root);
+        }catch( Exception e ) {
+            System.out.println("Error loading ProfilePage.fxml: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }

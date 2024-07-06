@@ -82,7 +82,36 @@ public class UserService implements  IService<User>{
 
     @Override
     public User getById(long id) {
-        return null;
+        Connection connection = DatabaseConnection.getConnection();
+        if (connection != null) {
+            String sql = "SELECT * FROM users WHERE id = ?";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setLong(1, id);
+                ResultSet resultSet = statement.executeQuery();
+                if (resultSet.next()) {
+                    User user = new User();
+                    user.setId(resultSet.getLong("id"));
+                    user.setFirstname(resultSet.getString("firstname"));
+                    user.setLastname(resultSet.getString("lastname"));
+                    user.setEmail(resultSet.getString("email"));
+                    user.setPassword(resultSet.getString("password"));
+                    user.setRole(resultSet.getString("role"));
+                    user.setStatus(resultSet.getString("status"));
+                    user.setImagePath(resultSet.getString("image"));
+                    user.setSex(resultSet.getString("sex"));
+                    return user;
+                } else {
+                    // User with given ID not found
+                    return null;
+                }
+            } catch (SQLException e) {
+                System.out.println("Error retrieving user: " + e.getMessage());
+                return null;
+            }
+        } else {
+            System.out.println("Database connection is null. Check your database connection.");
+            return null;
+        }
     }
 
     public User getUserByEmail(String email) {
