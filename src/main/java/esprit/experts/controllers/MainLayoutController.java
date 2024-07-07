@@ -173,6 +173,17 @@ public class MainLayoutController {
         allButtons.add(this.showPlanificationButton);
         return  allButtons;
     }
+    public void  afficheraudituser(){
+        try {
+            refreshUser();
+            dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/audituser.fxml"));
+            this.setButtonFocused(this.showAuditsButton);
+            setNode(dynamicContent);
+        }catch( Exception e ) {
+            System.out.println("Error loading ProfilePage.fxml: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
     public void editProfile(Long id) {
         try {
             refreshUser();
