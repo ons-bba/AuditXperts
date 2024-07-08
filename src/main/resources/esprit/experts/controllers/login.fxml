@@ -5,65 +5,83 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="750.0" prefWidth="1350.0" stylesheets="@../style/login.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.Login">
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="850.0" prefWidth="1350.0" stylesheets="@../style/login.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.Login">
    <children>
-      <VBox alignment="CENTER" spacing="20" styleClass="secondary-color" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <Text styleClass="title" text="Welcome Back!">
-            <font>
-               <Font size="24" />
-            </font>
-         </Text>
-         <Text styleClass="description" text="Please login to your account.">
-            <font>
-               <Font size="16" />
-            </font>
-         </Text>
-         <GridPane alignment="CENTER" hgap="25.0" prefHeight="227.0" prefWidth="1250.0" styleClass="primary-color" vgap="10">
-            <Label text="Email:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="0">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font></Label>
-            <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-            <Label fx:id="emailErrorLabel" styleClass="error-label" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label fx:id="passwordErrorLabel" styleClass="error-label" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-
-            <Label fx:id="loginErrorLabel" styleClass="error-label" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-
-            <HBox alignment="BOTTOM_RIGHT" prefHeight="33.0" prefWidth="262.0" spacing="25.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5">
-               <Button onAction="#handleLoginAction" prefHeight="33.0" prefWidth="200.0" text="Login" />
-            </HBox>
-            <Label text="Password" textFill="WHITE" GridPane.rowIndex="2">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <columnConstraints>
-               <ColumnConstraints />
-               <ColumnConstraints />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-            </rowConstraints>
-         </GridPane>
-      </VBox>
+      <StackPane layoutX="587.0" layoutY="-1.0" prefHeight="850.0" prefWidth="764.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="794.0" prefWidth="556.0" spacing="20" styleClass="secondary-color">
+               <Text styleClass="title" text="Welcome Back!">
+                  <font>
+                     <Font size="24" />
+                  </font>
+               </Text>
+               <Text fill="WHITE" text="Please login to your account.">
+                  <font>
+                     <Font size="16" />
+                  </font>
+               </Text>
+               <GridPane alignment="CENTER" hgap="25.0" prefHeight="227.0" prefWidth="1250.0" styleClass="secondary-color" vgap="10">
+                  <Label text="Email:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <Label fx:id="emailErrorLabel" styleClass="error-label" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="passwordErrorLabel" styleClass="error-label" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+      
+                        <Label fx:id="loginErrorLabel" styleClass="error-label" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+      
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="33.0" prefWidth="262.0" spacing="25.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                     <Button onAction="#handleLoginAction" prefHeight="33.0" prefWidth="200.0" styleClass="leftt" text="Login" textFill="WHITE" />
+                  </HBox>
+                  <Label text="Password" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+               </GridPane>
+            </VBox>
+         </children>
+      </StackPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="181.0" prefHeight="54.0" prefWidth="203.0" text="Experts-Audits" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="227.0" fitWidth="279.0" layoutX="150.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/logo.png" />
+         </image>
+      </ImageView>
    </children>
    <styleClass>
       <String fx:value="anchorPane" />
-      <String fx:value="primary-color" />
+      <String fx:value="leftt" />
    </styleClass>
 </AnchorPane>

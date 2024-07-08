@@ -16,9 +16,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchor" prefHeight="663.0" prefWidth="1185.0" style="-fx-background-color: white;" stylesheets="@../style/profile.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.EditProfile">
+<AnchorPane fx:id="anchor" prefHeight="673.0" prefWidth="1185.0" style="-fx-background-color: white;" stylesheets="@../style/profile.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.EditProfile">
     <children>
-        <BorderPane prefHeight="663.0" prefWidth="1185.0">
+        <BorderPane prefHeight="707.0" prefWidth="1185.0">
             <left>
                 <VBox prefHeight="663.0" prefWidth="234.0" spacing="50.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
                     <children>
@@ -41,7 +41,7 @@
                                         </Label>
                                     </children>
                                 </HBox>
-                                <Button fx:id="editButton" mnemonicParsing="false" onAction="#cancelEdit" prefHeight="25.0" prefWidth="143.0" text="Profile Page" textFill="WHITE">
+                                <Button mnemonicParsing="false" onAction="#cancelEdit" prefHeight="25.0" prefWidth="143.0" text="Profile Page" textFill="WHITE">
                                     <VBox.margin>
                                         <Insets top="10.0" />
                                     </VBox.margin>
@@ -93,7 +93,7 @@
                                                 <Image url="@../../../images/workers.png" />
                                             </image>
                                         </ImageView>
-                                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" styleClass="button2" text="co-workers" />
+                                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" styleClass="button2" text="Co-workers" />
                                     </children>
                                 </HBox>
                             </children>
@@ -102,9 +102,9 @@
                 </VBox>
             </left>
             <center>
-                <VBox prefHeight="663.0" prefWidth="951.0" spacing="25.0" styleClass="primary-color" BorderPane.alignment="CENTER">
+                <VBox prefHeight="707.0" prefWidth="834.0" spacing="25.0" styleClass="primary-color" BorderPane.alignment="CENTER">
                     <children>
-                        <Label prefHeight="70.0" prefWidth="897.0" text="Edit Settings" textFill="WHITE">
+                        <Label prefHeight="71.0" prefWidth="745.0" text="Edit Settings" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="25.0" />
                             </font>
@@ -112,141 +112,11 @@
                                 <Insets bottom="5.0" left="50.0" right="50.0" top="30.0" />
                             </padding>
                         </Label>
-                  <HBox prefHeight="199.0" prefWidth="951.0">
-                     <children>
-                              <VBox prefHeight="323.0" prefWidth="629.0">
-                                  <children>
-                                      <Label prefHeight="80.0" prefWidth="897.0" text="Profile Details" textFill="WHITE">
-                                          <font>
-                                              <Font name="System Bold" size="19.0" />
-                                          </font>
-                                          <padding>
-                                              <Insets bottom="10.0" left="50.0" right="40.0" />
-                                          </padding>
-                                      </Label>
-                                      <HBox prefHeight="58.0" prefWidth="897.0">
-                                          <children>
-                                              <Label prefHeight="40.0" prefWidth="263.0" text="Role" textFill="WHITE">
-                                                  <font>
-                                                      <Font name="System Bold" size="19.0" />
-                                                  </font>
-                                                  <padding>
-                                                      <Insets bottom="10.0" left="50.0" right="40.0" />
-                                                  </padding>
-                                              </Label>
-                                              <ComboBox fx:id="role" prefHeight="26.0" prefWidth="269.0">
-                                                  <styleClass>
-                                                      <String fx:value="white" />
-                                                      <String fx:value="text-input2" />
-                                                  </styleClass>
-                                              </ComboBox>
-                                          </children>
-                                      </HBox>
-
-                                      <HBox prefHeight="58.0" prefWidth="621.0">
-                                          <children>
-                                              <Label prefHeight="40.0" prefWidth="263.0" text="Status" textFill="WHITE">
-                                                  <font>
-                                                      <Font name="System Bold" size="19.0" />
-                                                  </font>
-                                                  <padding>
-                                                      <Insets bottom="10.0" left="50.0" right="40.0" />
-                                                  </padding>
-                                              </Label>
-                                              <TextField fx:id="status" disable="true" editable="false" prefHeight="26.0" prefWidth="271.0">
-                                       <styleClass>
-                                          <String fx:value="white" />
-                                          <String fx:value="text-input2" />
-                                       </styleClass></TextField>
-                                          </children>
-                                      </HBox>
-                                      <HBox prefHeight="58.0" prefWidth="897.0">
-                                          <children>
-                                              <Label prefHeight="40.0" prefWidth="263.0" text="Sex" textFill="WHITE">
-                                                  <font>
-                                                      <Font name="System Bold" size="19.0" />
-                                                  </font>
-                                                  <padding>
-                                                      <Insets bottom="10.0" left="50.0" right="40.0" />
-                                                  </padding>
-                                              </Label>
-                                              <ComboBox fx:id="sex" prefHeight="26.0" prefWidth="272.0">
-                                                  <items>
-                                                      <FXCollections fx:factory="observableArrayList">
-                                                          <String fx:value="Male" />
-                                                          <String fx:value="Female" />
-                                                      </FXCollections>
-                                                  </items>
-                                                  <styleClass>
-                                                      <String fx:value="white" />
-                                                      <String fx:value="text-input2" />
-                                                  </styleClass>
-                                              </ComboBox>
-                                          </children>
-                                      </HBox>
-
-                                  </children>
-                              </VBox>
-                        <VBox prefHeight="256.0" prefWidth="214.0" spacing="5.0" style="-fx-background-color: #212546;">
-                           <children>
-                              <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" style="-fx-background-color: green;" text="Change Password">
-                                 <VBox.margin>
-                                    <Insets bottom="20.0" top="20.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <Label prefHeight="36.0" prefWidth="174.0" text="Old password" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Label>
-                              <PasswordField styleClass="white" text="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.TextField?&gt;&lt;TextField styleClass=&quot;white&quot; xmlns=&quot;http://javafx.com/javafx/22&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;" />
-                              <Label prefHeight="36.0" prefWidth="174.0" text="New  password" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Label>
-                              <PasswordField styleClass="white" text="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.TextField?&gt;&lt;TextField styleClass=&quot;white&quot; xmlns=&quot;http://javafx.com/javafx/22&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;" />
-                           </children>
-                           <padding>
-                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                           </padding>
-                        </VBox>
-                     </children>
-                  </HBox>
-                        <VBox prefHeight="222.0" prefWidth="951.0">
+                        <HBox prefHeight="266.0" prefWidth="797.0">
                             <children>
-                        <Label prefHeight="80.0" prefWidth="897.0" text="Personal Info" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                           <padding>
-                              <Insets bottom="10.0" left="50.0" right="40.0" />
-                           </padding>
-                        </Label>
-                        <HBox prefHeight="58.0" prefWidth="897.0">
-                           <children>
-                              <Label prefHeight="40.0" prefWidth="263.0" text="Firstname" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="19.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="10.0" left="50.0" right="40.0" />
-                                 </padding>
-                              </Label>
-                              <TextField fx:id="firstname" prefHeight="25.0" prefWidth="364.0">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                                 <styleClass>
-                                    <String fx:value="white" />
-                                    <String fx:value="text-input2" />
-                                 </styleClass>
-                              </TextField>
-                           </children>
-                        </HBox>
-                                <HBox prefHeight="58.0" prefWidth="897.0">
+                                <VBox prefHeight="266.0" prefWidth="574.0">
                                     <children>
-                                        <Label prefHeight="40.0" prefWidth="263.0" text="Lastname" textFill="WHITE">
+                                        <Label prefHeight="80.0" prefWidth="897.0" text="Profile Details" textFill="WHITE">
                                             <font>
                                                 <Font name="System Bold" size="19.0" />
                                             </font>
@@ -254,55 +124,193 @@
                                                 <Insets bottom="10.0" left="50.0" right="40.0" />
                                             </padding>
                                         </Label>
-                                        <TextField fx:id="lastname" prefHeight="25.0" prefWidth="364.0">
-                                            <font>
-                                                <Font name="System Bold" size="14.0" />
-                                            </font>
-                                 <styleClass>
-                                    <String fx:value="white" />
-                                    <String fx:value="text-input2" />
-                                 </styleClass>
-                                        </TextField>
+                                        <HBox prefHeight="58.0" prefWidth="897.0">
+                                            <children>
+                                                <Label prefHeight="40.0" prefWidth="263.0" text="First Name" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="19.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                    </padding>
+                                                </Label>
+                                                <TextField fx:id="firstname" prefHeight="26.0" prefWidth="269.0">
+                                                    <styleClass>
+                                                        <String fx:value="white" />
+                                                        <String fx:value="text-input2" />
+                                                    </styleClass>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="58.0" prefWidth="897.0">
+                                            <children>
+                                                <Label prefHeight="40.0" prefWidth="263.0" text="Last Name" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="19.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                    </padding>
+                                                </Label>
+                                                <TextField fx:id="lastname" prefHeight="26.0" prefWidth="269.0">
+                                                    <styleClass>
+                                                        <String fx:value="white" />
+                                                        <String fx:value="text-input2" />
+                                                    </styleClass>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="58.0" prefWidth="897.0">
+                                            <children>
+                                                <Label prefHeight="40.0" prefWidth="263.0" text="Email" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="19.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                    </padding>
+                                                </Label>
+                                                <TextField fx:id="email" disable="true" prefHeight="26.0" prefWidth="269.0">
+                                                    <styleClass>
+                                                        <String fx:value="white" />
+                                                        <String fx:value="text-input2" />
+                                                    </styleClass>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="58.0" prefWidth="897.0">
+                                            <children>
+                                                <Label prefHeight="40.0" prefWidth="263.0" text="Role" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="19.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                    </padding>
+                                                </Label>
+                                                <ComboBox fx:id="role" disable="true" prefHeight="26.0" prefWidth="269.0">
+                                                    <styleClass>
+                                                        <String fx:value="white" />
+                                                        <String fx:value="text-input2" />
+                                                    </styleClass>
+                                                </ComboBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="58.0" prefWidth="897.0">
+                                            <children>
+                                                <Label prefHeight="40.0" prefWidth="263.0" text="Status" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="19.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                    </padding>
+                                                </Label>
+                                                <TextField fx:id="status" disable="true" editable="false" prefHeight="26.0" prefWidth="269.0">
+                                                    <styleClass>
+                                                        <String fx:value="white" />
+                                                        <String fx:value="text-input2" />
+                                                    </styleClass>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="58.0" prefWidth="897.0">
+                                            <children>
+                                                <Label prefHeight="40.0" prefWidth="263.0" text="Sex" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="19.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                    </padding>
+                                                </Label>
+                                                <ComboBox fx:id="sex" prefHeight="26.0" prefWidth="269.0">
+                                                    <items>
+                                                        <FXCollections fx:factory="observableArrayList">
+                                                            <String fx:value="Male" />
+                                                            <String fx:value="Female" />
+                                                        </FXCollections>
+                                                    </items>
+                                                </ComboBox>
+                                            </children>
+                                        </HBox>
                                     </children>
-                                </HBox>
-                                <Label prefHeight="80.0" prefWidth="897.0" text="Contact Info" textFill="WHITE">
-                                    <font>
-                                        <Font name="System Bold" size="20.0" />
-                                    </font>
-                                    <padding>
-                                        <Insets bottom="10.0" left="50.0" right="40.0" />
-                                    </padding>
-                                </Label>
-                        <HBox prefHeight="58.0" prefWidth="897.0">
-                           <children>
-                              <Label prefHeight="40.0" prefWidth="263.0" text="Email" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="19.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="10.0" left="50.0" right="40.0" />
-                                 </padding>
-                              </Label>
-                              <TextField fx:id="email" disable="true" editable="false" prefHeight="25.0" prefWidth="364.0">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                                 <styleClass>
-                                    <String fx:value="white" />
-                                    <String fx:value="text-input2" />
-                                 </styleClass>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <Button mnemonicParsing="false" onAction="#editProfile" prefHeight="38.0" prefWidth="676.0" styleClass="button2" text="Saves changes">
-                           <VBox.margin>
-                              <Insets left="50.0" top="20.0" />
-                           </VBox.margin>
-                        </Button>
+                                </VBox>
+                                <VBox alignment="TOP_CENTER" prefHeight="266.0" prefWidth="297.0" spacing="25.0" styleClass="primary-color">
+                                    <children>
+                                        <VBox prefHeight="323.0" prefWidth="293.0">
+                                            <children>
+                                                <Label prefHeight="80.0" prefWidth="293.0" text="Change Password" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="19.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                    </padding>
+                                                </Label>
+                                                <HBox prefHeight="58.0" prefWidth="293.0">
+                                                    <children>
+                                                        <Label prefHeight="40.0" prefWidth="87.0" text="Current" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="System Bold" size="19.0" />
+                                                            </font>
+                                                            <padding>
+                                                                <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                            </padding>
+                                                        </Label>
+                                                        <PasswordField fx:id="currentPassword" prefHeight="26.0" prefWidth="200.0" promptText="Enter Current Password" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="58.0" prefWidth="293.0">
+                                                    <children>
+                                                        <Label prefHeight="40.0" prefWidth="87.0" text="New" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="System Bold" size="19.0" />
+                                                            </font>
+                                                            <padding>
+                                                                <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                            </padding>
+                                                        </Label>
+                                                        <PasswordField fx:id="newPassword" prefHeight="26.0" prefWidth="200.0" promptText="Enter New Password" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="58.0" prefWidth="293.0">
+                                                    <children>
+                                                        <Label prefHeight="40.0" prefWidth="87.0" text="Confirm" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="System Bold" size="19.0" />
+                                                            </font>
+                                                            <padding>
+                                                                <Insets bottom="10.0" left="50.0" right="40.0" />
+                                                            </padding>
+                                                        </Label>
+                                                        <PasswordField fx:id="confirmPassword" prefHeight="26.0" prefWidth="200.0" promptText="Confirm New Password" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <Button fx:id="saveChangesButton" mnemonicParsing="false" onAction="#saveChanges" prefHeight="35.0" prefWidth="150.0" styleClass="button1" text="Save">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                    </children>
+                                </VBox>
                             </children>
-                        </VBox>
+                        </HBox>
+                  <Button mnemonicParsing="false" onAction="#editProfile" prefHeight="38.0" prefWidth="182.0" styleClass="button1" text="Submit Changes">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Button>
+                            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelEdit" prefHeight="38.0" prefWidth="184.0" styleClass="button2" text="Cancel">
+                                <VBox.margin>
+                                    <Insets bottom="10.0" left="50.0" />
+                                </VBox.margin>
+                            </Button>
                     </children>
                 </VBox>
+
             </center>
         </BorderPane>
     </children>

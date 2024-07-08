@@ -2,18 +2,20 @@ package esprit.experts.services;
 
 import esprit.experts.entities.User;
 import esprit.experts.utils.DatabaseConnection;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class UserService implements  IService<User>{
-
+    private Connection connection;
+    private PreparedStatement prepare;
+    private ResultSet resultSet;
+    private Statement statement;
 
     @Override
     public void Create(User user) {
@@ -89,6 +91,8 @@ public class UserService implements  IService<User>{
                     user.setRole(resultSet.getString("role"));
                     user.setStatus(resultSet.getString("status"));
                     user.setImagePath(resultSet.getString("image"));
+                    user.setSex(resultSet.getString("sex"));
+
                     users.add(user);
                 }
             } catch (SQLException e) {
@@ -258,5 +262,62 @@ public class UserService implements  IService<User>{
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+    public ObservableList<User> userListData() {
+
+        ObservableList<User> listData = FXCollections.observableArrayList();
+        String sql = "SELECT * FROM users";
+
+         connection = DatabaseConnection.getConnection();
+
+
+        try {
+             prepare = connection.prepareStatement(sql);
+             resultSet = prepare.executeQuery();
+             User user;
+
+            while (resultSet.next()) {
+                user = new User();
+                user.setId(resultSet.getLong("id"));
+                user.setFirstname(resultSet.getString("firstname"));
+                user.setLastname(resultSet.getString("lastname"));
+                user.setEmail(resultSet.getString("email"));
+                user.setPassword(resultSet.getString("password"));
+                user.setRole(resultSet.getString("role"));
+                user.setStatus(resultSet.getString("status"));
+                user.setImagePath(resultSet.getString("image"));
+                user.setSex(resultSet.getString("sex"));
+                listData.add(user);
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listData;
+    }
+    public boolean DeleteUser(User user) {
+        Connection connection = DatabaseConnection.getConnection();
+        if (connection != null) {
+            String sql = "DELETE FROM users WHERE id = ?";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setLong(1, user.getId());
+
+                int rowsDeleted = statement.executeUpdate();
+                if (rowsDeleted > 0) {
+                    System.out.println("User with ID " + user.getId() + " was deleted successfully!");
+                    return true;
+                } else {
+                    System.out.println("User with ID " + user.getId() + " not found for deletion.");
+                    return false;
+                }
+            } catch (SQLException e) {
+                System.out.println("Error deleting user: " + e.getMessage());
+                return false;
+            }
+        } else {
+            System.out.println("Database connection is null. Check your database connection.");
+            return false;
+        }
     }
 }

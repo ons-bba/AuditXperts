@@ -38,3 +38,5 @@ g
 7src/main/java/esprit/experts/services/AuditService.java,2\3\232b6f623ca253dc976b18611ce3aceae5a3c7a0
 m
 =src/main/java/esprit/experts/controllers/AuditController.java,3\e\3e5493665ee89d38d52e3079bbd24c2bb4f07cec
+e
+5src/main/java/esprit/experts/controllers/Landing.java,b\6\b6e770faca6792990e734711e49b62c43b1f170b

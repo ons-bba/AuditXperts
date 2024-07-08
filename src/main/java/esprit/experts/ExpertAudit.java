@@ -13,12 +13,12 @@ public class ExpertAudit extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         // Initialize database connection
-        // Initialize database connection
+        // Initialize database connection²
         Parent root;
         try {
             DatabaseConnection.connectDB();
             root = FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/login.fxml"));
-            Scene scene = new  Scene(root , 1350 , 850);
+            Scene scene = new  Scene(root , 1350 , 800);
             primaryStage.setTitle("Login Page");
             primaryStage.setScene(scene);
 //            primaryStage.setFullScreen(true); // Set the stage to maximized mode

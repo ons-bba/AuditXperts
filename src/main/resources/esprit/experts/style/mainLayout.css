@@ -47,3 +47,8 @@
 #userImageView {
     -fx-alignment: center-right; /* Align image to the far right */
 }
+.leftt{
+    -fx-background-color:  linear-gradient( to bottom right , #0056b3 ,#13123A );
+    -fx-border-color: white;
+    -fx-border-width: .4px 0 .4px 0  ;
+}

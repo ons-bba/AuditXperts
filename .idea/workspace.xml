@@ -5,18 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0aeeb1c-f2f2-471f-b84f-6f60f9ddd907" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/AuditController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/entities/Audit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/services/AuditService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audit.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/Landing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/landing.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/landing.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/users.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/image_20240707020053.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/image_20240707020312.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/image_20240707020459.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/image_20240707095439.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/image_20240707112754.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/image_20240707112821.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/image_20240707130401.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/image_20240707130415.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2ded748b031ae25848301562fe317da08fdd6698" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2ded748b031ae25848301562fe317da08fdd6698" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a17737a3576e06e50796f9f4bd2211028fc2a0a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a17737a3576e06e50796f9f4bd2211028fc2a0a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7c42964eee1cf8349b6782e669e07aa8be0c499" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7c42964eee1cf8349b6782e669e07aa8be0c499" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/ExpertAudit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/ExpertAudit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/EditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/EditProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/ProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/UsersDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/UsersDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/entities/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/MainLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/MainLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/ProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/ProfilePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/UsersDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/UsersDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/editprofile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/editprofile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/mainLayout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/style/mainLayout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/male.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/male.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +56,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ons" />
+      </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -60,7 +81,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "onsBenAli",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/baham/OneDrive/Desktop/data/perso/cours/AuditXperts/src/main/java/esprit/experts/controllers",
@@ -70,7 +91,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "settings.editor.selected.configurable": "build.tools",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -114,14 +135,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -145,6 +158,8 @@
       <workItem from="1719998491338" duration="16000" />
       <workItem from="1720184946479" duration="2139000" />
       <workItem from="1720188655467" duration="36670000" />
+      <workItem from="1720353681817" duration="1736000" />
+      <workItem from="1720365892386" duration="533000" />
     </task>
     <servers />
   </component>
@@ -156,7 +171,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/onsBenAli" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -167,8 +194,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java</url>
-          <line>59</line>
-          <properties class="esprit.experts.controllers.MainLayoutController" method="setNode">
+          <line>71</line>
+          <properties class="esprit.experts.controllers.MainLayoutController">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
