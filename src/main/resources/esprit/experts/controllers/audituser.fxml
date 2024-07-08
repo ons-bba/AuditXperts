@@ -16,7 +16,7 @@
    <children>
       <HBox layoutX="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="1106.0" style="-fx-background-color: bleu;" styleClass="dashboard">
          <children>
-            <VBox prefHeight="864.0" prefWidth="858.0" spacing="30.0" style="-fx-background-color: #00002c;" HBox.hgrow="ALWAYS">
+            <VBox prefHeight="864.0" prefWidth="858.0" spacing="30.0" style="-fx-background-color: #ADD8E6;" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
                </HBox.margin>
@@ -24,7 +24,6 @@
                   <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" onAction="#onTri" text="TRI" />
                   <TableView fx:id="auditsTable" prefHeight="153.0" prefWidth="1105.0">
                      <columns>
                         <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
@@ -39,12 +38,13 @@
                      </columns>
                   </TableView>
                   <HBox />
+                  <Button mnemonicParsing="false" onAction="#onTri" text="TRI" />
                   <HBox prefHeight="269.0" prefWidth="1118.0">
                      <children>
-                        <VBox prefHeight="246.0" prefWidth="1074.0" spacing="15.0" style="-fx-background-color: #0056b3;" styleClass="addForm" HBox.hgrow="ALWAYS">
+                        <VBox prefHeight="246.0" prefWidth="1074.0" spacing="15.0" style="-fx-background-color: #ADD8E6;" styleClass="addForm" HBox.hgrow="ALWAYS">
                            <children>
                               <VBox alignment="CENTER" prefHeight="0.0" prefWidth="875.0" />
-                              <Pane prefHeight="261.0" prefWidth="1074.0" style="-fx-background-color: #0056b3;">
+                              <Pane prefHeight="261.0" prefWidth="1074.0" style="-fx-background-color: #ADD8E6;">
                                  <children>
                                     <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="40.0" text="Titile" textFill="#171817" />
                                     <Label layoutX="294.0" layoutY="14.0" text="Start_date" textFill="#171817" />

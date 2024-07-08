@@ -305,8 +305,8 @@ public class AuditController {
             doc.open();
 
             doc.addAuthor("Easy Fit");
-          //  Image img = Image.getInstance("C:/xampp/htdocs/logo.jpg");
-           // doc.add(img);
+           Image img = Image.getInstance("C:/xampp/htdocs/logo.jpg");
+           doc.add(img);
 
             doc.addTitle("Liste des Audits");
 
