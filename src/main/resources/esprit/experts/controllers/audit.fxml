@@ -82,6 +82,6 @@
             </VBox>
          </children>
       </HBox>
-      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" />
    </children>
 </AnchorPane>
