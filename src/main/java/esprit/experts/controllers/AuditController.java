@@ -1,17 +1,31 @@
 package esprit.experts.controllers;
 
 
+import com.itextpdf.text.*;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
 import esprit.experts.entities.Audit;
 import esprit.experts.services.AuditService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+
+import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Locale;
+
 
 public class AuditController {
     AuditService auditService = new AuditService();
@@ -279,5 +293,66 @@ public class AuditController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
     }
+    @FXML
+    void PDF(ActionEvent event) {
+        try {
+            List<Audit> audits = auditService.findAll(); // Récupérer tous les audits disponibles
+
+            Document doc = new Document();
+            PdfWriter.getInstance(doc, new FileOutputStream("C:/xampp/htdocs/Taher.pdf"));
+            doc.open();
+
+            doc.addAuthor("Easy Fit");
+          //  Image img = Image.getInstance("C:/xampp/htdocs/logo.jpg");
+           // doc.add(img);
+
+            doc.addTitle("Liste des Audits");
+
+            doc.add(new Paragraph("Liste des Audits"));
+
+            PdfPTable table = new PdfPTable(8);
+            table.setWidthPercentage(100); // Largeur de table à 100% de la page
+
+            PdfPCell cell = new PdfPCell(new Phrase("ID"));
+            table.addCell(cell);
+            cell = new PdfPCell(new Phrase("Titre"));
+            table.addCell(cell);
+            cell = new PdfPCell(new Phrase("Date de début"));
+            table.addCell(cell);
+            cell = new PdfPCell(new Phrase("Date de retour"));
+            table.addCell(cell);
+            cell = new PdfPCell(new Phrase("Déficience"));
+            table.addCell(cell);
+            cell = new PdfPCell(new Phrase("Rapport"));
+            table.addCell(cell);
+            cell = new PdfPCell(new Phrase("Durée"));
+            table.addCell(cell);
+            cell = new PdfPCell(new Phrase("Statut"));
+            table.addCell(cell);
+
+            for (Audit audit : audits) {
+                table.addCell(audit.getTitle());
+                table.addCell(audit.getStartdate());
+                table.addCell(audit.getReturndate());
+                table.addCell(audit.getDeficiency());
+                table.addCell(audit.getReport());
+                table.addCell(audit.getDuration());
+                table.addCell(audit.getStatus());
+            }
+
+            doc.add(table);
+
+            doc.close();
+
+            Desktop.getDesktop().open(new File("C:/xampp/htdocs/Taher.pdf"));
+        } catch (DocumentException | IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
 }
+

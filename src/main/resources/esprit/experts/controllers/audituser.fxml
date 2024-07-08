@@ -14,9 +14,9 @@
 
 <AnchorPane prefHeight="885.0" prefWidth="1194.0" stylesheets="@../style/profile.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.AuditController">
    <children>
-      <HBox layoutX="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="894.0" prefWidth="1105.0" styleClass="dashboard">
+      <HBox layoutX="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="1106.0" style="-fx-background-color: bleu;" styleClass="dashboard">
          <children>
-            <VBox prefHeight="864.0" prefWidth="858.0" spacing="30.0" HBox.hgrow="ALWAYS">
+            <VBox prefHeight="864.0" prefWidth="858.0" spacing="30.0" style="-fx-background-color: #00002c;" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
                </HBox.margin>
@@ -41,10 +41,10 @@
                   <HBox />
                   <HBox prefHeight="269.0" prefWidth="1118.0">
                      <children>
-                        <VBox prefHeight="246.0" prefWidth="1074.0" spacing="15.0" styleClass="addForm" HBox.hgrow="ALWAYS">
+                        <VBox prefHeight="246.0" prefWidth="1074.0" spacing="15.0" style="-fx-background-color: #0056b3;" styleClass="addForm" HBox.hgrow="ALWAYS">
                            <children>
                               <VBox alignment="CENTER" prefHeight="0.0" prefWidth="875.0" />
-                              <Pane prefHeight="261.0" prefWidth="1074.0" style="-fx-background-color: white;">
+                              <Pane prefHeight="261.0" prefWidth="1074.0" style="-fx-background-color: #0056b3;">
                                  <children>
                                     <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="40.0" text="Titile" textFill="#171817" />
                                     <Label layoutX="294.0" layoutY="14.0" text="Start_date" textFill="#171817" />
@@ -54,7 +54,7 @@
                                     <Label layoutX="577.0" layoutY="74.0" prefHeight="17.0" prefWidth="53.0" text="duration" textFill="#171817" />
                                     <Label layoutX="14.0" layoutY="135.0" prefHeight="17.0" prefWidth="53.0" text="status" textFill="#171817" />
                                     <Label layoutX="294.0" layoutY="135.0" prefHeight="17.0" prefWidth="53.0" text="approach" textFill="#171817" />
-                                    <TextField fx:id="title" layoutX="105.0" layoutY="10.0" />
+                                    <TextField fx:id="title" layoutX="105.0" layoutY="10.0" style="-fx-background-color: bleu;" />
                                     <TextField fx:id="sartdate" layoutX="378.0" layoutY="10.0" />
                                     <TextField fx:id="returndate" layoutX="647.0" layoutY="10.0" />
                                     <TextField fx:id="deficiency" layoutX="105.0" layoutY="70.0" />
@@ -62,14 +62,13 @@
                                     <TextField fx:id="duration" layoutX="647.0" layoutY="70.0" />
                                     <TextField fx:id="status" layoutX="105.0" layoutY="131.0" />
                                     <TextField fx:id="approach" layoutX="378.0" layoutY="131.0" />
-                                    <Button fx:id="submit_btn" layoutX="666.0" layoutY="144.0" mnemonicParsing="false" onAction="#onSubmit" style="-fx-background-color: #3cbd33;" styleClass="action-button" text="Ajouter" />
-                                    <Button layoutX="560.0" layoutY="144.0" mnemonicParsing="false" onAction="#onEdit" style="-fx-background-color: #c5bb2c;" styleClass="action-button" text="Modifier" />
-                                    <Button layoutX="613.0" layoutY="193.0" mnemonicParsing="false" onAction="#onDelete" style="-fx-background-color: #d74848;" styleClass="action-button" text="Supprimer" />
+                                    <Button fx:id="submit_btn" layoutX="680.0" layoutY="188.0" mnemonicParsing="false" onAction="#onSubmit" style="-fx-background-color: #3cbd33;" styleClass="action-button" text="Ajouter" />
+                                    <Button layoutX="675.0" layoutY="124.0" mnemonicParsing="false" onAction="#onEdit" style="-fx-background-color: #c5bb2c;" styleClass="action-button" text="Modifier" />
                                     <DatePicker fx:id="date1" layoutX="61.0" layoutY="181.0" />
                                     <DatePicker fx:id="date2" layoutX="61.0" layoutY="212.0" />
                                     <Button layoutX="265.0" layoutY="199.0" mnemonicParsing="false" onAction="#onbetweendates" text="ok" />
                                     <TextField fx:id="recherche" layoutX="396.0" layoutY="225.0" />
-                                    <Button layoutX="443.0" layoutY="194.0" mnemonicParsing="false" onAction="#onRecherche" text="recherche" />
+                                    <Button layoutX="433.0" layoutY="175.0" mnemonicParsing="false" onAction="#onRecherche" text="recherche" />
                                  </children>
                               </Pane>
                            </children>
@@ -77,6 +76,7 @@
                         <Pane prefHeight="563.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
+                  <Button mnemonicParsing="false" onAction="#onDelete" style="-fx-background-color: #d74848;" styleClass="action-button" textFill="#aeadad" />
                </children>
             </VBox>
          </children>

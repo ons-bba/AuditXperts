@@ -16,11 +16,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchor" prefHeight="663.0" prefWidth="1185.0" style="-fx-background-color: white;" stylesheets="@../style/profile.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.EditProfile">
+<AnchorPane fx:id="anchor" prefHeight="663.0" prefWidth="1185.0" style="-fx-background-color: white;" stylesheets="@../style/profile.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.EditProfile">
     <children>
         <BorderPane prefHeight="663.0" prefWidth="1185.0">
             <left>
-                <VBox prefHeight="663.0" prefWidth="234.0" spacing="50.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
+                <VBox prefHeight="558.0" prefWidth="234.0" spacing="50.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
                     <children>
                         <VBox alignment="CENTER" prefHeight="241.0" prefWidth="288.0">
                             <VBox.margin>

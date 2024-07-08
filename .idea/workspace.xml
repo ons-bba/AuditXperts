@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0aeeb1c-f2f2-471f-b84f-6f60f9ddd907" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audituser.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/test.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/MainLayoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/ProfilePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/ProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/ProfilePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/AuditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/esprit/experts/controllers/AuditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audit.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audituser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audituser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/editprofile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/editprofile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,12 +59,15 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/baham/OneDrive/Desktop/data/perso/cours/AuditXperts/src/main/java/esprit/experts/controllers",
-    "last_opened_file_path": "C:/Users/taher/OneDrive/Documents/GitHub/AuditXperts/src/main/resources/esprit/experts/controllers",
+    "last_opened_file_path": "C:/Users/taher/OneDrive/Bureau/itextpdf",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.41609195",
     "settings.editor.selected.configurable": "editor.preferences.tabs",
     "vue.rearranger.settings.migration": "true"
   }
@@ -140,7 +144,8 @@
       <workItem from="1720184946479" duration="2139000" />
       <workItem from="1720188655467" duration="36670000" />
       <workItem from="1720276165978" duration="7079000" />
-      <workItem from="1720365216420" duration="7875000" />
+      <workItem from="1720365216420" duration="8218000" />
+      <workItem from="1720435689230" duration="14269000" />
     </task>
     <servers />
   </component>
