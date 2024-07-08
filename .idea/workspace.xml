@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0aeeb1c-f2f2-471f-b84f-6f60f9ddd907" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esprit/experts/controllers/audit.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +141,7 @@
       <workItem from="1720365216420" duration="8218000" />
       <workItem from="1720435689230" duration="14269000" />
       <workItem from="1720461058015" duration="2823000" />
+      <workItem from="1720464094290" duration="256000" />
     </task>
     <servers />
   </component>
