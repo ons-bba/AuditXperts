@@ -96,7 +96,7 @@ public class Login {
 
             // Create a new stage for the main layout
             Stage stage = (Stage) anchor.getScene().getWindow(); // Replace `button` with your actual button object
-            stage.setScene( new  Scene(root , 1350 , 750));
+            stage.setScene( new  Scene(root , 1350 , 800));
             stage.setTitle("Accueil");
 //            stage.setFullScreen(true); // Set the stage to maximized mode
             // Show the main stage

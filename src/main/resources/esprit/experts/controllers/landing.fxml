@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../style/landing.css">
+    <VBox alignment="CENTER" spacing="20" prefWidth="1049.0" styleClass="content">
+        <Label text="Welcome to Expert-Audits" styleClass="title"/>
+        <Label text="At Expert-Audits, we specialize in delivering meticulous expert audits that ensure compliance, efficiency, and trust. Explore our comprehensive solutions tailored to meet your audit needs with precision and insight." styleClass="description"/>
+
+        <VBox styleClass="section">
+            <Label text="Our Missions" styleClass="subtitle"/>
+            <Label text="Ensure thorough assessment and validation of compliance standards." styleClass="section-text"/>
+        </VBox>
+
+        <VBox styleClass="section">
+            <Label text="Objectives" styleClass="subtitle"/>
+            <Label text="Provide actionable insights for optimizing operational efficiency." styleClass="section-text"/>
+        </VBox>
+
+        <VBox styleClass="section">
+            <Label text="Core Values" styleClass="subtitle"/>
+            <Label text="Integrity, Excellence, Collaboration, Innovation." styleClass="section-text"/>
+        </VBox>
+
+    </VBox>
+</AnchorPane>

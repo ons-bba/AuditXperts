@@ -76,7 +76,7 @@ public class ProfilePageController implements Initializable {
         MainLayoutController mainController = loader.getController();
 
         Stage stage = (Stage) nameLabel.getScene().getWindow(); // Replace `button` with your actual button object
-        Scene scene = new Scene(root , 1350 , 750);
+        Scene scene = new Scene(root , 1350 , 800);
         stage.setScene(scene );
             mainController.editProfile(this.user.getId());
         stage.show();

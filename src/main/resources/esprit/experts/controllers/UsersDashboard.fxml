@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="usersBg" prefHeight="787.0" prefWidth="1130.0" styleClass="leftt" stylesheets="@../style/users.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.UsersDashboardController">
+<AnchorPane fx:id="usersBg" prefHeight="846.0" prefWidth="1130.0" styleClass="leftt" stylesheets="@../style/users.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.UsersDashboardController">
    <children>
       <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="349.0" prefWidth="1103.0" style="-fx-background-color: #fff;">
          <children>
-            <TableView fx:id="t_tableView" layoutX="58.0" layoutY="73.0" prefHeight="260.0" prefWidth="1015.0">
+            <TableView fx:id="t_tableView" layoutX="58.0" layoutY="73.0" onMouseClicked="#addUserSelect" prefHeight="260.0" prefWidth="1015.0">
               <columns>
                   <TableColumn fx:id="t_id" prefWidth="55.0" text="ID" />
                 <TableColumn fx:id="t_firstname" prefWidth="152.0" text="Firstname" />
@@ -30,10 +30,10 @@
                   <String fx:value="white-bg" />
                </styleClass>
             </TableView>
-            <TextField fx:id="tableSearch" layoutX="58.0" layoutY="23.0" prefHeight="35.0" prefWidth="282.0" promptText="Search for user" />
+            <TextField onKeyTyped="#addEmployeeSearch" fx:id="tableSearch" layoutX="58.0" layoutY="23.0" prefHeight="35.0" prefWidth="282.0" promptText="Search for user" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="40.0" layoutY="389.0" prefHeight="268.0" prefWidth="1024.0" styleClass="f">
+      <AnchorPane layoutX="21.0" layoutY="394.0" prefHeight="424.0" prefWidth="1065.0" styleClass="f">
          <children>
             <Label layoutX="20.0" layoutY="64.0" prefHeight="28.0" prefWidth="85.0" text="Firstname" textFill="WHITE">
                <font>
@@ -41,7 +41,7 @@
                </font></Label>
             <TextField fx:id="addfirstname" layoutX="128.0" layoutY="65.0" prefHeight="25.0" prefWidth="188.0" />
             <TextField fx:id="addlastname" layoutX="128.0" layoutY="110.0" prefHeight="25.0" prefWidth="188.0" />
-            <TextField fx:id="addemail" disable="true" layoutX="128.0" layoutY="151.0" prefHeight="25.0" prefWidth="188.0" />
+            <TextField fx:id="addemail" layoutX="128.0" layoutY="151.0" prefHeight="25.0" prefWidth="188.0" />
             <Label layoutX="20.0" layoutY="109.0" prefHeight="28.0" prefWidth="85.0" text="Lastname" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
@@ -57,7 +57,6 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="addsex" layoutX="128.0" layoutY="192.0" prefHeight="25.0" prefWidth="188.0" />
             <Label layoutX="358.0" layoutY="64.0" prefHeight="28.0" prefWidth="85.0" text="Role" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
@@ -72,7 +71,7 @@
             <ComboBox fx:id="addstatus" layoutX="426.0" layoutY="111.0" prefWidth="150.0" visibleRowCount="3" />
             <AnchorPane layoutX="895.0" layoutY="7.0" prefHeight="172.0" prefWidth="108.0">
                <children>
-                  <Button fx:id="importBtn" layoutY="161.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="129.0" styleClass="import-btn" text="Import " textFill="#003216" />
+                  <Button fx:id="importBtn" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#userInsetImage" prefHeight="43.0" prefWidth="129.0" styleClass="import-btn" text="Import " textFill="#003216" />
                   <ImageView fx:id="addImage" fitHeight="163.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
                </children>
                <styleClass>
@@ -80,10 +79,11 @@
                   <String fx:value="white-bg" />
                </styleClass>
             </AnchorPane>
-            <Button fx:id="clearbtn" layoutX="369.0" layoutY="245.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="clear-btn" text="Clear" />
-            <Button fx:id="deletebtn" layoutX="486.0" layoutY="245.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="delete-btn" text="Delete" />
-            <Button fx:id="updatebtn" layoutX="604.0" layoutY="245.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="update-btn" text="Update" />
-            <Button fx:id="addbtn" layoutX="716.0" layoutY="245.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="add-btn" text="Add" />
+            <Button fx:id="clearbtn" layoutX="369.0" layoutY="245.0" mnemonicParsing="false" onAction="#addUserReset" prefHeight="25.0" prefWidth="96.0" styleClass="clear-btn" text="Clear" />
+            <Button fx:id="deletebtn" layoutX="486.0" layoutY="245.0" mnemonicParsing="false" onAction="#deleteuser" prefHeight="25.0" prefWidth="96.0" styleClass="delete-btn" text="Delete" />
+            <Button fx:id="updatebtn" layoutX="604.0" layoutY="245.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="25.0" prefWidth="96.0" styleClass="update-btn" text="Update" />
+            <Button fx:id="addbtn" layoutX="716.0" layoutY="245.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="96.0" styleClass="add-btn" text="Add" />
+            <ComboBox fx:id="addsex" layoutX="128.0" layoutY="199.0" prefHeight="25.0" prefWidth="188.0" visibleRowCount="3" />
          </children>
       </AnchorPane>
    </children>

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchor" prefHeight="810.0" prefWidth="1331.0" styleClass="anchorPane" stylesheets="@../style/mainLayout.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.MainLayoutController">
+<AnchorPane fx:id="anchor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="810.0" prefWidth="1331.0" styleClass="anchorPane" stylesheets="@../style/mainLayout.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.MainLayoutController">
     <children>
         <!-- Top Section -->
         <AnchorPane fx:id="topAnchorPane" layoutY="1.0" prefHeight="96.0" prefWidth="1331.0" style="-fx-background-color: #f0f0f0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
@@ -28,17 +28,22 @@
         <!-- Left Section (Sidebar) -->
         <AnchorPane fx:id="leftAnchorPane" layoutY="97.0" prefHeight="780.0" prefWidth="240.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="97.0">
             <VBox alignment="TOP_CENTER" prefHeight="760.0" prefWidth="220.0" spacing="10" styleClass="sidebar">
-                <Button fx:id="showUsersButton" onAction="#showUsers" styleClass="sidebar-button" text="Users" />
                 <Button fx:id="showProfileButton" onAction="#showProfile" styleClass="sidebar-button" text="Profile Page" />
                 <Button fx:id="showPlanificationButton" onAction="#showPlanification" styleClass="sidebar-button" text="Planification" />
                 <Button fx:id="showAuditsButton" onAction="#showAudits" styleClass="sidebar-button" text="Audits" />
                 <Button fx:id="showWorkspaceButton" onAction="#showWorkspace" styleClass="sidebar-button" text="Workspace" />
+                <Button fx:id="showUsersButton" onAction="#showUsers" styleClass="sidebar-button" text="Users" />
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="284.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="showUsersButton1" onAction="#logout" styleClass="sidebar-button" text="Logout" />
+               </children>
+            </VBox>
 
             </VBox>
         </AnchorPane>
 
         <!-- Center Section -->
-        <AnchorPane fx:id="holderPanel" layoutX="238.0" layoutY="97.0" prefHeight="780.0" prefWidth="1094.0" style="-fx-clip: true;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="97.0">
+        <AnchorPane fx:id="holderPanel" layoutX="240.0" layoutY="97.0" prefHeight="780.0" prefWidth="1092.0" style="-fx-clip: true;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="97.0">
             <!-- Content will be dynamically loaded here -->
         </AnchorPane>
     </children>

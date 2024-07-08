@@ -14,6 +14,7 @@ public class User {
 
     // Constructors (if needed)
     public User() {
+        this.password ="Expert2024" ;
     }
 
     public User(String firstname, String lastname, String email, String password, String role, String status, String imagePath, String sex) {
@@ -94,7 +95,11 @@ public class User {
     }
 
     public String getImagePath() {
-        return imagePath;
+        if (imagePath == null){
+            return  "src/main/resources/images/usersIcon.png" ;
+        }
+
+        return imagePath ;
     }
 
     public void setImagePath(String imagePath) {

@@ -1,45 +1,108 @@
 
+
+java:S1192B"NDefine a constant instead of duplicating this literal "User with ID " 3 times.(ñÔ«/8¨ Çåˆ2J$4a84b28c-93be-4a8f-a263-ec4ba0f0ab24
 ’
-java:S1192U"JDefine a constant instead of duplicating this literal "firstname" 3 times.(»Ù•¹ùÿÿÿÿ8ÿ‚þµˆ2J$c887c606-229e-4a7d-b111-c8c2023ea18b
+java:S1192W"JDefine a constant instead of duplicating this literal "firstname" 4 times.(»Ù•¹ùÿÿÿÿ8ñ¶ÒÒˆ2J$504108ea-0491-4e8e-91bf-1bcf6fa4ff24
 Œ
-java:S1192X"IDefine a constant instead of duplicating this literal "password" 3 times.(‡ýªˆ8€ƒþµˆ2J$2219feb5-5f7e-4858-bf2f-950a070602e7
+java:S1192Z"IDefine a constant instead of duplicating this literal "password" 4 times.(‡ýªˆ8ò¶ÒÒˆ2J$1ea6ff0e-dcba-453e-9b49-28b9409d6ca9
 Å
-java:S1192)"}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 8 times.(›ÓÊ¡ùÿÿÿÿ8¤ÿ‰§ˆ2J$f57bb6bf-ecd7-46c5-b61e-a68b8d5b75f2
+java:S1192+"}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 9 times.(›ÓÊ¡ùÿÿÿÿ8ò¶ÒÒˆ2J$f0d61e25-38fd-4f2e-9997-431a00c95670
 ‰
-java:S1192W"FDefine a constant instead of duplicating this literal "email" 3 times.(ø‹¬¶8€ƒþµˆ2J$94dbffa6-9e42-4149-bdab-7e9802c74b10
+java:S1192Y"FDefine a constant instead of duplicating this literal "email" 4 times.(ø‹¬¶8ò¶ÒÒˆ2J$3136d4b7-53b1-4730-8463-8e5909861aed
 Ž
-java:S1192["FDefine a constant instead of duplicating this literal "image" 3 times.(³Õþ¹øÿÿÿÿ8ÿ‚þµˆ2J$389e5346-2194-4e48-9ad9-cf292563f011
+java:S1192]"FDefine a constant instead of duplicating this literal "image" 4 times.(³Õþ¹øÿÿÿÿ8ò¶ÒÒˆ2J$75c737a6-1e80-47ea-ab05-17ef129ef356
 Œ
-java:S1192V"IDefine a constant instead of duplicating this literal "lastname" 3 times.(¹„Žù8€ƒþµˆ2J$d3af0461-b423-48fa-b36f-60d4f55b5787
+java:S1192X"IDefine a constant instead of duplicating this literal "lastname" 4 times.(¹„Žù8ò¶ÒÒˆ2J$c49a469b-0554-4153-97b7-6b2c17d5f9ea
 
-java:S1192Z"GDefine a constant instead of duplicating this literal "status" 3 times.(ÁŒ¡…ÿÿÿÿÿ8€ƒþµˆ2J$674d9167-bf93-47b0-a5b0-348eb1859e8c
+java:S1192\"GDefine a constant instead of duplicating this literal "status" 4 times.(ÁŒ¡…ÿÿÿÿÿ8ò¶ÒÒˆ2J$02bfce6f-3620-465c-aa3d-a63c960c60b6
 Ä
-java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8¥ÿ‰§ˆ2J$f725dfc0-d6ec-4d82-9174-987fefaf6987
-m	java:S106#"+Replace this use of System.out by a logger.(ÌšÙ¬8ªÿ‰§ˆ2J$94c61957-6e12-42a9-b598-a0d40562c59a
-m	java:S106&"+Replace this use of System.out by a logger.(ƒŒ×8ªÿ‰§ˆ2J$343a5d81-8739-43c9-9e35-1b660bcb1bda
-r	java:S106)"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ªÿ‰§ˆ2J$1804b7f8-491e-4226-85cb-328f3923a727
-l	java:S106@"+Replace this use of System.out by a logger.(ñÔ«/8¯ÿ‰§ˆ2J$186a20a0-8408-42b2-bfe9-86f5eec6c39c
-l	java:S106C"+Replace this use of System.out by a logger.(ÈÓôU8¯ÿ‰§ˆ2J$404edc0e-1fee-4b46-bf03-85ce6051842a
-r	java:S106F"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8´ÿ‰§ˆ2J$35fd382a-5d35-426d-93d5-3de8fb592f1e
+java:S1186l"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8ó¶ÒÒˆ2J$8920c6ba-248d-4069-9d19-9781dc6397a2
+œ
+java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8õ¶ÒÒˆ2J$c467d18b-03df-4c7b-9af0-f333ff13cc75
+™
+java:S1450"VRemove the "prepare" field and declare it as a local variable in the relevant methods.( Âû¦8õ¶ÒÒˆ2J$45f2c443-a47d-4fe9-9d8f-5c23538c8850
+ 
+java:S1450"XRemove the "resultSet" field and declare it as a local variable in the relevant methods.(¿ˆ°úÿÿÿÿ8õ¶ÒÒˆ2J$ca748888-115c-4f39-ba2e-d14e1827cc1e
+
+java:S1117">Rename "connection" which hides the field declared at line 15.(˜²Î‡8ø¶ÒÒˆ2J$df3ee8eb-68e5-49aa-a657-a8cf9cb38106
+…
+java:S1117"=Rename "statement" which hides the field declared at line 18.(£ã¥²øÿÿÿÿ8ø¶ÒÒˆ2J$336e8de0-5b71-4de3-9f39-4bed7075802b
+m	java:S106%"+Replace this use of System.out by a logger.(ÌšÙ¬8ù¶ÒÒˆ2J$b1efcdb7-a724-4672-befa-0fee87f8fd85
+m	java:S106("+Replace this use of System.out by a logger.(ƒŒ×8ù¶ÒÒˆ2J$254fdeab-7052-4d64-b3ed-9e6e946731ad
+r	java:S106+"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ú¶ÒÒˆ2J$557fb477-d1f3-491e-a884-cb14b4d9ef3d
+
+java:S11171">Rename "connection" which hides the field declared at line 15.(˜²Î‡8ú¶ÒÒˆ2J$f5018733-7503-40c3-b7bf-91a97d81f109
+…
+java:S11175"=Rename "statement" which hides the field declared at line 18.(£ã¥²øÿÿÿÿ8û¶ÒÒˆ2J$4c56ea4b-039c-42e0-aa86-2d616db0fd1f
+l	java:S106B"+Replace this use of System.out by a logger.(ñÔ«/8ü¶ÒÒˆ2J$cac84dca-cd97-493f-9354-2e6698d16370
+l	java:S106E"+Replace this use of System.out by a logger.(ÈÓôU8ü¶ÒÒˆ2J$6d540b78-6054-4f9e-83f8-28a39698a247
+r	java:S106H"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ý¶ÒÒˆ2J$cefa418e-2615-426a-b816-cedcfd415a27
+
+java:S1117O">Rename "connection" which hides the field declared at line 15.(˜²Î‡8þ¶ÒÒˆ2J$e4be6655-3d0a-4065-9de0-90aea9597f7f
+…
+java:S1117R"=Rename "statement" which hides the field declared at line 18.(¼ð×ùûÿÿÿÿ8þ¶ÒÒˆ2J$677cceab-61ba-493f-af1f-aac4a9d8e94e
 g
-java:S6905O"Don't use the query "SELECT *".(ƒÊðÖûÿÿÿÿ8¬ÿ‰§ˆ2J$aa111865-6914-4f3a-b831-b57a1f172ffe
-m	java:S106_"+Replace this use of System.out by a logger.(ÔéêÅ8µÿ‰§ˆ2J$4326ebd9-6e66-45b4-aee0-eff9d057cf21
-r	java:S106b"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8·ÿ‰§ˆ2J$e4f19c39-4390-4dbd-9277-52161859f261
+java:S6905Q"Don't use the query "SELECT *".(ƒÊðÖûÿÿÿÿ8þ¶ÒÒˆ2J$1d1b510c-4794-43ce-8be9-423bea5e05f5
+€
+java:S1117S"=Rename "resultSet" which hides the field declared at line 17.(ýðñ¼8þ¶ÒÒˆ2J$72544910-164e-45c8-9068-24660fbdffce
+m	java:S106c"+Replace this use of System.out by a logger.(ÔéêÅ8€·ÒÒˆ2J$d763bab9-7c2d-4dae-9877-f1d5fb0efa4f
+r	java:S106f"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8€·ÒÒˆ2J$91934d59-d30a-4e9f-9073-f1fe37cef06d
+
+java:S1117r">Rename "connection" which hides the field declared at line 15.(˜²Î‡8·ÒÒˆ2J$1efbc553-caa3-4ca4-950c-f9d0e5641525
+…
+java:S1117u"=Rename "statement" which hides the field declared at line 18.(£ã¥²øÿÿÿÿ8·ÒÒˆ2J$2d153733-4a0b-44b7-a324-39ac46bab472
 b
-java:S6905p"Don't use the query "SELECT *".(‹šü–8Œƒþµˆ2J$fc62b551-963a-4b2b-bd6f-422bdd42ab5b
-s	java:S106…"+Replace this use of System.out by a logger.(‹ðÂûÿÿÿÿ8·ÿ‰§ˆ2J$ae7a216b-9c32-46a6-9341-58500b7c79d1
-s	java:S106‰"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8‘ƒþµˆ2J$230c13e5-6112-485e-bc7b-658e1b5d71c6
+java:S6905t"Don't use the query "SELECT *".(‹šü–8·ÒÒˆ2J$28c97303-852f-4b85-9d81-6a3d103f38cf
+€
+java:S1117w"=Rename "resultSet" which hides the field declared at line 17.(„‡–8·ÒÒˆ2J$ec391521-baeb-4e89-b657-6208aac16808
+s	java:S106‰"+Replace this use of System.out by a logger.(‹ðÂûÿÿÿÿ8ƒ·ÒÒˆ2J$9208a1b8-653a-4f5f-846c-50d6230c3db1
+s	java:S106"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ƒ·ÒÒˆ2J$e910db64-82a1-4a85-8983-a9908255c5e4
+‚
+java:S1117“">Rename "connection" which hides the field declared at line 15.(˜²Î‡8ƒ·ÒÒˆ2J$b2602812-9809-43e9-8009-01a432055f17
+†
+java:S1117–"=Rename "statement" which hides the field declared at line 18.(£ã¥²øÿÿÿÿ8„·ÒÒˆ2J$25d0f818-192f-47bc-99d0-90aab915c30e
 c
-java:S6905‘"Don't use the query "SELECT *".(¶âˆý8²ÿ‰§ˆ2J$5347ce38-2627-4cfb-83f2-c21563755be2
-s	java:S106§"+Replace this use of System.out by a logger.(‹ðÂûÿÿÿÿ8‘ƒþµˆ2J$bfb7a744-346d-4f0d-bd48-125c02d5a11e
-s	java:S106«"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ï±§·ˆ2J$5d2eda6a-cf1a-48cf-9732-9c0961643cb2
+java:S6905•"Don't use the query "SELECT *".(¶âˆý8„·ÒÒˆ2J$14cc847e-4807-47aa-8085-7727c172e984
+
+java:S1117˜"=Rename "resultSet" which hides the field declared at line 17.(„‡–8„·ÒÒˆ2J$ebb9e7ce-181d-45aa-8e3d-4128473e9c55
+s	java:S106«"+Replace this use of System.out by a logger.(‹ðÂûÿÿÿÿ8…·ÒÒˆ2J$c07d189a-f3b6-46f6-8edf-cb39d22e62c2
+s	java:S106¯"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8†·ÒÒˆ2J$99230c01-adbd-4d60-be30-29bd33ca0ef9
+‚
+java:S1117¶">Rename "connection" which hides the field declared at line 15.(˜²Î‡8†·ÒÒˆ2J$6fd15eed-2a06-4eab-a675-334a56054e6c
+†
+java:S1117¹"=Rename "statement" which hides the field declared at line 18.(£ã¥²øÿÿÿÿ8†·ÒÒˆ2J$7d5fd2a7-7b80-4b55-9739-621186294e53
 h
-java:S6905´"Don't use the query "SELECT *".(°Œ÷Ñúÿÿÿÿ8¶ÿ‰§ˆ2J$bb4f9ff2-a92f-4b15-bb2b-124944b41d6f
-s	java:S106»"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8ð±§·ˆ2J$394621f6-0126-4029-9729-1018edc56965
-s	java:S106¿"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ð±§·ˆ2J$babc9423-5663-4443-aeb1-2bb91c8e701a
-s	java:S106Ï"+Replace this use of System.out by a logger.(‘²ƒæúÿÿÿÿ8íù„¸ˆ2J$c024b2da-fe80-4bf8-8934-86d37974924f
-n	java:S106Õ"+Replace this use of System.out by a logger.(€¨²Š8íù„¸ˆ2J$e2554b37-79e5-40c6-b9ce-87c34aabe836
+java:S6905¸"Don't use the query "SELECT *".(°Œ÷Ñúÿÿÿÿ8†·ÒÒˆ2J$ae7ecfeb-fede-4d46-a5c1-73750d8bf5b9
+
+java:S1117¼"=Rename "resultSet" which hides the field declared at line 17.(„‡–8†·ÒÒˆ2J$9bdf3c3f-a590-4e8f-a9e9-c96884603cf6
+s	java:S106¿"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8‡·ÒÒˆ2J$1d79b8b9-95be-4af4-9366-7c162501a4c5
+s	java:S106Ã"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8‡·ÒÒˆ2J$2bfc9855-85c9-4021-a3c3-f9a6917d5ad1
+‚
+java:S1117È">Rename "connection" which hides the field declared at line 15.(˜²Î‡8‡·ÒÒˆ2J$dce06eca-319e-413b-bac1-908575597fd2
+†
+java:S1117Í"=Rename "statement" which hides the field declared at line 18.(£ã¥²øÿÿÿÿ8‡·ÒÒˆ2J$45d9ec40-f157-4c85-a823-c8f044cef90a
+s	java:S106Ó"+Replace this use of System.out by a logger.(‘²ƒæúÿÿÿÿ8‡·ÒÒˆ2J$ed579881-9e70-4e62-a76f-cf7eb3807104
+n	java:S106Ù"+Replace this use of System.out by a logger.(€¨²Š8‰·ÒÒˆ2J$271487a3-4653-45c8-9417-d133a32d1414
+‚
+java:S1117å">Rename "connection" which hides the field declared at line 15.(˜²Î‡8‰·ÒÒˆ2J$72ce7417-d2a5-47d8-aa44-9b6155278051
+†
+java:S1117è"=Rename "statement" which hides the field declared at line 18.(£ã¥²øÿÿÿÿ8‰·ÒÒˆ2J$e61932ca-5940-44fd-90ca-fe13277b77f1
 b
-java:S6905ã"Don't use the query "SELECT *".(¦ššW8íù„¸ˆ2J$7d110b68-2899-4fe7-9cd0-2dc368ab9177
-s	java:S106ê"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8íù„¸ˆ2J$d24a79cd-fedd-4410-b6f1-3c15350da55e
-s	java:S106î"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8íù„¸ˆ2J$d93b4dfc-d359-410d-993b-71733f04a8ac
+java:S6905ç"Don't use the query "SELECT *".(¦ššW8‰·ÒÒˆ2J$cb87094a-185f-4f1f-97f6-11b9a5a13e3e
+
+java:S1117ë"=Rename "resultSet" which hides the field declared at line 17.(„‡–8Š·ÒÒˆ2J$6f5e0b98-cff0-48ad-9388-c9561a5fac26
+s	java:S106î"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8Š·ÒÒˆ2J$66c15606-4cb6-4ff8-9169-76a4de1feedd
+s	java:S106ò"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8Š·ÒÒˆ2J$3cf97486-3c9e-4e8e-b686-fa2bae6ca406
+h
+java:S6905"Don't use the query "SELECT *".(ƒÊðÖûÿÿÿÿ8·ÒÒˆ2J$b05bc51e-cd04-459b-a77a-d2f6c75ebcf5
+k	java:S100«"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ÌëÄ8ÌÉåˆ2
+‚
+java:S1117¬">Rename "connection" which hides the field declared at line 15.(˜²Î‡8È Çåˆ2J$c421a7c3-d982-4a14-a8bc-928ffff7c088
+†
+java:S1117¯"=Rename "statement" which hides the field declared at line 18.(£ã¥²øÿÿÿÿ8È Çåˆ2J$35d6aa65-efdc-41a1-be76-466383569748
+s	java:S106´"+Replace this use of System.out by a logger.(êôŒŸùÿÿÿÿ8É Çåˆ2J$b526c8dd-596a-48b9-a366-26d3da62cb05
+m	java:S106·"+Replace this use of System.out by a logger.(šÅÔl8É Çåˆ2J$2c469d45-abca-4d3f-adcc-1a7a182d9a11
+n	java:S106»"+Replace this use of System.out by a logger.(¨½‰á8É Çåˆ2J$1f4c9e79-33c4-471c-ad1b-a1ec5682e157
+s	java:S106¿"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8É Çåˆ2J$a7d3d6d7-14e3-481f-87fd-9142c30c862d
+u
+java:S1068"-Remove this unused "statement" private field.(„£„÷øÿÿÿÿ8Ž·ÒÒˆ2J$6f38d89a-811c-4801-aed1-4825f537d1d4
