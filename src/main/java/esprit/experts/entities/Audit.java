@@ -31,6 +31,7 @@ public class Audit {
         Deficiency = deficiency;
         Report = report;
         Duration = duration;
+
         Status = status;
         Approach = approach;
     }

@@ -37,6 +37,9 @@ public class MainLayoutController {
     public Button showWorkspaceButton;
 
     @FXML
+    public Button showDocument;
+
+    @FXML
     AnchorPane holderPanel ;
     AnchorPane dynamicContent ;
 
@@ -49,7 +52,8 @@ public class MainLayoutController {
     @FXML
     private void initialize() {
         // Load default view
-        showUsers();
+
+        ShowDocuments();
     }
 
 
@@ -148,9 +152,22 @@ public class MainLayoutController {
             e.printStackTrace();
         }
     }
+
     @FXML
+    public void ShowDocuments() {
+        try {
+
+            dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/Document.fxml"));
+            this.setButtonFocused(this.showDocument);
+            setNode(dynamicContent);
+        }catch( Exception e ) {
+            System.out.println("Error loading Documents.fxml: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
     public void showWorkspace(ActionEvent actionEvent) {
     }
+    @FXML
 
     private void setButtonFocused(Button focusedButton) {
         List<Button> allButtons = getAllButtons();
