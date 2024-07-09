@@ -11,6 +11,10 @@ module esprit.experts {
     requires com.almasb.fxgl.all;
     requires java.sql;
     requires java.desktop;
+    requires com.google.api.client.auth;
+    requires com.google.api.client.extensions.java6.auth;
+    requires com.google.api.client.extensions.jetty.auth;
+    requires google.api.client;
 
     opens esprit.experts to javafx.fxml;
     exports esprit.experts;

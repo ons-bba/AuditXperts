@@ -40,3 +40,11 @@ m
 =src/main/java/esprit/experts/controllers/AuditController.java,3\e\3e5493665ee89d38d52e3079bbd24c2bb4f07cec
 e
 5src/main/java/esprit/experts/controllers/Landing.java,b\6\b6e770faca6792990e734711e49b62c43b1f170b
+_
+/src/main/java/esprit/experts/utils/Gmailer.java,a\f\af9e372d4f52f7c03b957377a28a5df3ba1c846a
+c
+3src/main/java/esprit/experts/utils/CreateEmail.java,a\1\a10775b7961e70c030a065890447c1184112cc17
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0

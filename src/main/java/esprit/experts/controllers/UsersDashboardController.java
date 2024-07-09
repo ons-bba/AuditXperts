@@ -2,6 +2,7 @@ package esprit.experts.controllers;
 
 import esprit.experts.entities.User;
 import esprit.experts.services.UserService;
+//import esprit.experts.utils.Gmailer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -194,6 +195,7 @@ public class UsersDashboardController implements Initializable {
                 }
                 user.setImagePath(imagePath);
                 this.userService.Create(user);
+//                Gmailer.MAIL(user.getEmail() , "Expert2024" , user.getFirstname());
 
                 alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Information Message");
