@@ -193,15 +193,17 @@ public class UsersDashboardController implements Initializable {
                     }
                 }
                 user.setImagePath(imagePath);
-                this.userService.Create(user);
+                boolean icreated =  this.userService.createUser(user);
+                if(icreated) {
 
-                alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Information Message");
-                alert.setHeaderText(null);
-                alert.setContentText("Successfully Added!");
-                alert.showAndWait();
-                showListData();
-                addUserReset();
+                    alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Information Message");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Successfully Added!");
+                    alert.showAndWait();
+                    showListData();
+                    addUserReset();
+                };
             }
         }catch (Exception e){
             System.out.println(e.getMessage());

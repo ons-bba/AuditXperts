@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.*;
 import java.net.URL;
@@ -170,7 +171,7 @@ public class EditProfile implements Initializable {
         String confirmNewPasswordS = confirmPassword.getText();
 
         // Validate old password
-        if (!currentPasswordS.equals(user.getPassword())) {
+        if (!BCrypt.checkpw(currentPasswordS, user.getPassword())) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Password Error");
             alert.setHeaderText(null);
@@ -200,7 +201,8 @@ public class EditProfile implements Initializable {
         }
 
         // Update user object with form values
-        user.setPassword(newPasswordS); // Update with new password
+        String hashedPassword = BCrypt.hashpw(newPasswordS, BCrypt.gensalt());
+        user.setPassword(hashedPassword); // Update with new password
 
         // Call UserService to update user
         UserService userService = new UserService();

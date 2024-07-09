@@ -5,6 +5,7 @@ import esprit.experts.utils.DatabaseConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -27,7 +28,11 @@ public class UserService implements  IService<User>{
                 statement.setString(1, user.getFirstname());
                 statement.setString(2, user.getLastname());
                 statement.setString(3, user.getEmail());
-                statement.setString(4, user.getPassword());
+
+                // Hash the password using bcrypt
+                String hashedPassword = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+                statement.setString(4, hashedPassword);
+
                 statement.setString(5, user.getRole());
                 statement.setString(6, user.getStatus());
                 statement.setString(7, user.getImagePath());
@@ -38,12 +43,47 @@ public class UserService implements  IService<User>{
                 }
             } catch (SQLException e) {
                 System.out.println("Error inserting user: " + e.getMessage());
+                showErrorAlert("Error SQL : " , "Error inserting user: " + e.getMessage());
             }
         } else {
             System.out.println("Database connection is null. Check your database connection.");
         }
     }
+    public boolean createUser(User user) {
+        Connection connection = DatabaseConnection.getConnection();
+        if (connection != null) {
+            String sql = "INSERT INTO users (firstname, lastname, email, password, role, status, image) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, user.getFirstname());
+                statement.setString(2, user.getLastname());
+                statement.setString(3, user.getEmail());
+
+                // Hash the password using bcrypt
+                String hashedPassword = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+                statement.setString(4, hashedPassword);
+
+                statement.setString(5, user.getRole());
+                statement.setString(6, user.getStatus());
+                statement.setString(7, user.getImagePath());
+
+                int rowsInserted = statement.executeUpdate();
+                if (rowsInserted > 0) {
+                    System.out.println("A new user was inserted successfully!");
+                    return true; // Return true if insertion was successful
+                } else {
+                    return false; // Return false if no rows were inserted (insertion failed)
+                }
+            } catch (SQLException e) {
+                System.out.println("Error inserting user: " + e.getMessage());
+                showErrorAlert("Error SQL : " , "Error inserting user: " + e.getMessage());
+                return false; // Return false in case of any SQL error
+            }
+        } else {
+            System.out.println("Database connection is null. Check your database connection.");
+            return false; // Return false if database connection is null
+        }
+    }
     @Override
     public void Update(User user) {
         Connection connection = DatabaseConnection.getConnection();
@@ -181,59 +221,21 @@ public class UserService implements  IService<User>{
     public boolean authenticateUser(String email, String password) {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
-            String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+            String sql = "SELECT password FROM users WHERE email = ?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, email);
-                statement.setString(2, password);
                 ResultSet resultSet = statement.executeQuery();
-                return resultSet.next(); // true if user exists with given email and password
-            } catch (SQLException e) {
-                System.out.println("Error authenticating user: " + e.getMessage());
-                return false;
-            }
-        } else {
-            System.out.println("Database connection is null. Check your database connection.");
-            return false;
-        }
-    }
-    public void updatePassword(long userId, String oldPassword, String newPassword) {
-        Connection connection = DatabaseConnection.getConnection();
-        if (connection != null) {
-            // First, check if the old password matches the current password in the database
-            if (authenticateUserById(userId, oldPassword)) {
-                String sql = "UPDATE users SET password = ? WHERE id = ?";
-                try (PreparedStatement statement = connection.prepareStatement(sql)) {
-                    statement.setString(1, newPassword);
-                    statement.setLong(2, userId);
-
-                    int rowsUpdated = statement.executeUpdate();
-                    if (rowsUpdated > 0) {
-                        System.out.println("Password updated successfully for user with ID " + userId);
-                        showInformationAlert("Password Updated", "Password updated successfully!");
+                if (resultSet.next()) {
+                    String hashedPasswordFromDB = resultSet.getString("password");
+                    // Verify hashed password using BCrypt
+                    if (BCrypt.checkpw(password, hashedPasswordFromDB)) {
+                        return true; // Passwords match, user authenticated
                     } else {
-                        showErrorAlert("Update Failed", "Failed to update password. Please try again.");
+                        return false; // Passwords do not match
                     }
-                } catch (SQLException e) {
-                    System.out.println("Error updating password: " + e.getMessage());
-                    showErrorAlert("Update Error", "Failed to update password. Error: " + e.getMessage());
+                } else {
+                    return false; // No user found with the given email
                 }
-            } else {
-                showErrorAlert("Authentication Failed", "Old password does not match. Password update failed.");
-            }
-        } else {
-            showErrorAlert("Database Error", "Database connection is null. Check your database connection.");
-        }
-    }
-
-    private boolean authenticateUserById(long userId, String password) {
-        Connection connection = DatabaseConnection.getConnection();
-        if (connection != null) {
-            String sql = "SELECT * FROM users WHERE id = ? AND password = ?";
-            try (PreparedStatement statement = connection.prepareStatement(sql)) {
-                statement.setLong(1, userId);
-                statement.setString(2, password);
-                ResultSet resultSet = statement.executeQuery();
-                return resultSet.next(); // true if user exists with given ID and password
             } catch (SQLException e) {
                 System.out.println("Error authenticating user: " + e.getMessage());
                 return false;
@@ -243,6 +245,9 @@ public class UserService implements  IService<User>{
             return false;
         }
     }
+
+
+
 
     // Other methods for user management (getUserByEmail, authenticateUser, etc.)
 

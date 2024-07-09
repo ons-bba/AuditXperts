@@ -11,6 +11,7 @@ module esprit.experts {
     requires com.almasb.fxgl.all;
     requires java.sql;
     requires java.desktop;
+    requires jbcrypt;
 
     opens esprit.experts to javafx.fxml;
     exports esprit.experts;
