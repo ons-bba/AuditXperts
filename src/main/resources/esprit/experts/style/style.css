@@ -1,0 +1,39 @@
+/* styles.css */
+
+.background {
+    -fx-background-color: linear-gradient(to bottom right, #0f2a4b, #0a4c8e);
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+}
+
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+}
+/* styles.css */
+
+
+
+.label {
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: #2980b9; /* Button background color */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #163f06;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+}

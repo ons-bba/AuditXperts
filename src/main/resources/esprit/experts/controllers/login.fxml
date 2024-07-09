@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="850.0" prefWidth="1350.0" stylesheets="@../style/login.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.Login">
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="850.0" prefWidth="1350.0" stylesheets="@../style/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.Login">
    <children>
       <StackPane layoutX="587.0" layoutY="-1.0" prefHeight="850.0" prefWidth="764.0">
          <children>
@@ -53,11 +53,13 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
+                  <Button fx:id="forget" onAction="#handleForget" prefHeight="33.0" prefWidth="200.0" styleClass="leftt" text="Forget Password ?" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <columnConstraints>
                      <ColumnConstraints />
                      <ColumnConstraints />
                   </columnConstraints>
                   <rowConstraints>
+                     <RowConstraints />
                      <RowConstraints />
                      <RowConstraints />
                      <RowConstraints />

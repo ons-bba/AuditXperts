@@ -40,3 +40,5 @@ m
 =src/main/java/esprit/experts/controllers/AuditController.java,3\e\3e5493665ee89d38d52e3079bbd24c2bb4f07cec
 e
 5src/main/java/esprit/experts/controllers/Landing.java,b\6\b6e770faca6792990e734711e49b62c43b1f170b
+d
+4src/main/java/esprit/experts/controllers/Forget.java,9\6\96c8fc426793b2d321e3bef8efa5b8b1ab9a09ab

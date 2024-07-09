@@ -126,4 +126,23 @@ public class Login {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
+    public void handleForget(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/forgetPassword.fxml"));
+        Parent root = loader.load();
+
+        // Fade transition
+        FadeTransition ft = new FadeTransition(Duration.millis(1000), root);
+        ft.setFromValue(0.0);
+        ft.setToValue(1.0);
+        ft.play();
+
+        // Create a new stage for the main layout
+        Stage stage = (Stage) anchor.getScene().getWindow(); // Replace `button` with your actual button object
+        stage.setScene( new  Scene(root , 1350 , 800));
+        stage.setTitle("forget password ");
+//            stage.setFullScreen(true); // Set the stage to maximized mode
+        // Show the main stage
+        stage.show();
+    }
 }

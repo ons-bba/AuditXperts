@@ -1,103 +1,110 @@
 
 
-java:S1192j"NDefine a constant instead of duplicating this literal "User with ID " 3 times.(ñÔ«/8Ó¼‘º‰2J$01b1f759-11c0-44d1-a1fb-0a91ce4bbff3
+java:S1192j"NDefine a constant instead of duplicating this literal "User with ID " 3 times.(ñÔ«/8Ó¼‘º‰2J$de84743b-562e-44d1-928a-c4d9a61dd742
 ’
-java:S1192"JDefine a constant instead of duplicating this literal "firstname" 4 times.(»Ù•¹ùÿÿÿÿ8¸èº‰2J$3e1ab184-dcff-4de3-b62c-39445729304c
+java:S1192"JDefine a constant instead of duplicating this literal "firstname" 4 times.(»Ù•¹ùÿÿÿÿ8¸èº‰2J$fc06bf33-757f-465d-b068-88e9f6250829
 
-java:S1192‚"IDefine a constant instead of duplicating this literal "password" 5 times.(‡ıªˆ8Ó¼‘º‰2J$73a050af-71ad-47e5-9cf4-c1eeaf6a0a8a
+java:S1192‚"IDefine a constant instead of duplicating this literal "password" 5 times.(‡ıªˆ8Ó¼‘º‰2J$3fa4f0ca-6652-443e-95d9-ba9d07b8d7e4
 Å
-java:S11921"}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 8 times.(›ÓÊ¡ùÿÿÿÿ8Ó¼‘º‰2J$9db97345-237e-4c12-9bd4-755391dda979
+java:S11921"}Define a constant instead of duplicating this literal "Database connection is null. Check your database connection." 9 times.(›ÓÊ¡ùÿÿÿÿ8Ó¼‘º‰2J$33aa8f86-5c4d-4682-9b6f-ba1c6f2c8775
 Š
-java:S1192"FDefine a constant instead of duplicating this literal "email" 4 times.(ø‹¬¶8¸èº‰2J$f0e19f14-ef25-41ab-80a4-9c8823199c6b
+java:S1192"FDefine a constant instead of duplicating this literal "email" 4 times.(ø‹¬¶8¸èº‰2J$84154bb3-a581-4950-97f9-8b6f309a48dd
 
-java:S1192…"FDefine a constant instead of duplicating this literal "image" 4 times.(³Õş¹øÿÿÿÿ8Ô¼‘º‰2J$6f4ed9dd-ea76-4f7a-9c14-2b93f54a6019
-t
-java:S1192-"WDefine a constant instead of duplicating this literal "Error inserting user: " 4 times.(ƒŒ×8ÿ—šº‰2
+java:S1192…"FDefine a constant instead of duplicating this literal "image" 4 times.(³Õş¹øÿÿÿÿ8Ô¼‘º‰2J$74c75b24-8305-4ed3-9679-668d4dc799f6
+š
+java:S1192-"WDefine a constant instead of duplicating this literal "Error inserting user: " 4 times.(ƒŒ×8ÿ—šº‰2J$b935301e-fce2-454f-86d5-afa161c65b9c
 
-java:S1192€"IDefine a constant instead of duplicating this literal "lastname" 4 times.(¹„ù8¸èº‰2J$923d912c-983f-407e-af1a-702858289ee7
+java:S1192€"IDefine a constant instead of duplicating this literal "lastname" 4 times.(¹„ù8¸èº‰2J$1954f687-a393-4a18-b435-645b3305404d
 
-java:S1192„"GDefine a constant instead of duplicating this literal "status" 4 times.(ÁŒ¡…ÿÿÿÿÿ8¸èº‰2J$ced19e61-1346-4ee7-9315-4eb4b20f992c
+java:S1192„"GDefine a constant instead of duplicating this literal "status" 4 times.(ÁŒ¡…ÿÿÿÿÿ8¸èº‰2J$04d16c40-4dbb-4c64-bbed-3d5be704049e
+˜
+java:S2095Ú"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¨‹şİşÿÿÿÿ8Ş§»‰2J$4a547602-9125-4ba0-a188-0d90eba15f9f
+˜
+java:S2095Ò"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¼Ôè¼ûÿÿÿÿ8Ş§»‰2J$e1671381-5cd5-4134-a2a3-3c30100809fe
 Å
-java:S1186”"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8ï¼‘º‰2J$3ff4ebf6-a1c7-48ce-a911-7c24ee57b463
+java:S1186”"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š±Ë¼8ï¼‘º‰2J$1c6c82d8-81d4-41c3-b581-3849ffcd0da0
 œ
-java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8†éº‰2J$cdda083d-6dbc-41f6-8d7d-2d52ba2b29fc
+java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8†éº‰2J$32f5f086-c215-4c9a-9987-44e09bdc6825
 ™
-java:S1450"VRemove the "prepare" field and declare it as a local variable in the relevant methods.( Âû¦8†éº‰2J$518b4e12-50e0-4f5f-9d0a-8c3919e11bc4
+java:S1450"VRemove the "prepare" field and declare it as a local variable in the relevant methods.( Âû¦8†éº‰2J$b4d438b7-d088-4884-b3e2-eb2e14086b0a
  
-java:S1450"XRemove the "resultSet" field and declare it as a local variable in the relevant methods.(¿ˆ°úÿÿÿÿ8‡éº‰2J$27fd6635-86da-4bc6-ad88-341043529381
+java:S1450"XRemove the "resultSet" field and declare it as a local variable in the relevant methods.(¿ˆ°úÿÿÿÿ8‡éº‰2J$7405e409-fce4-4244-a63e-868be8130768
 
-java:S1117">Rename "connection" which hides the field declared at line 16.(˜²Î‡8éº‰2J$ef7b3d57-1507-40d3-a7fc-df88595ae20b
+java:S1117">Rename "connection" which hides the field declared at line 16.(˜²Î‡8éº‰2J$4e6c09ca-3d8b-42cf-932a-934d081808f0
 …
-java:S1117"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8éº‰2J$f327c1b0-f7c1-435d-bd95-2f8f41d87743
-m	java:S106*"+Replace this use of System.out by a logger.(ÌšÙ¬8’éº‰2J$97bbd93d-4315-4fda-80b2-c8684a5d4c13
-m	java:S106-"+Replace this use of System.out by a logger.(ƒŒ×8“éº‰2J$a44c0b73-e7cb-4e19-b4da-e018641c7802
-r	java:S1061"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ö¼‘º‰2J$029b5689-af6a-4a16-b07c-cd54a07ed26f
+java:S1117"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8éº‰2J$401be7eb-b027-4359-af2d-6156e25a52cb
+m	java:S106*"+Replace this use of System.out by a logger.(ÌšÙ¬8’éº‰2J$37a68b8a-f050-4e97-821c-f8b5e2e859b0
+m	java:S106-"+Replace this use of System.out by a logger.(ƒŒ×8“éº‰2J$31c921d0-0ee9-4044-b58d-cf844b40810e
+r	java:S1061"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ö¼‘º‰2J$84e4dd72-9af4-4beb-a387-481bcdf7fae0
 
-java:S11175">Rename "connection" which hides the field declared at line 16.(˜²Î‡8ö¼‘º‰2J$bd35dfe0-3ae2-4cbe-871a-090f59303617
+java:S11175">Rename "connection" which hides the field declared at line 16.(˜²Î‡8ö¼‘º‰2J$7fddfeba-c377-4167-9392-bdc7e47b73e3
 …
-java:S11179"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8÷¼‘º‰2J$06dd2482-6d6c-4c98-bf06-3fc26d9d3e2c
-m	java:S106H"+Replace this use of System.out by a logger.(ÌšÙ¬8ø¼‘º‰2J$06be71f7-bde9-4c77-90ed-aaca93809581
-m	java:S106N"+Replace this use of System.out by a logger.(ƒŒ×8ø¼‘º‰2J$cff7bc10-f8c3-4e59-b45c-f74df4adc30e
-r	java:S106S"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ù¼‘º‰2J$dee41e5b-d307-4ef7-821e-aa597ececddd
+java:S11179"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8÷¼‘º‰2J$04d79a09-768f-47a0-9b05-bebf223ff480
+m	java:S106H"+Replace this use of System.out by a logger.(ÌšÙ¬8ø¼‘º‰2J$bb31f4d9-d331-4adb-b3f0-9679f7481e33
+m	java:S106N"+Replace this use of System.out by a logger.(ƒŒ×8ø¼‘º‰2J$fa193d59-ea8e-4619-9699-9969dbc29b98
+r	java:S106S"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ù¼‘º‰2J$216014d5-18a3-4269-8ff0-872ec97a40ba
 
-java:S1117Y">Rename "connection" which hides the field declared at line 16.(˜²Î‡8ú¼‘º‰2J$4e81731b-4c6f-4c97-bf21-151d6b2d4734
+java:S1117Y">Rename "connection" which hides the field declared at line 16.(˜²Î‡8ú¼‘º‰2J$863841cd-21a1-4723-8101-4a43f3deb44a
 …
-java:S1117]"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8›éº‰2J$d4846577-0a43-4df2-875e-a9e3e8bc7aed
-l	java:S106j"+Replace this use of System.out by a logger.(ñÔ«/8ü¼‘º‰2J$ab40e5be-5d10-4380-baf9-2718e4448313
-l	java:S106m"+Replace this use of System.out by a logger.(ÈÓôU8ı¼‘º‰2J$d403a68f-127a-4567-97b4-f9824974b439
-r	java:S106p"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8€½‘º‰2J$29ed0d76-c683-441b-8c37-ec5aba0f3f7f
+java:S1117]"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8›éº‰2J$503f81ab-2e1c-4c44-b00c-b5737c37d093
+l	java:S106j"+Replace this use of System.out by a logger.(ñÔ«/8ü¼‘º‰2J$170d535e-5138-4312-91b9-7f9165b1fcff
+l	java:S106m"+Replace this use of System.out by a logger.(ÈÓôU8ı¼‘º‰2J$08362d06-0eef-43b6-a3bf-3734cfba568f
+r	java:S106p"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8€½‘º‰2J$7a2346a7-60f7-4c1b-9df5-c6c4f21f9322
 
-java:S1117w">Rename "connection" which hides the field declared at line 16.(˜²Î‡8ş¼‘º‰2J$95c1dcb5-3348-4369-854c-5f61908067aa
+java:S1117w">Rename "connection" which hides the field declared at line 16.(˜²Î‡8ş¼‘º‰2J$8ade4011-2706-49b8-beb4-e56fe8bf86c2
 …
-java:S1117z"=Rename "statement" which hides the field declared at line 19.(¼ğ×ùûÿÿÿÿ8ş¼‘º‰2J$287aa201-213f-498d-b297-34f1e9e5552d
+java:S1117z"=Rename "statement" which hides the field declared at line 19.(¼ğ×ùûÿÿÿÿ8ş¼‘º‰2J$00ccf836-6f41-4025-8982-3a8ed39c3329
 g
-java:S6905y"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8û¼‘º‰2J$0a1ba5dc-b767-480a-9343-2f180a3b3c17
+java:S6905y"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8û¼‘º‰2J$c00c283e-6af4-48c9-b43e-1a4426e460f7
 €
-java:S1117{"=Rename "resultSet" which hides the field declared at line 18.(ığñ¼8û¼‘º‰2J$979e0a27-e2b7-4391-ac7d-b9609dac09be
-n	java:S106‹"+Replace this use of System.out by a logger.(ÔéêÅ8€½‘º‰2J$aaf4e7fe-9e25-450e-93ad-1a984eff4e67
-s	java:S106"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ƒ½‘º‰2J$e3cc3a06-badf-4dda-934c-5031c862b1b2
+java:S1117{"=Rename "resultSet" which hides the field declared at line 18.(ığñ¼8û¼‘º‰2J$7e55f788-9c74-4965-980d-9427512c1da6
+n	java:S106‹"+Replace this use of System.out by a logger.(ÔéêÅ8€½‘º‰2J$863b9b2f-ea47-44ce-a811-812286c21a99
+s	java:S106"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8ƒ½‘º‰2J$01bd53f6-b685-4f53-9555-62a02414bc5c
 ‚
-java:S1117š">Rename "connection" which hides the field declared at line 16.(˜²Î‡8½‘º‰2J$f31cb111-26f5-474e-97a5-ed5ad9b16422
+java:S1117š">Rename "connection" which hides the field declared at line 16.(˜²Î‡8½‘º‰2J$b805046c-c8ac-4cd2-b7c8-5ecb05f3b569
 †
-java:S1117"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8½‘º‰2J$8c2ae082-d9f2-450a-888a-65766ccd4205
+java:S1117"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8½‘º‰2J$ad0c89a8-cd73-4abe-94fa-cc8c2aa9bb2c
 c
-java:S6905œ"Don't use the query "SELECT *".(‹šü–8ş¼‘º‰2J$0107f1cb-ff14-47d0-8db4-33433c8f1d69
+java:S6905œ"Don't use the query "SELECT *".(‹šü–8ş¼‘º‰2J$cdab6166-919c-4616-bae6-fc021d78cbdf
 
-java:S1117Ÿ"=Rename "resultSet" which hides the field declared at line 18.(„‡–8ş¼‘º‰2J$b6ce01f2-425e-4306-b4e2-5e0cf19a2d8b
-s	java:S106±"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8ƒ½‘º‰2J$cb00d834-0159-4576-8698-dc1de03cbda2
-s	java:S106µ"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8†½‘º‰2J$34f0c7b9-bff3-4c31-8527-7fdf70b4ff71
+java:S1117Ÿ"=Rename "resultSet" which hides the field declared at line 18.(„‡–8ş¼‘º‰2J$24187625-00db-451c-b0d4-7d26440a0eb4
+s	java:S106±"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8ƒ½‘º‰2J$1d7cffb6-8294-48ef-8793-985b08097db9
+s	java:S106µ"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8†½‘º‰2J$92a71a21-f48b-42ee-a276-2a4b91925531
 ‚
-java:S1117»">Rename "connection" which hides the field declared at line 16.(˜²Î‡8„½‘º‰2J$595ad3ac-b2fe-4b81-b949-e833165bef46
+java:S1117»">Rename "connection" which hides the field declared at line 16.(˜²Î‡8„½‘º‰2J$8bf46118-62f5-40a0-a242-4c259b2e2722
 †
-java:S1117¾"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8„½‘º‰2J$bd09c01e-7700-47b9-8b48-df123d20f427
+java:S1117¾"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8„½‘º‰2J$6c1e8955-6926-4045-b2ce-d3f79fdd4d6c
 c
-java:S6905½"Don't use the query "SELECT *".(¶âˆı8½‘º‰2J$e1c916dc-167c-4ba5-a418-ba39875eec6d
+java:S6905½"Don't use the query "SELECT *".(¶âˆı8½‘º‰2J$88ac4f67-0590-460b-81d7-b2342ffa571d
 
-java:S1117À"=Rename "resultSet" which hides the field declared at line 18.(„‡–8‚½‘º‰2J$6e29afe2-399e-4c1d-a2fb-27b6a41c668d
-s	java:S106Ó"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8†½‘º‰2J$48a0fa56-c477-45f9-8161-175a175015bb
-s	java:S106×"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8Œ½‘º‰2J$f89593c2-1333-4411-bbba-a1cf608f23a8
+java:S1117À"=Rename "resultSet" which hides the field declared at line 18.(„‡–8‚½‘º‰2J$a1d8a95f-bc26-4fd7-a87f-8c15f85c1aba
+s	java:S106Ó"+Replace this use of System.out by a logger.(‹ğÂûÿÿÿÿ8†½‘º‰2J$81b1474d-46bb-4e9d-927a-c37c78046829
+s	java:S106×"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8Œ½‘º‰2J$a8b5c58c-cc1a-4c57-b9a6-08dd74b78b21
 ‚
-java:S1117Ş">Rename "connection" which hides the field declared at line 16.(˜²Î‡8‹½‘º‰2J$2b337ab5-8795-4458-838b-e58864b15147
+java:S1117Ş">Rename "connection" which hides the field declared at line 16.(˜²Î‡8‹½‘º‰2J$f0ace3f9-76ac-4e13-acfa-106c080b6648
 †
-java:S1117á"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8Œ½‘º‰2J$76e7547c-5394-4613-8314-67556cc57d78
+java:S1117á"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8Œ½‘º‰2J$e1ed092c-aa20-4074-8587-9182d6e42e19
 
-java:S1117ã"=Rename "resultSet" which hides the field declared at line 18.(„‡–8…½‘º‰2J$28a8e757-75e5-4019-aa96-a32ce7ca5ad7
+java:S1117ã"=Rename "resultSet" which hides the field declared at line 18.(„‡–8…½‘º‰2J$e9e1a203-98af-4302-9551-1f2b48aa431f
 Š
-java:S1126ç"AReplace this if-then-else statement by a single return statement.(ÙŠĞÜşÿÿÿÿ8†½‘º‰2J$4aa913cd-7d26-493b-a3bd-bcab6f38bf15
-s	java:S106ğ"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8½‘º‰2J$c06e72f4-3d90-4f72-8ee4-25ee7033121f
-s	java:S106ô"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8½‘º‰2J$2c3dcbb0-a48e-445e-93b6-f9a96dcb307b
+java:S1126ç"AReplace this if-then-else statement by a single return statement.(ÙŠĞÜşÿÿÿÿ8†½‘º‰2J$d16861cf-85d4-4f80-8c8a-3aa1adf1838d
+s	java:S106ğ"+Replace this use of System.out by a logger.(ñ ÿÌøÿÿÿÿ8½‘º‰2J$b5bf8540-05ee-4a24-a53f-57464884dd77
+s	java:S106ô"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8½‘º‰2J$2ab6a67c-a835-4082-b523-2c00bc811750
 h
-java:S6905’"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8‰½‘º‰2J$22db4aac-795c-46f7-ba66-f69ef49079d0
-‘	java:S100°"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ÌëÄ8‹½‘º‰2J$b96c0288-1841-4fd9-be22-0ea380015ec6
-\
-java:S1117±">Rename "connection" which hides the field declared at line 16.(˜²Î‡8Ü˜šº‰2
-`
-java:S1117´"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8Ü˜šº‰2
-s	java:S106¹"+Replace this use of System.out by a logger.(êôŒŸùÿÿÿÿ8½‘º‰2J$bf894a1f-a26b-4de1-93e0-5cec06dff0ad
-G	java:S106¼"+Replace this use of System.out by a logger.(šÅÔl8à˜šº‰2
-H	java:S106À"+Replace this use of System.out by a logger.(¨½‰á8à˜šº‰2
-M	java:S106Ä"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8á˜šº‰2
+java:S6905’"Don't use the query "SELECT *".(ƒÊğÖûÿÿÿÿ8‰½‘º‰2J$4cd4ac52-883c-46fa-8a92-fdd6111db534
+‘	java:S100°"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ÌëÄ8‹½‘º‰2J$85e919c4-9a2d-4916-b35e-9cb335390d78
+‚
+java:S1117±">Rename "connection" which hides the field declared at line 16.(˜²Î‡8Ü˜šº‰2J$579c07cb-7b90-4262-aaf9-040f0d6ad8a9
+†
+java:S1117´"=Rename "statement" which hides the field declared at line 19.(£ã¥²øÿÿÿÿ8Ü˜šº‰2J$8cdc31a1-b6cc-4da0-93f6-6090cb06e40d
+s	java:S106¹"+Replace this use of System.out by a logger.(êôŒŸùÿÿÿÿ8½‘º‰2J$08d949ec-3239-42b2-b174-410edab30075
+m	java:S106¼"+Replace this use of System.out by a logger.(šÅÔl8à˜šº‰2J$abb0a706-6b81-47b0-85d4-bfb769dd5cae
+n	java:S106À"+Replace this use of System.out by a logger.(¨½‰á8à˜šº‰2J$ef972d4d-2558-4526-ad6f-6b21838e6012
+s	java:S106Ä"+Replace this use of System.out by a logger.(›ÓÊ¡ùÿÿÿÿ8á˜šº‰2J$7bce12a9-761d-4f0a-9a04-dcff166b8c96
+M	java:S106É"+Replace this use of System.out by a logger.(î¸ıÿÿÿÿ8À™Â»‰2
+‚
+java:S1117Ê">Rename "connection" which hides the field declared at line 16.(˜²Î‡8†§»‰2J$9c07bd65-1db2-4a8b-8e9d-21d870d49512
+
+java:S1117Ô"=Rename "resultSet" which hides the field declared at line 18.(ÿ±»ü8†§»‰2J$6d304fda-6798-4653-8d37-7f17c7efeb8f
 u
-java:S1068"-Remove this unused "statement" private field.(„£„÷øÿÿÿÿ8³éº‰2J$9a16fa4f-f03d-4a22-9ca6-ada555381025
-}
-java:S1144ÿ"9Remove this unused private "showInformationAlert" method.(­„Ó€8½‘º‰2J$7e0b36c7-6116-493c-8d58-70583c218e88
+java:S1068"-Remove this unused "statement" private field.(„£„÷øÿÿÿÿ8³éº‰2J$f2822ab4-cff9-422a-aed6-db4de35a69b4

@@ -325,4 +325,52 @@ public class UserService implements  IService<User>{
             return false;
         }
     }
+    public boolean updatePasswordByEmail(String email) {
+        System.out.println(email);
+        Connection connection = DatabaseConnection.getConnection();
+        if (connection != null) {
+            // Check if the email exists in the database
+            String sqlSelect = "SELECT id FROM users WHERE email = ?";
+            String sqlUpdate = "UPDATE users SET password = ? WHERE email = ?";
+
+            try {
+                // Check if the email exists
+                PreparedStatement selectStatement = connection.prepareStatement(sqlSelect);
+                selectStatement.setString(1, email);
+                ResultSet resultSet = selectStatement.executeQuery();
+
+                if (resultSet.next()) {
+                    // Email exists, update the password
+                    String hashedPassword = BCrypt.hashpw("Expert2024", BCrypt.gensalt());
+
+                    PreparedStatement updateStatement = connection.prepareStatement(sqlUpdate);
+                    updateStatement.setString(1, hashedPassword);
+                    updateStatement.setString(2, email);
+
+                    int rowsUpdated = updateStatement.executeUpdate();
+                    if (rowsUpdated > 0) {
+                        // Password updated successfully
+                        showInformationAlert("Password Update", "Password updated successfully for email: " + email);
+                        return true;
+                    } else {
+                        // Password update failed
+                        showErrorAlert("Password Update Failed", "Failed to update password for email: " + email);
+                        return false;
+                    }
+                } else {
+                    // Email does not exist in the database
+                    showErrorAlert("Email Not Found", "Email not found in the database: " + email);
+                    return false;
+                }
+            } catch (SQLException e) {
+                // SQL Exception
+                showErrorAlert("Database Error", "Error updating password: " + e.getMessage());
+                return false;
+            }
+        } else {
+            // Database connection is null
+            showErrorAlert("Database Error", "Database connection is null. Check your database connection.");
+            return false;
+        }
+    }
 }
