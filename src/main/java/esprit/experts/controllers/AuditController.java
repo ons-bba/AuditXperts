@@ -5,20 +5,26 @@ import esprit.experts.entities.Audit;
 import esprit.experts.services.AuditService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Locale;
 
 public class AuditController {
     AuditService auditService = new AuditService();
     Audit selectedAudit = null;
     @FXML
     private TableColumn<Audit, String> columnapproach;
+    @FXML
+    private DatePicker date1;
+    @FXML
+    private TextField recherche;
+
+    @FXML
+    private DatePicker date2;
 
     @FXML
     private TableColumn<Audit, String> columndeficiency;
@@ -157,8 +163,27 @@ public class AuditController {
             System.out.println(e.getMessage());
         }
     }
-
-
+    @FXML
+    void onTri(ActionEvent event) {
+        try {
+            loadAudits_trier();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    void loadAudits_trier() throws SQLException {
+        List<Audit> audits = auditService.tri_audits();
+        System.out.println(audits);
+        auditsTable.getItems().setAll(audits);
+        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        startdate.setCellValueFactory(new PropertyValueFactory<>("startdate"));
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        columndeficiency.setCellValueFactory(new PropertyValueFactory<>("deficiency"));
+        columnreport.setCellValueFactory(new PropertyValueFactory<>("report"));
+        columnduration.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        columnstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        columnapproach.setCellValueFactory(new PropertyValueFactory<>("approach"));
+    }
         void loadAudits() throws SQLException {
         List<Audit> audits = auditService.findAll();
             System.out.println(audits);
@@ -200,4 +225,59 @@ public class AuditController {
         }
     }
 
+    void loadAudits_tribetweendates() throws SQLException {
+        String  date_loula = date1.getValue().toString();
+        String date_thenya = date2.getValue().toString();
+
+
+        System.out.println(date_loula);
+
+        System.out.println(date_thenya);
+        List<Audit> audits =auditService.auditbetweendates(date_loula,date_thenya);
+        System.out.println(audits);
+        auditsTable.getItems().setAll(audits);
+        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        startdate.setCellValueFactory(new PropertyValueFactory<>("startdate"));
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        columndeficiency.setCellValueFactory(new PropertyValueFactory<>("deficiency"));
+        columnreport.setCellValueFactory(new PropertyValueFactory<>("report"));
+        columnduration.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        columnstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        columnapproach.setCellValueFactory(new PropertyValueFactory<>("approach"));
+    }
+    @FXML
+    void onbetweendates(ActionEvent event) {
+        try {
+            loadAudits_tribetweendates();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    void loadAudits_recherche() throws SQLException {
+        String  recherches=recherche.getText();
+
+
+
+
+        List<Audit> audits =auditService.recherhe(recherches);
+        System.out.println(audits);
+        auditsTable.getItems().setAll(audits);
+        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        startdate.setCellValueFactory(new PropertyValueFactory<>("startdate"));
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        columndeficiency.setCellValueFactory(new PropertyValueFactory<>("deficiency"));
+        columnreport.setCellValueFactory(new PropertyValueFactory<>("report"));
+        columnduration.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        columnstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        columnapproach.setCellValueFactory(new PropertyValueFactory<>("approach"));
+    }
+    @FXML
+    void onRecherche(ActionEvent event) {
+        try {
+            loadAudits_recherche();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

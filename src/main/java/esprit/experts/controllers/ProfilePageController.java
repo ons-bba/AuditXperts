@@ -67,6 +67,25 @@ public class ProfilePageController implements Initializable {
         }
     }
     @FXML
+    void Myauditsuser(ActionEvent event) {
+        try {
+            // Load the MainLayout.fxml
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/MainLayout.fxml"));
+            Parent root = loader.load();
+            // Access the controller and call setLoggedInUser
+            MainLayoutController mainController = loader.getController();
+
+            Stage stage = (Stage) nameLabel.getScene().getWindow(); // Replace `button` with your actual button object
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            mainController.afficheraudituser();
+            stage.show();
+
+        } catch(IOException ex ) {
+            System.out.println(ex.getMessage());
+        }
+    }
+    @FXML
     public void editProfile() {
         try {
         // Load the MainLayout.fxml
