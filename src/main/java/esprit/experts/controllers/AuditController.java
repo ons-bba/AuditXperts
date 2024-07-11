@@ -15,7 +15,16 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class AuditController {
-    AuditService auditService = new AuditService();
+    AuditService auditService;
+
+    {
+        try {
+            auditService = new AuditService();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     Audit selectedAudit = null;
     @FXML
     private TableColumn<Audit, String> columnapproach;

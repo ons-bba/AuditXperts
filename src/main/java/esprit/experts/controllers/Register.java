@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Pattern;
@@ -137,7 +138,11 @@ public class Register {
 
             User newUser = new User(firstname, lastname, email, password, role, status, imagePath, sex);
             UserService userService = new UserService();
-            userService.Create(newUser);
+            try {
+                userService.Create(newUser);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
 
             // Clear the form fields after successful registration
             firstnameField.clear();

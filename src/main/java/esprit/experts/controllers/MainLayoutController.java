@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,7 +80,12 @@ public class MainLayoutController {
 
     public void setLoggedInUser(String userEmail) {
         UserService userService = new UserService();
-        User loggedInUser = userService.getUserByEmail(userEmail);
+        User loggedInUser = null;
+        try {
+            loggedInUser = userService.getUserByEmail(userEmail);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         if (loggedInUser != null) {
             this.user = loggedInUser;
@@ -208,7 +214,12 @@ public class MainLayoutController {
     }
     private void  refreshUser(){
         UserService us = new UserService();
-        User newUser = us.getById(this.user.getId());
+        User newUser = null;
+        try {
+            newUser = us.getById(this.user.getId());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println(newUser);
         user = newUser;
     }

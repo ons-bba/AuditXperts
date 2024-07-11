@@ -13,6 +13,10 @@ import java.util.List;
 
 public class AuditService implements IService<Audit> {
     Connection db = DatabaseConnection.getConnection();
+
+    public AuditService() throws SQLException {
+    }
+
     public void add(Audit audit) throws SQLException {
         String query = "INSERT INTO audit (Title, Startdate, Returndate, Deficiency, Report, Duration, Status, Approach) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 

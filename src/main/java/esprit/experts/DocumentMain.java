@@ -1,4 +1,5 @@
 package esprit.experts;
+
 import esprit.experts.utils.DatabaseConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,8 +18,8 @@ public class DocumentMain extends Application {
         Parent root;
         try {
 
-           root = FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/Documents.fxml"));
-            Scene scene = new  Scene(root , 1350 , 850);
+            root = FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/Documents.fxml"));
+            Scene scene = new Scene(root, 1350, 850);
             primaryStage.setTitle("Document Page");
             primaryStage.setScene(scene);
 //            primaryStage.setFullScreen(true); // Set the stage to maximized mode

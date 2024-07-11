@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class ExpertAudit extends Application {
     @Override
@@ -16,7 +17,7 @@ public class ExpertAudit extends Application {
         // Initialize database connection
         Parent root;
         try {
-            DatabaseConnection.connectDB();
+            DatabaseConnection.getConnection();
             root = FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/Document.fxml"));
             Scene scene = new  Scene(root , 1350 , 850);
             primaryStage.setTitle("Login Page");
@@ -26,6 +27,8 @@ public class ExpertAudit extends Application {
             primaryStage.show();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
     public static void main(String[] args) {

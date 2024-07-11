@@ -16,7 +16,7 @@ public class UserService implements  IService<User>{
 
 
     @Override
-    public void Create(User user) {
+    public void Create(User user) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
             String sql = "INSERT INTO users (firstname, lastname, email, password, role, status, image) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -43,7 +43,7 @@ public class UserService implements  IService<User>{
     }
 
     @Override
-    public void Update(User user) {
+    public void Update(User user) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
             String sql = "UPDATE users SET firstname=?, lastname=?, email=?, password=?, role=?, status=?, image=?, sex=? WHERE id=?";
@@ -72,7 +72,7 @@ public class UserService implements  IService<User>{
     }
 
     @Override
-    public List<User> read() {
+    public List<User> read() throws SQLException {
         List<User> users = new ArrayList<>();
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
@@ -106,7 +106,7 @@ public class UserService implements  IService<User>{
     }
 
     @Override
-    public User getById(long id) {
+    public User getById(long id) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
             String sql = "SELECT * FROM users WHERE id = ?";
@@ -139,7 +139,7 @@ public class UserService implements  IService<User>{
         }
     }
 
-    public User getUserByEmail(String email) {
+    public User getUserByEmail(String email) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
             String sql = "SELECT * FROM users WHERE email = ? ";
@@ -174,7 +174,7 @@ public class UserService implements  IService<User>{
     }
 
 
-    public boolean authenticateUser(String email, String password) {
+    public boolean authenticateUser(String email, String password) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
             String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
@@ -192,7 +192,7 @@ public class UserService implements  IService<User>{
             return false;
         }
     }
-    public void updatePassword(long userId, String oldPassword, String newPassword) {
+    public void updatePassword(long userId, String oldPassword, String newPassword) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
             // First, check if the old password matches the current password in the database
@@ -221,7 +221,7 @@ public class UserService implements  IService<User>{
         }
     }
 
-    private boolean authenticateUserById(long userId, String password) {
+    private boolean authenticateUserById(long userId, String password) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
             String sql = "SELECT * FROM users WHERE id = ? AND password = ?";

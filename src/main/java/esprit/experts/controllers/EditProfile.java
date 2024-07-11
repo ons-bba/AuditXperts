@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
@@ -60,7 +61,11 @@ public class EditProfile implements Initializable {
     public void getUserProfile(Long id) {
         System.out.println(id);
         UserService us = new UserService();
-        this.user = us.getById(id);
+        try {
+            this.user = us.getById(id);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         if (Objects.isNull(this.user)) {
             System.out.println("User is not found");
         }
@@ -104,7 +109,11 @@ public class EditProfile implements Initializable {
 
             // Call UserService to update user
             UserService userService = new UserService();
-            userService.Update(user);
+            try {
+                userService.Update(user);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
 
             // Optionally, show success message or navigate to another view
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

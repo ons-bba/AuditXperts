@@ -10,6 +10,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -26,7 +27,7 @@ public class UsersDashboardController implements Initializable {
 //        loadUsers();
     }
 
-    private void loadUsers() {
+    private void loadUsers() throws SQLException {
         List<User> users = userService.read();
 
         for (User user : users) {

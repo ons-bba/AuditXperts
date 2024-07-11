@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Login {
 
@@ -48,7 +49,7 @@ public class Login {
     }
 
     @FXML
-    private void handleLoginAction(ActionEvent event) {
+    private void handleLoginAction(ActionEvent event) throws SQLException {
         String email = emailField.getText().trim();
         String password = passwordField.getText().trim();
 
