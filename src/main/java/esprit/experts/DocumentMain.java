@@ -18,7 +18,7 @@ public class DocumentMain extends Application {
         Parent root;
         try {
 
-            root = FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/Documents.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/register.fxml"));
             Scene scene = new Scene(root, 1350, 850);
             primaryStage.setTitle("Document Page");
             primaryStage.setScene(scene);

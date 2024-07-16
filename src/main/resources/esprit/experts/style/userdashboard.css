@@ -1,0 +1,40 @@
+/* Styling for the user cards */
+.user-card {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+/* Styling for the user name label */
+.user-card .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Styling for the user status and role labels */
+.user-card .status-label, .user-card .role-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #34495e;
+}
+
+/* Additional styling for VBox */
+.vbox {
+    -fx-background-color: rgba(150, 237, 144, 0.52); /* Light gray background */
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-min-width: 1200px; /* Minimum width of 1200px */
+    -fx-min-height: 150px;
+}
+
+/* Styling for the welcome label */
+.welcome-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold; /* Make the text bold */
+    -fx-text-fill: #2a9df4; /* Blue color for text */
+}

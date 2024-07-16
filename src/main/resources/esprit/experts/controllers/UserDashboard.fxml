@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="userListContainer" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.UsersDashboardController" spacing="10" styleClass="vbox" stylesheets="@../style/userdashboard.css">
+    <!-- The children of VBox will be populated by the controller -->
+</VBox>

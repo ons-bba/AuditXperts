@@ -3,6 +3,7 @@ package esprit.experts.services;
 import esprit.experts.entities.User;
 import esprit.experts.utils.DatabaseConnection;
 import javafx.scene.control.Alert;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -25,7 +26,9 @@ public class UserService implements  IService<User>{
                 statement.setString(1, user.getFirstname());
                 statement.setString(2, user.getLastname());
                 statement.setString(3, user.getEmail());
-                statement.setString(4, user.getPassword());
+                // Hash the password before storing it
+                String hashedPassword = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+                statement.setString(4, hashedPassword);
                 statement.setString(5, user.getRole());
                 statement.setString(6, user.getStatus());
                 statement.setString(7, user.getImagePath());
@@ -177,12 +180,17 @@ public class UserService implements  IService<User>{
     public boolean authenticateUser(String email, String password) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {
-            String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+            String sql = "SELECT password FROM users WHERE email = ?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, email);
-                statement.setString(2, password);
                 ResultSet resultSet = statement.executeQuery();
-                return resultSet.next(); // true if user exists with given email and password
+                if (resultSet.next()) {
+                    String hashedPassword = resultSet.getString("password");
+                    // Check if the provided plain text password matches the hashed password
+                    return BCrypt.checkpw(password, hashedPassword);
+                } else {
+                    return false; // User with given email not found
+                }
             } catch (SQLException e) {
                 System.out.println("Error authenticating user: " + e.getMessage());
                 return false;
@@ -192,6 +200,7 @@ public class UserService implements  IService<User>{
             return false;
         }
     }
+
     public void updatePassword(long userId, String oldPassword, String newPassword) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         if (connection != null) {

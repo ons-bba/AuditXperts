@@ -11,6 +11,11 @@ module esprit.experts {
     requires com.almasb.fxgl.all;
     requires java.sql;
     requires java.desktop;
+    requires java.sql.rowset;
+    requires org.apache.pdfbox;
+    requires jbcrypt;
+    requires mysql.connector.j;
+    requires java.mail;
 
     opens esprit.experts to javafx.fxml;
     exports esprit.experts;

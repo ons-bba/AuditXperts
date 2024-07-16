@@ -1,29 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-
-<BorderPane xmlns="http://javafx.com/javafx/21.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.DocumentController">
-    <top>
-        <HBox spacing="10" padding="10">
-            <TextField fx:id="titleField" promptText="Title"/>
-            <TextField fx:id="authorField" promptText="Author"/>
-            <Button text="Add Document" onAction="#handleAddDocument"/>
-            <Button text="Update Document" onAction="#handleUpdateDocument"/>
-            <Button text="Delete Document" onAction="#handleDeleteDocument"/>
-        </HBox>
-    </top>
-    <center>
-        <ListView fx:id="documentListView" onMouseClicked="#handleSelectDocument"/>
-    </center>
-    <bottom>
-        <TextArea fx:id="contentArea"/>
-    </bottom>
-</BorderPane>
+<AnchorPane stylesheets="@../style/document.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.experts.controllers.DocumentController">
+    <children>
+        <VBox alignment="CENTER" spacing="15" styleClass="primary-color">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            <HBox alignment="CENTER" spacing="10">
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+                <TextField fx:id="titleField" prefWidth="200" promptText="Title" styleClass="text-input2" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10">
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+                <Button onAction="#handleAddDocument" styleClass="button2" text="Add Document" />
+                <Button onAction="#handleUpdateDocument" styleClass="button2" text="Update Document" />
+                <Button onAction="#handleDeleteDocument" styleClass="button2" text="Delete Document" />
+                <Button onAction="#handleAttachFile" styleClass="button2" text="Attach File" />
+            </HBox>
+            <Label fx:id="attachmentLabel" styleClass="label" />
+            <HBox alignment="CENTER" spacing="10">
+                <TextField fx:id="searchField" promptText="Search by ID, Title, or Author" styleClass="text-input2" />
+                <Button onAction="#handleSearchDocument" styleClass="button2" text="Search" />
+            </HBox>
+        </VBox>
+        <TableView fx:id="documentTable" layoutX="7.0" layoutY="250.0" onMouseClicked="#handleSelectDocument" prefHeight="400" prefWidth="600">
+            <columns>
+                <TableColumn text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Title">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Author">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="author" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Date of Insertion">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dateOfInsertion" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Attachment">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="attachmentPath" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem onAction="#handleDownloadAttachment" text="Download PDF file"/>
+                        <MenuItem onAction="#handleExportToPdf" text="Export to PDF" />
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+    </children>
+</AnchorPane>

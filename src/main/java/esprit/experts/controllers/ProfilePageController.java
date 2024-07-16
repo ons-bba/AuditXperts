@@ -42,23 +42,29 @@ public class ProfilePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        this.user = MainLayoutController.getUser(); // Fetch the user data
-        // Populate UI elements with user data
-        nameLabel.setText(user.getFirstname() + " " + user.getLastname());
-        email.setText(user.getEmail());
-        role.setText(user.getRole());
-        status.setText(user.getStatus());
-        sex.setText(user.getSex());
+        // Fetch the user data from MainLayoutController
+        this.user = MainLayoutController.getUser();
 
-        // Load profile image
-        String imagePath = user.getImagePath();
-        try {
-            InputStream inputStream = new FileInputStream(new File(imagePath));
-            Image image = new Image(inputStream);
-            profileImage.setImage(image);
-        } catch (FileNotFoundException e) {
-            System.err.println("Image file not found: " + e.getMessage());
-            // Handle file not found error
+        if (user != null) {
+            // Populate UI elements with user data
+            nameLabel.setText(user.getFirstname() + " " + user.getLastname());
+            email.setText(user.getEmail());
+            role.setText(user.getRole());
+            status.setText(user.getStatus());
+            sex.setText(user.getSex());
+
+            // Load profile image if available
+            String imagePath = user.getImagePath();
+            try {
+                InputStream inputStream = new FileInputStream(new File(imagePath));
+                Image image = new Image(inputStream);
+                profileImage.setImage(image);
+            } catch (FileNotFoundException e) {
+                System.err.println("Image file not found: " + e.getMessage());
+                // Handle file not found error
+            }
+        } else {
+            System.err.println("User object is null.");
         }
     }
     @FXML

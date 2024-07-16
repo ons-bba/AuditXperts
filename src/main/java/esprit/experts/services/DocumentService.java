@@ -5,6 +5,7 @@ import esprit.experts.utils.DatabaseConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.io.InputStream;
 import java.sql.*;
 import java.time.LocalDate;
 
@@ -13,27 +14,28 @@ public class DocumentService {
     public ObservableList<Document> getAllDocuments() {
         ObservableList<Document> documentList = FXCollections.observableArrayList();
         Connection conn = null;
-        Statement stmt = null;
+        PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
             conn = DatabaseConnection.getConnection();
-            stmt = conn.createStatement();
-            rs = stmt.executeQuery("SELECT * FROM documents");
+            String query = "SELECT * FROM documents";
+            pstmt = conn.prepareStatement(query);
+            rs = pstmt.executeQuery();
 
             while (rs.next()) {
-                Document doc = new Document(
-                        rs.getInt("id"),
-                        rs.getString("title"),
-                        rs.getString("author"),
-                        rs.getDate("date").toLocalDate(),
-                        rs.getString("content")
-                );
+                Document doc = new Document();
+                doc.setId(rs.getInt("id"));
+                doc.setTitle(rs.getString("title"));
+                doc.setAuthor(rs.getString("author"));
+                doc.setAttachmentPath(rs.getString("attachment"));
+                doc.setDateOfInsertion(rs.getTimestamp("date_of_insertion"));
+                // Retrieve attachment if needed
                 documentList.add(doc);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            closeResources(conn, stmt, rs);
+            closeResources(conn, pstmt, rs);
         }
         return documentList;
     }
@@ -44,12 +46,13 @@ public class DocumentService {
         ResultSet generatedKeys = null;
         try {
             conn = DatabaseConnection.getConnection();
-            String query = "INSERT INTO documents (title, author, date, content) VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO documents (title, author, attachment, date_of_insertion) VALUES (?, ?, ?, ?)";
             pstmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             pstmt.setString(1, document.getTitle());
             pstmt.setString(2, document.getAuthor());
-            pstmt.setDate(3, Date.valueOf(document.getDate()));
-            pstmt.setString(4, document.getContent());
+            pstmt.setString(3, document.getAttachmentPath());
+            pstmt.setTimestamp(4, (document.getDateOfInsertion()));
+
             pstmt.executeUpdate();
 
             generatedKeys = pstmt.getGeneratedKeys();
@@ -68,11 +71,11 @@ public class DocumentService {
         PreparedStatement pstmt = null;
         try {
             conn = DatabaseConnection.getConnection();
-            String query = "UPDATE documents SET title = ?, author = ?, content = ? WHERE id = ?";
+            String query = "UPDATE documents SET title = ?, author = ?, attachment = ? WHERE id = ?";
             pstmt = conn.prepareStatement(query);
             pstmt.setString(1, document.getTitle());
             pstmt.setString(2, document.getAuthor());
-            pstmt.setString(3, document.getContent());
+            pstmt.setString(3, document.getAttachmentPath());
             pstmt.setInt(4, document.getId());
             pstmt.executeUpdate();
         } catch (SQLException e) {
@@ -98,27 +101,13 @@ public class DocumentService {
         }
     }
 
-    private void closeResources(Connection conn, Statement stmt, ResultSet rs) {
-        if (rs != null) {
-            try {
-                rs.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        if (stmt != null) {
-            try {
-                stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        if (conn != null) {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+    private void closeResources(Connection conn, PreparedStatement pstmt, ResultSet rs) {
+        try {
+            if (rs != null) rs.close();
+            if (pstmt != null) pstmt.close();
+            if (conn != null) conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

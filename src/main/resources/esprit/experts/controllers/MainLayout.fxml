@@ -17,6 +17,7 @@
                     <ImageView fx:id="userImageView" fitHeight="50.0" fitWidth="50.0" />
                     <Label fx:id="welcomeLabel" styleClass="welcome-label" />
                     <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+                    <Button fx:id="logoutButton" onAction="#handleLogout" styleClass="logout-button" text="Logout" />
                 </HBox>
             </VBox>
         </AnchorPane>
@@ -29,7 +30,7 @@
                 <Button fx:id="showPlanificationButton" onAction="#showPlanification" styleClass="sidebar-button" text="Planification" />
                 <Button fx:id="showAuditsButton" onAction="#showAudits" styleClass="sidebar-button" text="Audits" />
                 <Button fx:id="showWorkspaceButton" onAction="#showWorkspace" styleClass="sidebar-button" text="Workspace" />
-                <Button fx:id="showDocument" onAction="#ShowDocuments" styleClass="sidebar-button" text="Workspace" />
+                <Button fx:id="showDocumentButton" onAction="#ShowDocuments" styleClass="sidebar-button" text="Documents" />
 
             </VBox>
         </AnchorPane>

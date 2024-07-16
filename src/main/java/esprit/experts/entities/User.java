@@ -1,5 +1,7 @@
 package esprit.experts.entities;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 public class User {
     private static long ID = 0;
     private long id;
@@ -74,7 +76,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = hashPassword(password); // Hash the password
     }
 
     public String getRole() {
@@ -114,5 +116,9 @@ public class User {
                 ", status='" + status + '\'' +
                 ", imagePath='" + imagePath + '\'' +
                 '}';
+    }
+    // Method to hash the password using Bcrypt
+    private String hashPassword(String password) {
+        return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 }

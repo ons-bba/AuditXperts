@@ -79,6 +79,27 @@ public class Login {
         }
     }
 
+    @FXML
+    private void handleRegisterAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/register.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Register");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+            // Optionally, close the current login window after opening the register window
+            Stage loginStage = (Stage) anchor.getScene().getWindow();
+            loginStage.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle exception (e.g., show error message)
+        }
+    }
+
     private void fadeTransitionToMainLayout(String userEmail) {
         try {
             // Load the MainLayout.fxml

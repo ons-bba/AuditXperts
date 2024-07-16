@@ -90,7 +90,14 @@
             <HBox alignment="CENTER" spacing="10">
                 <Button onAction="#handleRegisterAction" prefHeight="27.0" prefWidth="272.0" text="Register" />
             </HBox>
+            <!-- Button to go to login page -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="Already have an account?" />
+                <Button fx:id="goToLoginButton" onAction="#goToLogin" text="Login" />
+            </HBox>
+
         </VBox>
+
 
         <!-- Image Preview Section -->
         <VBox fx:id="imagePreviewContainer" prefHeight="462.0" prefWidth="294.0" visible="false">

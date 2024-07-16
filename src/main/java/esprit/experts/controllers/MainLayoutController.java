@@ -8,18 +8,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Region;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,13 +37,16 @@ public class MainLayoutController {
     public Button showAuditsButton;
     @FXML
     public Button showWorkspaceButton;
+    @FXML
+    public Button showDocumentButton;
+    public Region spacer;
+    @FXML
+    private Button logoutButton;
+
 
     @FXML
-    public Button showDocument;
-
-    @FXML
-    AnchorPane holderPanel ;
-    AnchorPane dynamicContent ;
+    AnchorPane holderPanel;
+    AnchorPane dynamicContent;
 
     @FXML
     private Label welcomeLabel;
@@ -50,21 +54,20 @@ public class MainLayoutController {
     @FXML
     private ImageView userImageView;
 
-    @FXML
-    private void initialize() {
-        // Load default view
-
-        ShowDocuments();
-    }
-
-
     public static User getUser() {
         return user;
     }
 
-    private void setNode(Node node ) {
+    @FXML
+    private void initialize() {
+        // Load default view
+
+        showUsers();
+    }
+
+    private void setNode(Node node) {
         holderPanel.getChildren().clear();
-        holderPanel.getChildren().add( (Node)node);
+        holderPanel.getChildren().add(node);
         FadeTransition ft = new FadeTransition(Duration.millis(1000));
         ft.setNode(node);
         ft.setFromValue(0.5);
@@ -75,26 +78,21 @@ public class MainLayoutController {
     }
 
 
-
-
-
     public void setLoggedInUser(String userEmail) {
         UserService userService = new UserService();
-        User loggedInUser = null;
         try {
-            loggedInUser = userService.getUserByEmail(userEmail);
+            user = userService.getUserByEmail(userEmail);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        if (loggedInUser != null) {
-            this.user = loggedInUser;
-            welcomeLabel.setText("Welcome, " + loggedInUser.getFirstname() + " " + loggedInUser.getLastname());
+        if (user != null) {
+            welcomeLabel.setText("Welcome, " + user.getFirstname() + " " + user.getLastname());
 
             // Load user image if available
-            if (loggedInUser.getImagePath() != null && !loggedInUser.getImagePath().isEmpty()) {
+            if (user.getImagePath() != null && !user.getImagePath().isEmpty()) {
                 try {
-                    String imagePath = loggedInUser.getImagePath(); // Assuming imagePath is "src/main/resources/images/image_20240701222306.jpg"
+                    String imagePath = user.getImagePath();
                     InputStream inputStream = new FileInputStream(new File(imagePath));
                     Image image = new Image(inputStream);
                     userImageView.setImage(image);
@@ -104,15 +102,12 @@ public class MainLayoutController {
                     userImageView.setFitWidth(50); // Adjust size as needed
                     userImageView.setFitHeight(50);
                     userImageView.setPreserveRatio(true);
-
                 } catch (FileNotFoundException e) {
-                    System.out.println("File not found: " + loggedInUser.getImagePath());
+                    System.out.println("File not found: " + user.getImagePath());
                     e.printStackTrace();
-                    // Handle file not found exception
                 } catch (Exception e) {
-                    System.out.println("Error loading user image from path: " + loggedInUser.getImagePath());
+                    System.out.println("Error loading user image from path: " + user.getImagePath());
                     e.printStackTrace();
-                    // Handle other exceptions
                 }
             } else {
                 // Set a default image or handle the case where no image is available
@@ -121,39 +116,70 @@ public class MainLayoutController {
             System.out.println("User with email " + userEmail + " not found.");
         }
     }
+
+    @FXML
+    private void handleLogout() {
+        // Close current window
+        Stage stage = (Stage) logoutButton.getScene().getWindow();
+        stage.close();
+
+        try {
+            // Load login page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/login.fxml"));
+            Parent root = loader.load();
+
+            Stage loginStage = new Stage();
+            loginStage.setTitle("Login");
+            loginStage.initStyle(StageStyle.UNDECORATED); // Optional, depending on your design
+            loginStage.setScene(new Scene(root));
+            loginStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle the exception (e.g., show an error dialog)
+        }
+    }
+
     @FXML
     public void showUsers() {
         try {
-            dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/UsersDashboard.fxml"));
-            setNode(dynamicContent);
-        }catch( Exception e ) {
-            System.out.println("Error loading UsersDashboard.fxml: " + e.getMessage());
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/UserDashboard.fxml"));
+            Parent root = loader.load();
+            this.setButtonFocused(this.showUsersButton);
+            setNode(root);
+        } catch (Exception e) {
+            System.out.println("Error loading UserDashboard.fxml: " + e.getMessage());
 
         }
     }
+
     @FXML
     public void showProfile() {
         try {
-            refreshUser();
-            dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/ProfilePage.fxml"));
+            //refreshUser();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/ProfilePage.fxml"));
+            Parent root = loader.load();
             this.setButtonFocused(this.showProfileButton);
-            setNode(dynamicContent);
-        }catch( Exception e ) {
+            setNode(root);
+        } catch (Exception e) {
             System.out.println("Error loading ProfilePage.fxml: " + e.getMessage());
             e.printStackTrace();
         }
     }
+
     @FXML
     public void showPlanification(ActionEvent actionEvent) {
     }
+
     @FXML
     public void showAudits(ActionEvent actionEvent) {
         try {
             refreshUser();
-            dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/audit.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/audit.fxml"));
+            Parent root = loader.load();
             this.setButtonFocused(this.showAuditsButton);
-            setNode(dynamicContent);
-        }catch( Exception e ) {
+            setNode(root);
+        } catch (Exception e) {
             System.out.println("Error loading ProfilePage.fxml: " + e.getMessage());
             e.printStackTrace();
         }
@@ -162,17 +188,24 @@ public class MainLayoutController {
     @FXML
     public void ShowDocuments() {
         try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/Document.fxml"));
+            Parent root = loader.load();
 
-            dynamicContent =  FXMLLoader.load(getClass().getResource("/esprit/experts/controllers/Document.fxml"));
-            this.setButtonFocused(this.showDocument);
-            setNode(dynamicContent);
-        }catch( Exception e ) {
-            System.out.println("Error loading Documents.fxml: " + e.getMessage());
+            // Get the controller and set the logged-in user
+            DocumentController documentController = loader.getController();
+            documentController.setLoggedInUser(MainLayoutController.user);
+
+            this.setButtonFocused(this.showDocumentButton);
+            setNode(root);
+        } catch (Exception e) {
+            System.out.println("Error loading Document.fxml: " + e.getMessage());
             e.printStackTrace();
         }
     }
+
     public void showWorkspace(ActionEvent actionEvent) {
     }
+
     @FXML
 
     private void setButtonFocused(Button focusedButton) {
@@ -187,6 +220,7 @@ public class MainLayoutController {
             }
         }
     }
+
     private List<Button> getAllButtons() {
         List<Button> allButtons = new ArrayList<>();
         allButtons.add(this.showWorkspaceButton);
@@ -194,12 +228,14 @@ public class MainLayoutController {
         allButtons.add(this.showProfileButton);
         allButtons.add(this.showAuditsButton);
         allButtons.add(this.showPlanificationButton);
-        return  allButtons;
+        allButtons.add(this.showDocumentButton);
+        return allButtons;
     }
+
     public void editProfile(Long id) {
         try {
             refreshUser();
-            FXMLLoader loader =   new FXMLLoader(getClass().getResource("/esprit/experts/controllers/editProfile.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/editProfile.fxml"));
             Parent root = loader.load();
 
             // Access the controller and call setLoggedInUser
@@ -207,20 +243,19 @@ public class MainLayoutController {
             editProfileController.getUserProfile(id);
             this.setButtonFocused(this.showProfileButton);
             setNode(root);
-        }catch( Exception e ) {
+        } catch (Exception e) {
             System.out.println("Error loading ProfilePage.fxml: " + e.getMessage());
             e.printStackTrace();
         }
     }
-    private void  refreshUser(){
+
+    private void refreshUser() {
         UserService us = new UserService();
-        User newUser = null;
         try {
-            newUser = us.getById(this.user.getId());
+            user = us.getById(user.getId());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(newUser);
-        user = newUser;
+        System.out.println(user);
     }
 }

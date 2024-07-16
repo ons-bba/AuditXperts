@@ -24,7 +24,11 @@ public class UsersDashboardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         userService = new UserService();
-//        loadUsers();
+        try {
+            loadUsers();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private void loadUsers() throws SQLException {

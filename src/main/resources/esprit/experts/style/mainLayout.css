@@ -47,3 +47,22 @@
 #userImageView {
     -fx-alignment: center-right; /* Align image to the far right */
 }
+
+/* Styling for the logout button */
+.logout-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-font-size: 16px;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+.logout-button:pressed {
+    -fx-background-color: #a93226;
+}

@@ -4,11 +4,16 @@ import esprit.experts.entities.User;
 import esprit.experts.services.UserService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.File;
 import java.io.IOException;
@@ -65,6 +70,9 @@ public class Register {
 
     @FXML
     private ToggleGroup sexToggleGroup;
+
+    @FXML
+    private Button goToLoginButton;
 
     private File selectedImageFile;
 
@@ -170,6 +178,29 @@ public class Register {
             imageView.setFitWidth(150);
             imageView.setFitHeight(150);
             imagePreviewContainer.setVisible(true);
+        }
+    }
+
+    @FXML
+    private void goToLogin(ActionEvent event) {
+        // Close current window
+        Stage stage = (Stage) goToLoginButton.getScene().getWindow();
+        stage.close();
+
+        try {
+            // Load login page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/esprit/experts/controllers/login.fxml"));
+            Parent root = loader.load();
+
+            Stage loginStage = new Stage();
+            loginStage.setTitle("Login");
+            loginStage.initStyle(StageStyle.UNDECORATED); // Optional, depending on your design
+            loginStage.setScene(new Scene(root));
+            loginStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle the exception (e.g., show an error dialog)
         }
     }
 
